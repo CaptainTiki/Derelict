@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dnaxw3t4et8a8"]
+
+[ext_resource type="PackedScene" uid="uid://bt517h8mlj6r8" path="res://room.tscn" id="1_u52ul"]
+
+[node name="Level" type="Node3D" unique_id=346581259]
+
+[node name="Room" parent="." unique_id=1912775003 instance=ExtResource("1_u52ul")]
+
+[node name="Room2" parent="." unique_id=137346211 instance=ExtResource("1_u52ul")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
