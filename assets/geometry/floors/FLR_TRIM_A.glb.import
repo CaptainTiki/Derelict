@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cx4sbepfhhseq"
-path="res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"
+uid="uid://cc2pxherwb1j"
+path="res://.godot/imported/FLR_TRIM_A.glb-4971773b939f1486d6baceed7acfa491.scn"
 
 [deps]
 
-source_file="res://assets/props/Pipe_Sm.glb"
-dest_files=["res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"]
+source_file="res://assets/geometry/floors/FLR_TRIM_A.glb"
+dest_files=["res://.godot/imported/FLR_TRIM_A.glb-4971773b939f1486d6baceed7acfa491.scn"]
 
 [params]
 

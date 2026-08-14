@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bnedal360xfak"
-path="res://.godot/imported/AirCylinder.glb-322a36c5ebe2a06942c544ca8c3d437c.scn"
+path="res://.godot/imported/AirCylinder.glb-2b033950ad37eb9a3aeb74620a396412.scn"
 
 [deps]
 
-source_file="res://assets/Props/AirCylinder.glb"
-dest_files=["res://.godot/imported/AirCylinder.glb-322a36c5ebe2a06942c544ca8c3d437c.scn"]
+source_file="res://assets/props/AirCylinder.glb"
+dest_files=["res://.godot/imported/AirCylinder.glb-2b033950ad37eb9a3aeb74620a396412.scn"]
 
 [params]
 

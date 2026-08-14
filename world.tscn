@@ -3,9 +3,27 @@
 [ext_resource type="PackedScene" uid="uid://dnaxw3t4et8a8" path="res://level.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://c88pfdot3fhe4" path="res://player.tscn" id="2_fj7yv"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 0.3
+
+[sub_resource type="Sky" id="Sky_tlwt5"]
+sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
+
+[sub_resource type="Environment" id="Environment_aqk2v"]
+background_mode = 2
+sky = SubResource("Sky_tlwt5")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
 [node name="World" type="Node3D" unique_id=1684630163]
 
-[node name="Level" parent="." unique_id=346581259 instance=ExtResource("1_f3sb7")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2007424131]
+environment = SubResource("Environment_aqk2v")
 
 [node name="Player" parent="." unique_id=747017444 instance=ExtResource("2_fj7yv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0294427, 0)
+transform = Transform3D(0.100099444, 0, -0.9949774, 0, 1, 0, 0.9949774, 0, 0.100099444, 0, 1.0294427, 0)
+
+[node name="Level" parent="." unique_id=346581259 instance=ExtResource("1_f3sb7")]

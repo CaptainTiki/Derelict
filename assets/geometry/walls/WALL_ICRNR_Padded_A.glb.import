@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cx4sbepfhhseq"
-path="res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"
+uid="uid://dm6yo4tnacgnm"
+path="res://.godot/imported/WALL_ICRNR_Padded_A.glb-937634ec0c5678a57f96394dc875f245.scn"
 
 [deps]
 
-source_file="res://assets/props/Pipe_Sm.glb"
-dest_files=["res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"]
+source_file="res://assets/geometry/walls/WALL_ICRNR_Padded_A.glb"
+dest_files=["res://.godot/imported/WALL_ICRNR_Padded_A.glb-937634ec0c5678a57f96394dc875f245.scn"]
 
 [params]
 

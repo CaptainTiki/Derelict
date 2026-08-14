@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xe84b5tuwdo4"
-path="res://.godot/imported/Yellow_Paint_Dotted.glb-b63b9d2c022a7a3f69657bbe41609172.scn"
+path="res://.godot/imported/Yellow_Paint_Dotted.glb-75d27733ffb4c036801c1bc8df5087de.scn"
 
 [deps]
 
-source_file="res://assets/Props/Yellow_Paint_Dotted.glb"
-dest_files=["res://.godot/imported/Yellow_Paint_Dotted.glb-b63b9d2c022a7a3f69657bbe41609172.scn"]
+source_file="res://assets/props/Yellow_Paint_Dotted.glb"
+dest_files=["res://.godot/imported/Yellow_Paint_Dotted.glb-75d27733ffb4c036801c1bc8df5087de.scn"]
 
 [params]
 

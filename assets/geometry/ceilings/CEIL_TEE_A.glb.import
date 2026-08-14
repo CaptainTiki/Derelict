@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cx4sbepfhhseq"
-path="res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"
+uid="uid://d2vxvitt40qsm"
+path="res://.godot/imported/CEIL_TEE_A.glb-7f02d6b7f8beb0b4daef8fd0980a7352.scn"
 
 [deps]
 
-source_file="res://assets/props/Pipe_Sm.glb"
-dest_files=["res://.godot/imported/Pipe_Sm.glb-30256fb68f7330d6d62367ae091900b5.scn"]
+source_file="res://assets/geometry/ceilings/CEIL_TEE_A.glb"
+dest_files=["res://.godot/imported/CEIL_TEE_A.glb-7f02d6b7f8beb0b4daef8fd0980a7352.scn"]
 
 [params]
 

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://7m2txpcg0n75"]
+
+[ext_resource type="PackedScene" uid="uid://d2vxvitt40qsm" path="res://assets/geometry/ceilings/CEIL_TEE_A.glb" id="2_jhd4a"]
+[ext_resource type="PackedScene" uid="uid://b6m3jyxdff1nl" path="res://assets/geometry/floors/FLR_TEE_A.glb" id="3_4s6qu"]
+[ext_resource type="PackedScene" uid="uid://cslk50ddfq5ok" path="res://assets/geometry/walls/Wall_Padded_STR_A_4.glb" id="4_56r43"]
+[ext_resource type="PackedScene" uid="uid://dm6yo4tnacgnm" path="res://assets/geometry/walls/WALL_ICRNR_Padded_A.glb" id="5_hb5vy"]
+
+[node name="Corridor_Tee" type="Node3D" unique_id=1912775003]
+
+[node name="Geometry" type="Node3D" parent="." unique_id=2054749483]
+
+[node name="WALL_ICRNR_Padded_A2" parent="Geometry" unique_id=1648079139 instance=ExtResource("5_hb5vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="WALL_ICRNR_Padded_A3" parent="Geometry" unique_id=1142915548 instance=ExtResource("5_hb5vy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0, -4)
+
+[node name="CEIL_TEE_A2" parent="Geometry" unique_id=2071931852 instance=ExtResource("2_jhd4a")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, 4)
+
+[node name="FLR_TEE_A2" parent="Geometry" unique_id=164448636 instance=ExtResource("3_4s6qu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, 4)
+
+[node name="Wall_Padded_STR_A_42" parent="Geometry" unique_id=33460089 instance=ExtResource("4_56r43")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 0)
+
+[node name="Wall_Padded_STR_A_43" parent="Geometry" unique_id=460087638 instance=ExtResource("4_56r43")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 4)

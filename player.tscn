@@ -1,13 +1,36 @@
 [gd_scene format=3 uid="uid://c88pfdot3fhe4"]
 
+[ext_resource type="Script" uid="uid://it88ph7g1cey" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dhj7rwpa8dbbe" path="res://actors/player/components/camera_rig.gd" id="2_onrkg"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bhunq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bhunq"]
 
 [node name="Player" type="CharacterBody3D" unique_id=747017444]
+script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=90696748]
 shape = SubResource("CapsuleShape3D_bhunq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=290031930]
 mesh = SubResource("CapsuleMesh_bhunq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1133232292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47815388, -0.44597813)
+light_energy = 0.3
+omni_range = 4.286
+omni_attenuation = 0.5
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=497660468]
+script = ExtResource("2_onrkg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CameraRig" unique_id=561486166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5221757)
+light_energy = 0.5
+spot_range = 29.395
+spot_angle = 55.0
+spot_angle_attenuation = 0.45
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=1462046722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65201044, -0.51424277)

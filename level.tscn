@@ -4,7 +4,4 @@
 
 [node name="Level" type="Node3D" unique_id=346581259]
 
-[node name="Room" parent="." unique_id=1912775003 instance=ExtResource("1_u52ul")]
-
-[node name="Room2" parent="." unique_id=137346211 instance=ExtResource("1_u52ul")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+[node name="Corridor_Section" parent="." unique_id=1912775003 instance=ExtResource("1_u52ul")]
