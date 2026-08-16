@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cqfd0fmsl1bym"]
 
+[ext_resource type="VoxelGIData" uid="uid://cmvr0fq4ur2fr" path="res://world.VoxelGI_data.res" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://dnaxw3t4et8a8" path="res://level.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://c88pfdot3fhe4" path="res://player.tscn" id="2_fj7yv"]
-[ext_resource type="Script" path="res://ui/build_label.gd" id="3_build_label"]
+[ext_resource type="Script" uid="uid://4s2wmwfksdpd" path="res://ui/build_label.gd" id="3_build_label"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,8 +16,13 @@ sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
 [sub_resource type="Environment" id="Environment_aqk2v"]
 background_mode = 2
 sky = SubResource("Sky_tlwt5")
+ambient_light_source = 2
+ambient_light_color = Color(0.16862746, 0.23921569, 0.36078432, 1)
+ambient_light_energy = 0.2
 tonemap_mode = 2
 ssao_enabled = true
+ssao_intensity = 1.0
+ssao_light_affect = 1.0
 glow_enabled = true
 
 [node name="World" type="Node3D" unique_id=1684630163]
@@ -24,14 +30,17 @@ glow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2007424131]
 environment = SubResource("Environment_aqk2v")
 
+[node name="VoxelGI" type="VoxelGI" parent="WorldEnvironment" unique_id=570873989]
+data = ExtResource("1_aqk2v")
+
 [node name="Player" parent="." unique_id=747017444 instance=ExtResource("2_fj7yv")]
 transform = Transform3D(0.100099444, 0, -0.9949774, 0, 1, 0, 0.9949774, 0, 0.100099444, 0, 1.0294427, 0)
 
 [node name="Level" parent="." unique_id=346581259 instance=ExtResource("1_f3sb7")]
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=25598063]
 
-[node name="BuildLabel" type="Label" parent="HUD"]
+[node name="BuildLabel" type="Label" parent="HUD" unique_id=1825158639]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -40,7 +49,6 @@ offset_top = 12.0
 offset_right = -12.0
 offset_bottom = 35.0
 grow_horizontal = 0
-mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
 theme_override_constants/outline_size = 4
 text = "Build:"

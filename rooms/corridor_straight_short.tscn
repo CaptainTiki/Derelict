@@ -41,3 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 
 [node name="Wall_Padded_STR_A_43" parent="Geometry" unique_id=1858341555 instance=ExtResource("4_2qilp")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Geometry" unique_id=975743000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8496854, 0)

@@ -26,8 +26,9 @@ omni_attenuation = 0.5
 script = ExtResource("2_onrkg")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CameraRig" unique_id=561486166]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5221757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6121639, -0.5221757)
 light_energy = 0.5
+shadow_enabled = true
 spot_range = 29.395
 spot_angle = 55.0
 spot_angle_attenuation = 0.45
