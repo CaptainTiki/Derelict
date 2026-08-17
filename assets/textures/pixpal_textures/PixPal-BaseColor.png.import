@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct3ph42l0fl1n"
-path.s3tc="res://.godot/imported/PixPal-BaseColor.png-a2f15ecf30431b0047cf4a726197f9c0.s3tc.ctex"
+path="res://.godot/imported/PixPal-BaseColor.png-a2f15ecf30431b0047cf4a726197f9c0.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "c8dc4c0d0440d6a46a78624ef794cd0f"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/textures/pixpal_textures/PixPal-BaseColor.png"
-dest_files=["res://.godot/imported/PixPal-BaseColor.png-a2f15ecf30431b0047cf4a726197f9c0.s3tc.ctex"]
+dest_files=["res://.godot/imported/PixPal-BaseColor.png-a2f15ecf30431b0047cf4a726197f9c0.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +26,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

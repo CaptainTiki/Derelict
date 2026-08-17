@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1r1vye0comuv"
-path.s3tc="res://.godot/imported/PixPal-Attributes.png-b8054b689bea36e3d5a4114fe6a36f66.s3tc.ctex"
+path="res://.godot/imported/PixPal-Attributes.png-b8054b689bea36e3d5a4114fe6a36f66.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "043eb07423174a433ab474f8cd4eb28d"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/textures/pixpal_textures/PixPal-Attributes.png"
-dest_files=["res://.godot/imported/PixPal-Attributes.png-b8054b689bea36e3d5a4114fe6a36f66.s3tc.ctex"]
+dest_files=["res://.godot/imported/PixPal-Attributes.png-b8054b689bea36e3d5a4114fe6a36f66.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +26,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

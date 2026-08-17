@@ -36,11 +36,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0
 [node name="FLR_WALK_A5" parent="Geometry" unique_id=521619230 instance=ExtResource("3_8sumy")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -1)
 
-[node name="Wall_Padded_STR_A_42" parent="Geometry" unique_id=1915152259 instance=ExtResource("4_2qilp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
-
-[node name="Wall_Padded_STR_A_43" parent="Geometry" unique_id=1858341555 instance=ExtResource("4_2qilp")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -2)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="Geometry" unique_id=975743000]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8496854, 0)
+light_energy = 0.75
+shadow_enabled = true
+omni_attenuation = 1.25
+
+[node name="Wall_Padded_STR_A_42" parent="Geometry" unique_id=1594177582 instance=ExtResource("4_2qilp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Wall_Padded_STR_A_43" parent="Geometry" unique_id=1857441868 instance=ExtResource("4_2qilp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, -2)
