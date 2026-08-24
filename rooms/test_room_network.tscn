@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://rooms/test_airlock.tscn" id="1_airlock"]
+[ext_resource type="PackedScene" path="res://rooms/corridor_straight.tscn" id="2_straight"]
+[ext_resource type="PackedScene" path="res://rooms/corridor_cross.tscn" id="3_cross"]
+[ext_resource type="PackedScene" path="res://rooms/room_control.tscn" id="4_control"]
+[ext_resource type="PackedScene" path="res://rooms/room_maintenance.tscn" id="5_maintenance"]
+[ext_resource type="PackedScene" path="res://rooms/room_secure_chamber.tscn" id="6_secure"]
+
+[node name="TestRoomNetwork" type="Node3D"]
+
+[node name="Airlock" parent="." instance=ExtResource("1_airlock")]
+
+[node name="EastCorridor" type="Node3D" parent="."]
+
+[node name="Straight_00" parent="EastCorridor" instance=ExtResource("2_straight")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, -5)
+
+[node name="Straight_01" parent="EastCorridor" instance=ExtResource("2_straight")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, -5)
+
+[node name="Hub" parent="." instance=ExtResource("3_cross")]
+position = Vector3(20, 0, -10)
+
+[node name="ControlBranch" type="Node3D" parent="."]
+
+[node name="Straight" parent="ControlBranch" instance=ExtResource("2_straight")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 0, -5)
+
+[node name="ControlRoom" parent="ControlBranch" instance=ExtResource("4_control")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30, 0, 0)
+
+[node name="MaintenanceBranch" type="Node3D" parent="."]
+
+[node name="Straight" parent="MaintenanceBranch" instance=ExtResource("2_straight")]
+position = Vector3(20, 0, -5)
+
+[node name="MaintenanceRoom" parent="MaintenanceBranch" instance=ExtResource("5_maintenance")]
+position = Vector3(20, 0, 0)
+
+[node name="SecureBranch" type="Node3D" parent="."]
+
+[node name="Straight" parent="SecureBranch" instance=ExtResource("2_straight")]
+position = Vector3(20, 0, -15)
+
+[node name="SecureRoom" parent="SecureBranch" instance=ExtResource("6_secure")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 30, 0, -15)
+
+[node name="NetworkOrigin" type="Marker3D" parent="."]
+
+[node name="HubFocus" type="Marker3D" parent="."]
+position = Vector3(22.5, 1.5, -7.5)

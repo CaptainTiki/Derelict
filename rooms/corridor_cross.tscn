@@ -1,27 +1,54 @@
-[gd_scene format=3 uid="uid://gwufmqkn4smv"]
+[gd_scene format=3]
 
-[ext_resource type="PackedScene" uid="uid://dm6yo4tnacgnm" path="res://assets/geometry/walls/WALL_ICRNR_Padded_A.glb" id="1_s5iho"]
-[ext_resource type="PackedScene" uid="uid://cfd30rrkbbepq" path="res://assets/geometry/ceilings/CEIL_CROSS_A.glb" id="2_loag7"]
-[ext_resource type="PackedScene" uid="uid://cql8ja4k7pcj4" path="res://assets/geometry/floors/FLR_CROSS_A.glb" id="3_s5iho"]
+[ext_resource type="PackedScene" uid="uid://b6bvrt8fppwmf" path="res://assets/geometry/floors/SM_Bld_Floor_02.glb" id="1_floor"]
+[ext_resource type="PackedScene" uid="uid://d0ssdre23eddn" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="2_ceiling"]
+[ext_resource type="PackedScene" uid="uid://c27uhf2as4sar" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="3_arch"]
+[ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="4_light"]
 
-[node name="Corridor_Tee" type="Node3D" unique_id=1912775003]
+[node name="CorridorCross" type="Node3D"]
 
-[node name="Geometry" type="Node3D" parent="." unique_id=2054749483]
+[node name="Floor" parent="." instance=ExtResource("1_floor")]
 
-[node name="WALL_ICRNR_Padded_A2" parent="Geometry" unique_id=1648079139 instance=ExtResource("1_s5iho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+[node name="Ceiling" parent="." instance=ExtResource("2_ceiling")]
 
-[node name="WALL_ICRNR_Padded_A3" parent="Geometry" unique_id=1142915548 instance=ExtResource("1_s5iho")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0, -4)
+[node name="PortalFrames" type="Node3D" parent="."]
 
-[node name="WALL_ICRNR_Padded_A4" parent="Geometry" unique_id=791647732 instance=ExtResource("1_s5iho")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, -2)
+[node name="SouthArch" parent="PortalFrames" instance=ExtResource("3_arch")]
 
-[node name="WALL_ICRNR_Padded_A5" parent="Geometry" unique_id=1598869326 instance=ExtResource("1_s5iho")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0000002, 0, 4)
+[node name="NorthArch" parent="PortalFrames" instance=ExtResource("3_arch")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 5)
 
-[node name="CEIL_CROSS_A2" parent="Geometry" unique_id=1077460210 instance=ExtResource("2_loag7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+[node name="WestArch" parent="PortalFrames" instance=ExtResource("3_arch")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
 
-[node name="FLR_CROSS_A2" parent="Geometry" unique_id=1887345423 instance=ExtResource("3_s5iho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+[node name="EastArch" parent="PortalFrames" instance=ExtResource("3_arch")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5, 0, 0)
+
+[node name="PoweredLighting" type="Node3D" parent="."]
+
+[node name="LightPanel" parent="PoweredLighting" instance=ExtResource("4_light")]
+position = Vector3(2.5, 3.78, 2.5)
+
+[node name="Light" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(2.5, 3.15, 2.5)
+light_color = Color(0.55, 0.82, 1, 1)
+light_energy = 2.6
+shadow_enabled = true
+omni_range = 8.0
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="North" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 5)
+
+[node name="East" type="Marker3D" parent="Connections"]
+position = Vector3(5, 0, 2.5)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="South" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 0)
+rotation = Vector3(0, 3.1415927, 0)
+
+[node name="West" type="Marker3D" parent="Connections"]
+position = Vector3(0, 0, 2.5)
+rotation = Vector3(0, -1.5707963, 0)

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtkvfy65jblr5"]
+
+[ext_resource type="Texture2D" uid="uid://dbby8fvlu8giq" path="res://assets/textures/PolygonSciFiSpace_Texture_01_A.png" id="1_albedo"]
+
+[resource]
+resource_name = "SciFi Space - Unpowered"
+albedo_texture = ExtResource("1_albedo")
+roughness = 0.68
+texture_filter = 5
+texture_repeat = false

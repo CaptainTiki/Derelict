@@ -1,0 +1,162 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bgndjknyervmf" path="res://assets/geometry/floors/SM_Bld_Floor_05.glb" id="1_floor"]
+[ext_resource type="PackedScene" uid="uid://b00vui3gk8fsy" path="res://assets/geometry/floors/SM_Bld_Floor_011.glb" id="2_hatch"]
+[ext_resource type="PackedScene" uid="uid://d1qxf8c4od6ac" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="3_wall"]
+[ext_resource type="PackedScene" uid="uid://cg6s5c1db7nxi" path="res://assets/geometry/walls/SM_Bld_Wall_02.glb" id="4_wall_detail"]
+[ext_resource type="PackedScene" uid="uid://dq2k5nqwtupuy" path="res://assets/geometry/walls/SM_Bld_Wall_Mechanical_01.glb" id="5_wall_mech"]
+[ext_resource type="PackedScene" uid="uid://dovijhac6re70" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.glb" id="6_roof"]
+[ext_resource type="PackedScene" uid="uid://d0ssdre23eddn" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="7_light_bay"]
+[ext_resource type="PackedScene" uid="uid://cp0cinhyys3bm" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.glb" id="8_frame"]
+[ext_resource type="PackedScene" uid="uid://culiudofoit0j" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05__SM_Bld_Wall_Door_01.glb" id="9_leaf_a"]
+[ext_resource type="PackedScene" uid="uid://cqwvqq5ujebvj" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.glb" id="10_leaf_b"]
+[ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="11_light"]
+[ext_resource type="PackedScene" uid="uid://b5vttg6kf805a" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="12_button"]
+[ext_resource type="PackedScene" uid="uid://vptimce7ujfw" path="res://assets/geometry/controls/SM_Prop_Detail_Keypad_01.glb" id="13_keypad"]
+
+[node name="SecureChamber" type="Node3D"]
+
+[node name="Floors" type="Node3D" parent="."]
+
+[node name="Floor_00" parent="Floors" instance=ExtResource("1_floor")]
+
+[node name="Floor_01" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 0)
+
+[node name="Floor_02" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(10, 0, 0)
+
+[node name="Floor_03" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(0, 0, 5)
+
+[node name="SecureHatch" parent="Floors" instance=ExtResource("2_hatch")]
+position = Vector3(5, 0, 5)
+
+[node name="Floor_04" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(10, 0, 5)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="SouthLeft" parent="Walls" instance=ExtResource("3_wall")]
+
+[node name="SouthRight" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector3(10, 0, 0)
+
+[node name="NorthLeft" parent="Walls" instance=ExtResource("5_wall_mech")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 10)
+
+[node name="NorthRight" parent="Walls" instance=ExtResource("5_wall_mech")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15, 0, 10)
+
+[node name="West_00" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
+
+[node name="West_01" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 10)
+
+[node name="East_00" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 0)
+
+[node name="East_01" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 5)
+
+[node name="Entrance" type="Node3D" parent="."]
+position = Vector3(5, 0, 0)
+
+[node name="Frame" parent="Entrance" instance=ExtResource("8_frame")]
+
+[node name="DoorLeafA" parent="Entrance" instance=ExtResource("9_leaf_a")]
+
+[node name="DoorLeafB" parent="Entrance" instance=ExtResource("10_leaf_b")]
+
+[node name="InteriorControl" parent="Entrance" instance=ExtResource("12_button")]
+position = Vector3(0.65, 1.4, 0.68)
+
+[node name="SealedBulkhead" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 10)
+
+[node name="Frame" parent="SealedBulkhead" instance=ExtResource("8_frame")]
+
+[node name="DoorLeafA" parent="SealedBulkhead" instance=ExtResource("9_leaf_a")]
+
+[node name="DoorLeafB" parent="SealedBulkhead" instance=ExtResource("10_leaf_b")]
+
+[node name="Ceilings" type="Node3D" parent="."]
+
+[node name="Roof_00" parent="Ceilings" instance=ExtResource("6_roof")]
+
+[node name="LightBay_00" parent="Ceilings" instance=ExtResource("7_light_bay")]
+position = Vector3(5, 0, 0)
+
+[node name="Roof_01" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(10, 0, 0)
+
+[node name="Roof_02" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(0, 0, 5)
+
+[node name="LightBay_01" parent="Ceilings" instance=ExtResource("7_light_bay")]
+position = Vector3(5, 0, 5)
+
+[node name="Roof_03" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(10, 0, 5)
+
+[node name="PoweredLighting" type="Node3D" parent="."]
+
+[node name="Panel_00" parent="PoweredLighting" instance=ExtResource("11_light")]
+position = Vector3(3.75, 3.78, 5)
+
+[node name="Light_00" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(3.75, 3.15, 5)
+light_color = Color(0.5, 0.8, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 8.0
+
+[node name="Panel_01" parent="PoweredLighting" instance=ExtResource("11_light")]
+position = Vector3(11.25, 3.78, 5)
+
+[node name="Light_01" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(11.25, 3.15, 5)
+light_color = Color(0.5, 0.8, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 8.0
+
+[node name="EmergencyLighting" type="Node3D" parent="."]
+visible = false
+
+[node name="EmergencyRed_00" type="OmniLight3D" parent="EmergencyLighting"]
+position = Vector3(2.0, 2.3, 8.5)
+light_color = Color(1, 0.08, 0.03, 1)
+light_energy = 2.2
+omni_range = 6.0
+
+[node name="EmergencyRed_01" type="OmniLight3D" parent="EmergencyLighting"]
+position = Vector3(13.0, 2.3, 8.5)
+light_color = Color(1, 0.08, 0.03, 1)
+light_energy = 2.2
+omni_range = 6.0
+
+[node name="Controls" type="Node3D" parent="."]
+
+[node name="EntrySwitch" parent="Controls" instance=ExtResource("12_button")]
+position = Vector3(5.65, 1.4, 0.68)
+
+[node name="BulkheadKeypad" parent="Controls" instance=ExtResource("13_keypad")]
+position = Vector3(7.5, 1.55, 9.3)
+rotation = Vector3(1.5707963, 0, 3.1415927)
+
+[node name="BulkheadInteractionPoint" type="Marker3D" parent="Controls"]
+position = Vector3(7.5, 1.55, 8.8)
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="South" type="Marker3D" parent="Connections"]
+position = Vector3(7.5, 0, 0)
+rotation = Vector3(0, 3.1415927, 0)
+
+[node name="RoomFocus" type="Marker3D" parent="."]
+position = Vector3(7.5, 1.5, 5)
+
+[node name="SealedObjective" type="Marker3D" parent="."]
+position = Vector3(7.5, 1.5, 8.5)

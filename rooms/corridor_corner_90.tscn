@@ -1,16 +1,18 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" uid="uid://bc4jt820kwk7b" path="res://assets/geometry/floors/SM_Bld_Floor_03.glb" id="1_floor"]
+[ext_resource type="PackedScene" uid="uid://c6ij0m2d7mefq" path="res://assets/geometry/floors/SM_Bld_Floor_01.glb" id="1_floor"]
 [ext_resource type="PackedScene" uid="uid://d1qxf8c4od6ac" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="2_wall"]
-[ext_resource type="PackedScene" uid="uid://b17ri4mub1g04" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.glb" id="3_ceiling"]
+[ext_resource type="PackedScene" uid="uid://dovijhac6re70" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.glb" id="3_ceiling"]
 [ext_resource type="PackedScene" uid="uid://c27uhf2as4sar" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="4_arch"]
 [ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="5_light"]
 
-[node name="CorridorTee" type="Node3D"]
+[node name="CorridorCorner90" type="Node3D"]
 
 [node name="Floor" parent="." instance=ExtResource("1_floor")]
 
 [node name="Walls" type="Node3D" parent="."]
+
+[node name="SouthWall" parent="Walls" instance=ExtResource("2_wall")]
 
 [node name="WestWall" parent="Walls" instance=ExtResource("2_wall")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
@@ -18,8 +20,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="Ceiling" parent="." instance=ExtResource("3_ceiling")]
 
 [node name="PortalFrames" type="Node3D" parent="."]
-
-[node name="SouthArch" parent="PortalFrames" instance=ExtResource("4_arch")]
 
 [node name="NorthArch" parent="PortalFrames" instance=ExtResource("4_arch")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 5)
@@ -35,7 +35,7 @@ position = Vector3(2.5, 3.78, 2.5)
 [node name="Light" type="OmniLight3D" parent="PoweredLighting"]
 position = Vector3(2.5, 3.15, 2.5)
 light_color = Color(0.55, 0.82, 1, 1)
-light_energy = 2.4
+light_energy = 2.2
 shadow_enabled = true
 omni_range = 7.5
 
@@ -47,7 +47,3 @@ position = Vector3(2.5, 0, 5)
 [node name="East" type="Marker3D" parent="Connections"]
 position = Vector3(5, 0, 2.5)
 rotation = Vector3(0, 1.5707963, 0)
-
-[node name="South" type="Marker3D" parent="Connections"]
-position = Vector3(2.5, 0, 0)
-rotation = Vector3(0, 3.1415927, 0)

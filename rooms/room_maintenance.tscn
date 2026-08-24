@@ -1,0 +1,147 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://c13v0puqtp4rq" path="res://assets/geometry/floors/SM_Bld_Floor_010.glb" id="1_floor"]
+[ext_resource type="PackedScene" uid="uid://c4h4i0qsnyrei" path="res://assets/geometry/floors/SM_Bld_Floor_07.glb" id="2_hazard_floor"]
+[ext_resource type="PackedScene" uid="uid://d1qxf8c4od6ac" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="3_wall"]
+[ext_resource type="PackedScene" uid="uid://cg6s5c1db7nxi" path="res://assets/geometry/walls/SM_Bld_Wall_02.glb" id="4_wall_detail"]
+[ext_resource type="PackedScene" uid="uid://dq2k5nqwtupuy" path="res://assets/geometry/walls/SM_Bld_Wall_Mechanical_01.glb" id="5_wall_mech"]
+[ext_resource type="PackedScene" uid="uid://dovijhac6re70" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.glb" id="6_roof"]
+[ext_resource type="PackedScene" uid="uid://b17ri4mub1g04" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.glb" id="7_vent_bay"]
+[ext_resource type="PackedScene" uid="uid://d0ssdre23eddn" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="8_light_bay"]
+[ext_resource type="PackedScene" uid="uid://c27uhf2as4sar" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="9_arch"]
+[ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="10_light"]
+[ext_resource type="PackedScene" uid="uid://seqe0xylxwsm" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="11_vent"]
+[ext_resource type="PackedScene" uid="uid://d0miatl6d0pvi" path="res://assets/geometry/vents/SM_Prop_Detail_Pipe_Broken_01.glb" id="12_pipe"]
+[ext_resource type="PackedScene" uid="uid://d4ipsm44sg35" path="res://assets/geometry/damage/SM_Prop_Detail_Panel_Broken_01.glb" id="13_damage"]
+[ext_resource type="PackedScene" uid="uid://b5vttg6kf805a" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="14_button"]
+
+[node name="MaintenanceRoom" type="Node3D"]
+
+[node name="Floors" type="Node3D" parent="."]
+
+[node name="Floor_00" parent="Floors" instance=ExtResource("1_floor")]
+
+[node name="Floor_01" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 0)
+
+[node name="HazardBay" parent="Floors" instance=ExtResource("2_hazard_floor")]
+position = Vector3(0, 0, 5)
+
+[node name="Floor_02" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 5)
+
+[node name="Floor_03" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(0, 0, 10)
+
+[node name="Floor_04" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 10)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="SouthWall" parent="Walls" instance=ExtResource("3_wall")]
+position = Vector3(5, 0, 0)
+
+[node name="NorthLeft" parent="Walls" instance=ExtResource("5_wall_mech")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 15)
+
+[node name="NorthRight" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 15)
+
+[node name="West_00" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
+
+[node name="West_01" parent="Walls" instance=ExtResource("3_wall")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 10)
+
+[node name="West_02" parent="Walls" instance=ExtResource("5_wall_mech")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)
+
+[node name="East_00" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, 0)
+
+[node name="East_01" parent="Walls" instance=ExtResource("5_wall_mech")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, 5)
+
+[node name="East_02" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, 10)
+
+[node name="EntranceArch" parent="." instance=ExtResource("9_arch")]
+
+[node name="Ceilings" type="Node3D" parent="."]
+
+[node name="Roof_00" parent="Ceilings" instance=ExtResource("6_roof")]
+
+[node name="Roof_01" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(5, 0, 0)
+
+[node name="VentBay" parent="Ceilings" instance=ExtResource("7_vent_bay")]
+position = Vector3(0, 0, 5)
+
+[node name="Roof_02" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(5, 0, 5)
+
+[node name="Roof_03" parent="Ceilings" instance=ExtResource("6_roof")]
+position = Vector3(0, 0, 10)
+
+[node name="LightBay" parent="Ceilings" instance=ExtResource("8_light_bay")]
+position = Vector3(5, 0, 10)
+
+[node name="PoweredLighting" type="Node3D" parent="."]
+
+[node name="Panel_00" parent="PoweredLighting" instance=ExtResource("10_light")]
+position = Vector3(2.5, 3.78, 2.5)
+
+[node name="Light_00" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(2.5, 3.1, 2.5)
+light_color = Color(0.5, 0.72, 0.9, 1)
+light_energy = 1.8
+shadow_enabled = true
+omni_range = 7.0
+
+[node name="Panel_01" parent="PoweredLighting" instance=ExtResource("10_light")]
+position = Vector3(7.5, 3.78, 12.5)
+
+[node name="Light_01" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(7.5, 3.1, 12.5)
+light_color = Color(0.5, 0.72, 0.9, 1)
+light_energy = 1.6
+shadow_enabled = true
+omni_range = 7.0
+
+[node name="Controls" type="Node3D" parent="."]
+
+[node name="UtilitySwitch" parent="Controls" instance=ExtResource("14_button")]
+position = Vector3(5.65, 1.4, 0.65)
+
+[node name="UtilitySwitchInteractionPoint" type="Marker3D" parent="Controls"]
+position = Vector3(5.65, 1.4, 1.0)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="WallVent" parent="Props" instance=ExtResource("11_vent")]
+position = Vector3(0.65, 2.35, 7.5)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="BrokenPipe" parent="Props" instance=ExtResource("12_pipe")]
+position = Vector3(6.5, 0.24, 6.0)
+rotation = Vector3(0, 1.5707963, 0)
+
+[node name="DamagedPanel" parent="Props" instance=ExtResource("13_damage")]
+position = Vector3(2.5, 0.015, 7.5)
+
+[node name="FXOrigins" type="Node3D" parent="Props"]
+
+[node name="SteamOrigin" type="Marker3D" parent="Props/FXOrigins"]
+position = Vector3(1.0, 2.35, 7.5)
+
+[node name="SparksOrigin" type="Marker3D" parent="Props/FXOrigins"]
+position = Vector3(2.5, 0.45, 7.5)
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="South" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 0)
+rotation = Vector3(0, 3.1415927, 0)
+
+[node name="RoomFocus" type="Marker3D" parent="."]
+position = Vector3(5, 1.5, 7.5)
