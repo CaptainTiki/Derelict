@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02__SM_Bld_Wall_Door_01.glb" id="1_visual"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_door"]
+size = Vector3(1.84, 2.44, 0.43)
+
+[node name="SM_Bld_Wall_Doorframe_02__SM_Bld_Wall_Door_01" type="Node3D"]
+
+[node name="Visual" parent="." instance=ExtResource("1_visual")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+position = Vector3(1.77, 1.215, 0)
+shape = SubResource("BoxShape3D_door")

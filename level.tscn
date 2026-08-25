@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnaxw3t4et8a8"]
 
-[ext_resource type="PackedScene" path="res://rooms/test_room_network.tscn" id="1_u52ul"]
+[ext_resource type="PackedScene" path="res://levels/biome_showcase.tscn" id="1_showcase"]
 
 [node name="Level" type="Node3D" unique_id=346581259]
 
-[node name="RoomNetwork" parent="." unique_id=1625150501 instance=ExtResource("1_u52ul")]
+[node name="BiomeShowcase" parent="." instance=ExtResource("1_showcase")]

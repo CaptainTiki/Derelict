@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://gameplay/doors/bulkhead_door_02.tscn" id="1_door"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.tscn" id="2_arch"]
+
+[node name="ServicePortal" type="Node3D"]
+
+[node name="Door" parent="." instance=ExtResource("1_door")]
+proximity_enabled = true
+auto_close_enabled = true
+auto_close_delay = 1.5
+
+[node name="CorridorArch" parent="." instance=ExtResource("2_arch")]
+position = Vector3(0, 0, -0.5)
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="RoomSide" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 0.5)
+
+[node name="CorridorSide" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, -0.5)
+rotation = Vector3(0, 3.1415927, 0)

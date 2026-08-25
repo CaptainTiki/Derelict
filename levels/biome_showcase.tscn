@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://rooms/biomes/service/service_entry_room.tscn" id="1_entry"]
+[ext_resource type="PackedScene" path="res://rooms/biomes/service/service_corridor_straight_10m.tscn" id="2_service_corridor"]
+[ext_resource type="PackedScene" path="res://rooms/biomes/service/service_maintenance_room.tscn" id="3_maintenance"]
+[ext_resource type="PackedScene" path="res://rooms/biomes/operations/operations_corridor_straight_5m.tscn" id="4_operations_corridor"]
+[ext_resource type="PackedScene" path="res://rooms/biomes/operations/operations_control_room.tscn" id="5_control"]
+
+[node name="BiomeShowcase" type="Node3D"]
+
+[node name="ServiceEntry" parent="." instance=ExtResource("1_entry")]
+position = Vector3(-5, 0, -5)
+
+[node name="ServiceCorridor" parent="." instance=ExtResource("2_service_corridor")]
+position = Vector3(0, 0, 5)
+
+[node name="MaintenanceTransition" parent="." instance=ExtResource("3_maintenance")]
+position = Vector3(-5, 0, 15)
+
+[node name="OperationsCorridor" parent="." instance=ExtResource("4_operations_corridor")]
+position = Vector3(0, 0, 25)
+
+[node name="OperationsControl" parent="." instance=ExtResource("5_control")]
+position = Vector3(-5, 0, 30)
+
+[node name="PlayerStart" type="Marker3D" parent="."]
+position = Vector3(2.5, 1.03, 0)
+rotation = Vector3(0, 3.1415927, 0)

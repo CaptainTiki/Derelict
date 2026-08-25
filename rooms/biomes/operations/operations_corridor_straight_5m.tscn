@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_011.tscn" id="1_floor"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01_Alt.tscn" id="2_wall"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_02.tscn" id="3_wall_detail"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.tscn" id="4_ceiling"]
+
+[node name="OperationsCorridorStraight5m" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_floor")]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="WestWall" parent="Walls" instance=ExtResource("2_wall")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
+
+[node name="EastWall" parent="Walls" instance=ExtResource("3_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5, 0, 0)
+
+[node name="Ceiling" parent="." instance=ExtResource("4_ceiling")]
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="South" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 0)
+rotation = Vector3(0, 3.1415927, 0)
+
+[node name="North" type="Marker3D" parent="Connections"]
+position = Vector3(2.5, 0, 5)

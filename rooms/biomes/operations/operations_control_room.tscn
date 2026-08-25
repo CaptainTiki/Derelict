@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_011.tscn" id="1_floor"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01_Alt.tscn" id="2_wall"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_02.tscn" id="3_wall_detail"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_06.tscn" id="4_wall_accent"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.tscn" id="5_ceiling"]
+[ext_resource type="PackedScene" path="res://rooms/portals/operations_portal.tscn" id="6_portal"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="7_light_panel"]
+
+[node name="OperationsControlRoom" type="Node3D"]
+
+[node name="Floors" type="Node3D" parent="."]
+
+[node name="Floor_00" parent="Floors" instance=ExtResource("1_floor")]
+
+[node name="Floor_01" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 0)
+
+[node name="Floor_02" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(10, 0, 0)
+
+[node name="Floor_03" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(0, 0, 5)
+
+[node name="Floor_04" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 5)
+
+[node name="Floor_05" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(10, 0, 5)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="SouthWest" parent="Walls" instance=ExtResource("2_wall")]
+
+[node name="SouthEast" parent="Walls" instance=ExtResource("4_wall_accent")]
+position = Vector3(10, 0, 0)
+
+[node name="NorthWest" parent="Walls" instance=ExtResource("3_wall_detail")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 10)
+
+[node name="NorthCenter" parent="Walls" instance=ExtResource("2_wall")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 10)
+
+[node name="NorthEast" parent="Walls" instance=ExtResource("3_wall_detail")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15, 0, 10)
+
+[node name="WestSouth" parent="Walls" instance=ExtResource("3_wall_detail")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
+
+[node name="WestNorth" parent="Walls" instance=ExtResource("2_wall")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 10)
+
+[node name="EastSouth" parent="Walls" instance=ExtResource("4_wall_accent")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 0)
+
+[node name="EastNorth" parent="Walls" instance=ExtResource("3_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 0, 5)
+
+[node name="SouthEntrance" parent="." instance=ExtResource("6_portal")]
+position = Vector3(5, 0, 0)
+
+[node name="Ceilings" type="Node3D" parent="."]
+
+[node name="Ceiling_00" parent="Ceilings" instance=ExtResource("5_ceiling")]
+
+[node name="Ceiling_01" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(5, 0, 0)
+
+[node name="Ceiling_02" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(10, 0, 0)
+
+[node name="Ceiling_03" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(0, 0, 5)
+
+[node name="Ceiling_04" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(5, 0, 5)
+
+[node name="Ceiling_05" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(10, 0, 5)
+
+[node name="PoweredLighting" type="Node3D" parent="."]
+
+[node name="WestFixture" parent="PoweredLighting" instance=ExtResource("7_light_panel")]
+position = Vector3(2.5, 3.78, 5)
+
+[node name="WestLight" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(2.5, 3.1, 5)
+light_color = Color(0.52, 0.78, 1, 1)
+light_energy = 2.2
+shadow_enabled = true
+omni_range = 8.5
+
+[node name="CenterFixture" parent="PoweredLighting" instance=ExtResource("7_light_panel")]
+position = Vector3(7.5, 3.78, 5)
+
+[node name="CenterLight" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(7.5, 3.1, 5)
+light_color = Color(0.58, 0.84, 1, 1)
+light_energy = 2.4
+shadow_enabled = true
+omni_range = 8.5
+
+[node name="EastFixture" parent="PoweredLighting" instance=ExtResource("7_light_panel")]
+position = Vector3(12.5, 3.78, 5)
+
+[node name="EastLight" type="OmniLight3D" parent="PoweredLighting"]
+position = Vector3(12.5, 3.1, 5)
+light_color = Color(0.52, 0.78, 1, 1)
+light_energy = 2.2
+shadow_enabled = true
+omni_range = 8.5
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="South" type="Marker3D" parent="Connections"]
+position = Vector3(7.5, 0, 0)
+rotation = Vector3(0, 3.1415927, 0)
+
+[node name="RoomFocus" type="Marker3D" parent="."]
+position = Vector3(7.5, 1.5, 5)

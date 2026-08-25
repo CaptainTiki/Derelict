@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_010.tscn" id="1_floor"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_07.tscn" id="2_hazard"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_05.tscn" id="3_wall"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_06.tscn" id="4_wall_detail"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.tscn" id="5_ceiling"]
+[ext_resource type="PackedScene" path="res://rooms/portals/service_portal.tscn" id="6_portal"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="7_light_panel"]
+
+[node name="ServiceEntryRoom" type="Node3D"]
+
+[node name="Floors" type="Node3D" parent="."]
+
+[node name="SouthWest" parent="Floors" instance=ExtResource("1_floor")]
+
+[node name="SouthEast" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(5, 0, 0)
+
+[node name="NorthWest" parent="Floors" instance=ExtResource("1_floor")]
+position = Vector3(0, 0, 5)
+
+[node name="ExitHazard" parent="Floors" instance=ExtResource("2_hazard")]
+position = Vector3(5, 0, 5)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="SouthWest" parent="Walls" instance=ExtResource("3_wall")]
+
+[node name="SouthEast" parent="Walls" instance=ExtResource("4_wall_detail")]
+position = Vector3(5, 0, 0)
+
+[node name="NorthWest" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 10)
+
+[node name="WestSouth" parent="Walls" instance=ExtResource("3_wall")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 5)
+
+[node name="WestNorth" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 10)
+
+[node name="EastSouth" parent="Walls" instance=ExtResource("4_wall_detail")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, 0)
+
+[node name="EastNorth" parent="Walls" instance=ExtResource("3_wall")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, 5)
+
+[node name="NorthExit" parent="." instance=ExtResource("6_portal")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 10)
+
+[node name="Ceilings" type="Node3D" parent="."]
+
+[node name="SouthWest" parent="Ceilings" instance=ExtResource("5_ceiling")]
+
+[node name="SouthEast" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(5, 0, 0)
+
+[node name="NorthWest" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(0, 0, 5)
+
+[node name="NorthEast" parent="Ceilings" instance=ExtResource("5_ceiling")]
+position = Vector3(5, 0, 5)
+
+[node name="UnpoweredFixtures" type="Node3D" parent="."]
+
+[node name="SouthFixture" parent="UnpoweredFixtures" instance=ExtResource("7_light_panel")]
+position = Vector3(2.5, 3.78, 2.5)
+
+[node name="NorthFixture" parent="UnpoweredFixtures" instance=ExtResource("7_light_panel")]
+position = Vector3(7.5, 3.78, 7.5)
+
+[node name="Connections" type="Node3D" parent="."]
+
+[node name="North" type="Marker3D" parent="Connections"]
+position = Vector3(7.5, 0, 10)
+
+[node name="RoomFocus" type="Marker3D" parent="."]
+position = Vector3(5, 1.5, 5)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_02.glb" id="1_visual"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_arch_side"]
+size = Vector3(0.8, 5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_arch_header"]
+size = Vector3(3.4, 1.35, 1)
+
+[node name="SM_Bld_Corridor_Single_Arch_02" type="Node3D"]
+
+[node name="Visual" parent="." instance=ExtResource("1_visual")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Left" type="CollisionShape3D" parent="StaticBody3D"]
+position = Vector3(0.4, 1.5, 0)
+shape = SubResource("BoxShape3D_arch_side")
+
+[node name="Right" type="CollisionShape3D" parent="StaticBody3D"]
+position = Vector3(4.6, 1.5, 0)
+shape = SubResource("BoxShape3D_arch_side")
+
+[node name="Header" type="CollisionShape3D" parent="StaticBody3D"]
+position = Vector3(2.5, 3.325, 0)
+shape = SubResource("BoxShape3D_arch_header")
