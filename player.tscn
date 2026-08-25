@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://it88ph7g1cey" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dhj7rwpa8dbbe" path="res://actors/player/components/camera_rig.gd" id="2_onrkg"]
+[ext_resource type="Script" path="res://actors/player/components/player_interaction.gd" id="3_interaction"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bhunq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bhunq"]
 
-[node name="Player" type="CharacterBody3D" unique_id=747017444]
+[node name="Player" type="CharacterBody3D" unique_id=747017444 groups=["player"]]
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=90696748]
@@ -35,3 +36,14 @@ spot_angle_attenuation = 0.45
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=1462046722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65201044, -0.51424277)
+
+[node name="PlayerInteraction" type="Node3D" parent="CameraRig/Camera3D"]
+script = ExtResource("3_interaction")
+actor_path = NodePath("../../..")
+
+[node name="InteractionRay" type="RayCast3D" parent="CameraRig/Camera3D/PlayerInteraction"]
+enabled = true
+target_position = Vector3(0, 0, -3)
+collision_mask = 2
+collide_with_bodies = false
+collide_with_areas = true

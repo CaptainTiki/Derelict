@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.glb" id="1_visual"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_leaf"]
+size = Vector3(1.88, 2.44, 0.43)
+
+[node name="SM_Bld_Wall_Door_02" type="AnimatableBody3D"]
+
+[node name="Visual" parent="." instance=ExtResource("1_visual")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(3.215, 1.215, 0)
+shape = SubResource("BoxShape3D_leaf")
+

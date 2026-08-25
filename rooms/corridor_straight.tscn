@@ -1,9 +1,9 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" uid="uid://c6ij0m2d7mefq" path="res://assets/geometry/floors/SM_Bld_Floor_01.glb" id="1_floor"]
-[ext_resource type="PackedScene" uid="uid://d1qxf8c4od6ac" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="2_wall"]
-[ext_resource type="PackedScene" uid="uid://iglsuuj5427x" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_01.glb" id="3_ceiling"]
-[ext_resource type="PackedScene" uid="uid://c27uhf2as4sar" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="4_arch"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_01.tscn" id="1_floor"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01.tscn" id="2_wall"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_01.tscn" id="3_ceiling"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.tscn" id="4_arch"]
 [ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="5_light"]
 
 [node name="CorridorStraight" type="Node3D"]
