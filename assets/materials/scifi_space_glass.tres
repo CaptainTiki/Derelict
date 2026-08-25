@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c6v4d6t0f8q2m"]
+
+[resource]
+resource_name = "SciFi Space - Glass"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.08, 0.32, 0.38, 0.28)
+metallic = 0.0
+roughness = 0.12
+texture_filter = 5
+

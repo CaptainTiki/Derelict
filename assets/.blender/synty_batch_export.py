@@ -51,6 +51,10 @@ def placeholder_for(material):
 
 
 def export_object(obj, collection, root):
+    if not obj.data.vertices or not obj.data.polygons:
+        print(f"SKIPPED EMPTY MESH: {obj.name}")
+        return False
+
     output_directory = OUTPUT_ROOT.joinpath(*collection_path_from_root(collection, root))
     output_directory.mkdir(parents=True, exist_ok=True)
     output_file = output_directory / f"{obj.name}.glb"
@@ -97,6 +101,7 @@ def export_object(obj, collection, root):
         obj.hide_set(was_hidden)
 
     print(f"EXPORTED: {obj.name} -> {output_file}")
+    return True
 
 
 def main():
@@ -106,14 +111,22 @@ def main():
     if root is None:
         raise RuntimeError(f"Collection '{EXPORT_ROOT_NAME}' does not exist.")
 
-    exported = set()
+    processed = set()
+    export_count = 0
+    skipped_count = 0
     for collection in descendant_collections(root):
         for obj in collection.objects:
-            if obj.type != "MESH" or obj.name in exported:
+            if obj.type != "MESH" or obj.name in processed:
                 continue
-            export_object(obj, collection, root)
-            exported.add(obj.name)
-    print(f"DONE: Exported {len(exported)} GLB(s) to {OUTPUT_ROOT}")
+            if export_object(obj, collection, root):
+                export_count += 1
+            else:
+                skipped_count += 1
+            processed.add(obj.name)
+    print(
+        f"DONE: Exported {export_count} GLB(s), skipped {skipped_count} empty mesh(es) "
+        f"to {OUTPUT_ROOT}"
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5q1k3w9m7x2h"]
+
+[ext_resource type="Texture2D" path="res://assets/textures/PolygonSciFiSpace_Signs_Texture_01_B.png" id="1_albedo"]
+[ext_resource type="Texture2D" path="res://assets/textures/PolygonSciFiSpace_Signs_Texture_Emissive_01.png" id="2_emission"]
+
+[resource]
+resource_name = "SciFi Space - Signs"
+albedo_texture = ExtResource("1_albedo")
+roughness = 0.65
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.0
+emission_operator = 1
+emission_texture = ExtResource("2_emission")
+texture_filter = 5
+texture_repeat = false

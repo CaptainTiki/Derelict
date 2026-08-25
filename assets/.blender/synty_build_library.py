@@ -1,10 +1,12 @@
-"""Build the curated POLYGON Sci-Fi Space Blender source library.
+"""Build the complete static POLYGON Sci-Fi Space Blender source library.
 
-Run with Blender in background mode. The script imports the first Derelict
-test-zone batch, normalizes transforms and materials, creates an audition
-layout, and saves ``synty_space_library.blend`` beside this script.
+Run with Blender in background mode. The script discovers every static FBX in
+the pack's FBX directory, organizes the assets by family, normalizes transforms
+and materials, retains the first Derelict test-zone audition layout, and saves
+``synty_space_library.blend`` beside this script.
 """
 
+from collections import defaultdict
 from pathlib import Path
 import math
 import re
@@ -28,9 +30,9 @@ OPAQUE_MATERIAL = "M_SyntySpace_Opaque_A"
 GLASS_MATERIAL = "M_SyntySpace_Glass"
 SIGN_MATERIAL = "M_SyntySpace_Sign_B"
 
-# The first production test group. Alternatives are intentionally included so
-# they can be compared in the audition layout before the final room kit is set.
-ASSETS = {
+# The first production test group remains as a compact audition layout inside
+# the complete source library.
+AUDITION_ASSETS = {
     "floors": [
         "SM_Bld_Floor_01",
         "SM_Bld_Floor_02",
@@ -86,6 +88,84 @@ ASSETS = {
 }
 
 
+def asset_category(asset_name: str) -> str:
+    """Return a stable Godot geometry folder for a Synty asset name."""
+    if asset_name.startswith(("SM_Bld_Ceiling", "SM_Bld_Roof")):
+        return "ceilings"
+    if asset_name.startswith("SM_Bld_Floor"):
+        return "floors"
+    if asset_name.startswith("SM_Bld_Corridor"):
+        return "corridor"
+    if asset_name.startswith(("SM_Bld_Wall_Door", "SM_Bld_Wall_EscPod_Hatch")):
+        return "doors"
+    if asset_name.startswith(("SM_Bld_Wall_Pillar", "SM_Bld_Wall_Corner_Pillar")):
+        return "pillars"
+    if asset_name.startswith("SM_Bld_Wall"):
+        return "walls"
+
+    if asset_name.startswith("SM_Prop_Light"):
+        return "lights"
+    if asset_name.startswith((
+        "SM_Prop_Detail_Button",
+        "SM_Prop_Detail_Keypad",
+        "SM_Prop_Buttons",
+        "SM_Prop_ControlPanel",
+        "SM_Prop_HandScanner",
+        "SM_Prop_Joystick",
+        "SM_Prop_MapTable",
+        "SM_Prop_Radar",
+        "SM_Prop_Screen",
+    )):
+        return "controls"
+    if asset_name.startswith("SM_Prop_Detail_Panel_Broken"):
+        return "damage"
+    if asset_name.startswith((
+        "SM_Prop_Detail_Airvent",
+        "SM_Prop_Detail_Pipe_Broken",
+        "SM_Prop_AirVent",
+    )):
+        return "vents"
+
+    parts = asset_name.split("_")
+    family = parts[1].lower() if len(parts) > 1 else "misc"
+    subfamily = parts[2].lower() if len(parts) > 2 else "misc"
+    if family == "bld":
+        return f"buildings/{subfamily}"
+    if family == "prop":
+        return f"props/{subfamily}"
+    if family == "env":
+        return "environment"
+    if family == "veh":
+        return "vehicles"
+    if family == "ship":
+        return "ships"
+    if family in ("sign", "signborder"):
+        return "signs"
+    if family == "hud":
+        return "hud"
+    if family == "wep":
+        return "weapons"
+    if family == "chr":
+        return "character_parts"
+    if family == "fx":
+        return "fx"
+    return f"misc/{family}"
+
+
+def discover_assets():
+    """Discover the static FBX library and reject ambiguous duplicate names."""
+    by_name = {}
+    for fbx_path in sorted(FBX_ROOT.rglob("*.fbx")):
+        asset_name = fbx_path.stem
+        if asset_name in by_name:
+            raise RuntimeError(
+                f"Duplicate static asset name '{asset_name}': "
+                f"{by_name[asset_name]} and {fbx_path}"
+            )
+        by_name[asset_name] = fbx_path
+    return by_name
+
+
 def require_file(path: Path) -> None:
     if not path.is_file():
         raise FileNotFoundError(path)
@@ -98,6 +178,18 @@ def make_collection(name: str, parent=None):
     else:
         parent.children.link(collection)
     return collection
+
+
+def make_collection_path(path: str, parent, prefix: str = ""):
+    current = parent
+    for part in path.split("/"):
+        collection_name = f"{prefix}{part}"
+        existing = next(
+            (child for child in current.children if child.name == collection_name),
+            None,
+        )
+        current = existing or make_collection(collection_name, current)
+    return current
 
 
 def load_image(path: Path):
@@ -193,7 +285,7 @@ def unlink_object_everywhere(obj) -> None:
         collection.objects.unlink(obj)
 
 
-def normalize_mesh(obj, materials) -> None:
+def normalize_mesh(obj, asset_name, materials) -> None:
     bpy.ops.object.select_all(action="DESELECT")
     obj.hide_set(False)
     obj.select_set(True)
@@ -206,9 +298,9 @@ def normalize_mesh(obj, materials) -> None:
         obj["derelict_collision_source"] = True
         return
 
-    if "glass" in obj.name.lower():
+    if "glass" in obj.name.lower() or "glass" in asset_name.lower() or "clear" in asset_name.lower():
         canonical = materials[GLASS_MATERIAL]
-    elif obj.name.startswith("SM_Sign_"):
+    elif asset_name.startswith("SM_Sign_"):
         canonical = materials[SIGN_MATERIAL]
     else:
         canonical = materials[OPAQUE_MATERIAL]
@@ -225,8 +317,7 @@ def normalize_mesh(obj, materials) -> None:
         pass
 
 
-def import_asset(asset_name, category, source_category, export_category, materials):
-    fbx_path = FBX_ROOT / f"{asset_name}.fbx"
+def import_asset(asset_name, fbx_path, category, source_category, export_category, materials):
     require_file(fbx_path)
 
     before = set(bpy.data.objects)
@@ -261,7 +352,7 @@ def import_asset(asset_name, category, source_category, export_category, materia
         obj["derelict_source_fbx"] = str(fbx_path)
         obj["derelict_asset_group"] = asset_name
         if obj.type == "MESH":
-            normalize_mesh(obj, materials)
+            normalize_mesh(obj, asset_name, materials)
             if not obj.name.upper().startswith("UCX_"):
                 export_category.objects.link(obj)
                 visual_meshes.append(obj)
@@ -289,7 +380,7 @@ def build_audition_layout(imported_by_asset, audition_root):
     # a compound FBX share an offset so doors remain aligned with their frames.
     row_spacing = 9.0
     item_spacing = 7.0
-    for row, (category, names) in enumerate(ASSETS.items()):
+    for row, (category, names) in enumerate(AUDITION_ASSETS.items()):
         row_collection = make_collection(f"TEST_{category}", audition_root)
         for column, asset_name in enumerate(names):
             offset = (column * item_spacing, row * row_spacing, 0.0)
@@ -300,9 +391,15 @@ def build_audition_layout(imported_by_asset, audition_root):
 def main():
     for path in (ALBEDO_PATH, EMISSION_PATH, SIGN_PATH, SIGN_EMISSION_PATH):
         require_file(path)
-    for names in ASSETS.values():
+    for names in AUDITION_ASSETS.values():
         for asset_name in names:
             require_file(FBX_ROOT / f"{asset_name}.fbx")
+
+    discovered_assets = discover_assets()
+    assets_by_category = defaultdict(list)
+    for asset_name, fbx_path in discovered_assets.items():
+        category = "fx" if fbx_path.parent != FBX_ROOT else asset_category(asset_name)
+        assets_by_category[category].append(asset_name)
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.context.scene.name = "Synty Space Library"
@@ -324,17 +421,26 @@ def main():
     }
 
     imported_by_asset = {}
-    for category, names in ASSETS.items():
-        source_category = make_collection(f"SOURCE_{category}", source_root)
-        export_category = make_collection(category, export_root)
-        for asset_name in names:
-            imported_by_asset[asset_name] = import_asset(
-                asset_name,
-                category,
-                source_category,
-                export_category,
-                materials,
-            )
+    skipped_assets = []
+    for category in sorted(assets_by_category):
+        source_category = make_collection_path(category, source_root, "SOURCE_")
+        export_category = make_collection_path(category, export_root)
+        for asset_name in sorted(assets_by_category[category]):
+            try:
+                imported_by_asset[asset_name] = import_asset(
+                    asset_name,
+                    discovered_assets[asset_name],
+                    category,
+                    source_category,
+                    export_category,
+                    materials,
+                )
+            except RuntimeError as error:
+                if "ASCII FBX files are not supported" not in str(error):
+                    raise
+                imported_by_asset[asset_name] = []
+                skipped_assets.append(asset_name)
+                print(f"SKIPPED ASCII FBX: {asset_name} -> {discovered_assets[asset_name]}")
 
     build_audition_layout(imported_by_asset, audition_root)
 
@@ -348,7 +454,9 @@ def main():
 
     bpy.ops.wm.save_as_mainfile(filepath=str(OUTPUT_BLEND), check_existing=False)
     print(f"SAVED: {OUTPUT_BLEND}")
-    print(f"ASSETS: {sum(len(names) for names in ASSETS.values())}")
+    print(f"ASSETS: {len(discovered_assets) - len(skipped_assets)} imported")
+    print(f"SKIPPED: {skipped_assets}")
+    print(f"CATEGORIES: {len(assets_by_category)}")
     print(f"MATERIALS: {[material.name for material in bpy.data.materials]}")
 
 
