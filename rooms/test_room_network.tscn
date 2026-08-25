@@ -1,52 +1,53 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://vya623u1vaq"]
 
-[ext_resource type="PackedScene" path="res://rooms/test_airlock.tscn" id="1_airlock"]
+[ext_resource type="PackedScene" uid="uid://8ors3pnaxvu6" path="res://rooms/test_airlock.tscn" id="1_airlock"]
 [ext_resource type="PackedScene" path="res://rooms/corridor_straight.tscn" id="2_straight"]
 [ext_resource type="PackedScene" path="res://rooms/corridor_cross.tscn" id="3_cross"]
 [ext_resource type="PackedScene" path="res://rooms/room_control.tscn" id="4_control"]
 [ext_resource type="PackedScene" path="res://rooms/room_maintenance.tscn" id="5_maintenance"]
 [ext_resource type="PackedScene" path="res://rooms/room_secure_chamber.tscn" id="6_secure"]
 
-[node name="TestRoomNetwork" type="Node3D"]
+[node name="TestRoomNetwork" type="Node3D" unique_id=2094499534]
 
-[node name="Airlock" parent="." instance=ExtResource("1_airlock")]
+[node name="Room" parent="." unique_id=346581259 instance=ExtResource("1_airlock")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
-[node name="EastCorridor" type="Node3D" parent="."]
+[node name="EastCorridor" type="Node3D" parent="." unique_id=324246923]
 
-[node name="Straight_00" parent="EastCorridor" instance=ExtResource("2_straight")]
+[node name="Straight_00" parent="EastCorridor" unique_id=614974072 instance=ExtResource("2_straight")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, -5)
 
-[node name="Straight_01" parent="EastCorridor" instance=ExtResource("2_straight")]
+[node name="Straight_01" parent="EastCorridor" unique_id=1501558700 instance=ExtResource("2_straight")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, -5)
 
-[node name="Hub" parent="." instance=ExtResource("3_cross")]
-position = Vector3(20, 0, -10)
+[node name="Hub" parent="." unique_id=283574413 instance=ExtResource("3_cross")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
 
-[node name="ControlBranch" type="Node3D" parent="."]
+[node name="ControlBranch" type="Node3D" parent="." unique_id=288060028]
 
-[node name="Straight" parent="ControlBranch" instance=ExtResource("2_straight")]
+[node name="Straight" parent="ControlBranch" unique_id=720515829 instance=ExtResource("2_straight")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 0, -5)
 
-[node name="ControlRoom" parent="ControlBranch" instance=ExtResource("4_control")]
+[node name="ControlRoom" parent="ControlBranch" unique_id=496759340 instance=ExtResource("4_control")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 30, 0, 0)
 
-[node name="MaintenanceBranch" type="Node3D" parent="."]
+[node name="MaintenanceBranch" type="Node3D" parent="." unique_id=832230442]
 
-[node name="Straight" parent="MaintenanceBranch" instance=ExtResource("2_straight")]
-position = Vector3(20, 0, -5)
+[node name="Straight" parent="MaintenanceBranch" unique_id=336137638 instance=ExtResource("2_straight")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -5)
 
-[node name="MaintenanceRoom" parent="MaintenanceBranch" instance=ExtResource("5_maintenance")]
-position = Vector3(20, 0, 0)
+[node name="MaintenanceRoom" parent="MaintenanceBranch" unique_id=1477867234 instance=ExtResource("5_maintenance")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 
-[node name="SecureBranch" type="Node3D" parent="."]
+[node name="SecureBranch" type="Node3D" parent="." unique_id=393609960]
 
-[node name="Straight" parent="SecureBranch" instance=ExtResource("2_straight")]
-position = Vector3(20, 0, -15)
+[node name="Straight" parent="SecureBranch" unique_id=809064238 instance=ExtResource("2_straight")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -15)
 
-[node name="SecureRoom" parent="SecureBranch" instance=ExtResource("6_secure")]
+[node name="SecureRoom" parent="SecureBranch" unique_id=1057969882 instance=ExtResource("6_secure")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 30, 0, -15)
 
-[node name="NetworkOrigin" type="Marker3D" parent="."]
+[node name="NetworkOrigin" type="Marker3D" parent="." unique_id=1690073039]
 
-[node name="HubFocus" type="Marker3D" parent="."]
-position = Vector3(22.5, 1.5, -7.5)
+[node name="HubFocus" type="Marker3D" parent="." unique_id=2093952548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 1.5, -7.5)

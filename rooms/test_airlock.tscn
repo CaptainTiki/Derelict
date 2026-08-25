@@ -8,11 +8,6 @@
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.tscn" id="6_jxfi2"]
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.tscn" id="7_roof"]
 [ext_resource type="PackedScene" path="res://gameplay/doors/mechanical_door.tscn" id="8_door"]
-[ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="11_light"]
-[ext_resource type="PackedScene" uid="uid://b5vttg6kf805a" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="12_button"]
-[ext_resource type="PackedScene" uid="uid://seqe0xylxwsm" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="13_vent"]
-[ext_resource type="PackedScene" uid="uid://d0miatl6d0pvi" path="res://assets/geometry/vents/SM_Prop_Detail_Pipe_Broken_01.glb" id="14_pipe"]
-[ext_resource type="PackedScene" uid="uid://d4ipsm44sg35" path="res://assets/geometry/damage/SM_Prop_Detail_Panel_Broken_01.glb" id="15_damage"]
 [ext_resource type="PackedScene" path="res://gameplay/doors/door_control_panel.tscn" id="16_door_panel"]
 
 [node name="Room" type="Node3D" unique_id=346581259]
@@ -158,7 +153,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15,
 locked = true
 
 [node name="InteriorControl" parent="AirlockDoors/WestDoor" unique_id=1960078988 instance=ExtResource("16_door_panel")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.65, 1.4, -0.68)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 4.72639, 1.4, 0.35468864)
 target_door_path = NodePath("../Door")
 
 [node name="EastDoor" type="Node3D" parent="AirlockDoors" unique_id=991394040]
@@ -167,7 +162,11 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 
 [node name="Door" parent="AirlockDoors/EastDoor" unique_id=2028317720 instance=ExtResource("8_door")]
 
 [node name="InteriorControl" parent="AirlockDoors/EastDoor" unique_id=2101302347 instance=ExtResource("16_door_panel")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.65, 1.4, -0.68)
+transform = Transform3D(-2.5, 0, -3.7748947e-07, 0, 2.5, 0, 3.7748947e-07, 0, -2.5, 0.46460247, 0.79503036, -0.37140083)
+target_door_path = NodePath("../Door")
+
+[node name="InteriorControl2" parent="AirlockDoors/EastDoor" unique_id=487325709 instance=ExtResource("16_door_panel")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 4.713834, 1.3224353, 0.3520918)
 target_door_path = NodePath("../Door")
 
 [node name="Ceilings" type="Node3D" parent="." unique_id=1703102684]
@@ -246,73 +245,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
 [node name="Plain_19" parent="Ceilings" unique_id=826538948 instance=ExtResource("7_roof")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -20)
 
-[node name="PoweredLighting" type="Node3D" parent="." unique_id=1457376073]
-
-[node name="LightPanel_00" parent="PoweredLighting" unique_id=259232698 instance=ExtResource("11_light")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.78, 2.5)
-
-[node name="Light_00" type="OmniLight3D" parent="PoweredLighting" unique_id=1876543083]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.2, 2.5)
-light_color = Color(0.55, 0.82, 1, 1)
-light_energy = 3.0
-shadow_enabled = true
-omni_range = 9.0
-
-[node name="LightPanel_01" parent="PoweredLighting" unique_id=1954323859 instance=ExtResource("11_light")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.78, -7.5)
-
-[node name="Light_01" type="OmniLight3D" parent="PoweredLighting" unique_id=1727260956]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.2, -7.5)
-light_color = Color(0.55, 0.82, 1, 1)
-light_energy = 3.0
-shadow_enabled = true
-omni_range = 9.0
-
-[node name="LightPanel_02" parent="PoweredLighting" unique_id=1166082343 instance=ExtResource("11_light")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.78, -17.5)
-
-[node name="Light_02" type="OmniLight3D" parent="PoweredLighting" unique_id=246485900]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.2, -17.5)
-light_color = Color(0.55, 0.82, 1, 1)
-light_energy = 3.0
-shadow_enabled = true
-omni_range = 9.0
-
-[node name="Controls" type="Node3D" parent="." unique_id=1689685691]
-
-[node name="LightSwitch" parent="Controls" unique_id=695787702 instance=ExtResource("12_button")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.45, -19.35)
-
-[node name="LightSwitchInteractionPoint" type="Marker3D" parent="Controls" unique_id=218003766]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.45, -19)
-
 [node name="Props" type="Node3D" parent="." unique_id=1708846074]
-
-[node name="WestWallVent" parent="Props" instance=ExtResource("13_vent")]
-position = Vector3(-14.35, 2.35, -2.5)
-rotation = Vector3(0, -1.5707963, 0)
-
-[node name="BrokenPipe" parent="Props" instance=ExtResource("14_pipe")]
-position = Vector3(6.25, 0.24, -18.5)
-rotation = Vector3(0, 1.5707963, 0)
-
-[node name="DamagedFloorPanel" parent="Props" instance=ExtResource("15_damage")]
-position = Vector3(3.25, 0.015, -2.5)
-
-[node name="FXOrigins" type="Node3D" parent="Props"]
-
-[node name="SteamVentOrigin" type="Marker3D" parent="Props/FXOrigins"]
-position = Vector3(-13.85, 2.35, -2.5)
-
-[node name="SparksOrigin" type="Marker3D" parent="Props/FXOrigins"]
-position = Vector3(3.25, 0.45, -2.5)
-
-[node name="Connections" type="Node3D" parent="."]
-
-[node name="West" type="Marker3D" parent="Connections"]
-position = Vector3(-15, 0, -7.5)
-rotation = Vector3(0, -1.5707963, 0)
-
-[node name="East" type="Marker3D" parent="Connections"]
-position = Vector3(10, 0, -7.5)
-rotation = Vector3(0, 1.5707963, 0)
