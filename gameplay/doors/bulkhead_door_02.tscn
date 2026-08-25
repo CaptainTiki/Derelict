@@ -1,31 +1,38 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene format=3 uid="uid://b0qgo8is6nkc5"]
 
-[ext_resource type="Script" path="res://gameplay/doors/mechanical_door.gd" id="1_door"]
+[ext_resource type="Script" uid="uid://c2vqmadr3j012" path="res://gameplay/doors/mechanical_door.gd" id="1_door"]
 [ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02.tscn" id="2_frame"]
 [ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02__SM_Bld_Wall_Door_01.tscn" id="3_leaf_a"]
 [ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.tscn" id="4_leaf_b"]
-[ext_resource type="Script" path="res://gameplay/triggers/trigger_volume.gd" id="5_trigger"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_proximity"]
-size = Vector3(3.2, 2.5, 4)
+[ext_resource type="Script" uid="uid://34oknkdeb1jv" path="res://gameplay/triggers/trigger_volume.gd" id="5_trigger"]
 
 [sub_resource type="Animation" id="Animation_reset"]
 resource_name = "RESET"
-length = 0.0
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("DoorLeafA:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector3(0, 0, 0)]}
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("DoorLeafB:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector3(0, 0, 0)]}
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_open"]
 resource_name = "open"
@@ -37,48 +44,63 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("DoorLeafA:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = {"times": PackedFloat32Array(0, 1.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector3(0, 0, 0), Vector3(-1.9, 0, 0)]}
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.9, 0, 0)]
+}
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("DoorLeafB:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = {"times": PackedFloat32Array(0, 1.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Vector3(0, 0, 0), Vector3(1.9, 0, 0)]}
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.9, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_door"]
-_data = {&"RESET": SubResource("Animation_reset"), &"open": SubResource("Animation_open")}
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"open": SubResource("Animation_open")
+}
 
-[node name="BulkheadDoor02" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_proximity"]
+size = Vector3(3.2, 2.5, 4)
+
+[node name="BulkheadDoor02" type="Node3D" unique_id=872462028]
 script = ExtResource("1_door")
 
-[node name="Frame" parent="." instance=ExtResource("2_frame")]
+[node name="Frame" parent="." unique_id=1136076335 instance=ExtResource("2_frame")]
 
-[node name="DoorLeafA" parent="." instance=ExtResource("3_leaf_a")]
+[node name="DoorLeafA" parent="." unique_id=817331038 instance=ExtResource("3_leaf_a")]
 
-[node name="DoorLeafB" parent="." instance=ExtResource("4_leaf_b")]
+[node name="DoorLeafB" parent="." unique_id=1586894512 instance=ExtResource("4_leaf_b")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=450144784]
 callback_mode_process = 0
-libraries = {&"": SubResource("AnimationLibrary_door")}
+libraries/ = SubResource("AnimationLibrary_door")
 
-[node name="ProximityTrigger" type="Area3D" parent="."]
-position = Vector3(2.5, 1.25, 0)
+[node name="ProximityTrigger" type="Area3D" parent="." unique_id=1319789838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.25, 0)
 collision_layer = 0
-collision_mask = 1
 monitoring = false
 script = ExtResource("5_trigger")
 trigger_enabled = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityTrigger"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityTrigger" unique_id=1756228617]
 shape = SubResource("BoxShape3D_proximity")
 
-[node name="AutoCloseTimer" type="Timer" parent="."]
+[node name="AutoCloseTimer" type="Timer" parent="." unique_id=574074585]
 one_shot = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 [connection signal="body_entered" from="ProximityTrigger" to="ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="ProximityTrigger" to="ProximityTrigger" method="_on_body_exited"]
-[connection signal="triggered" from="ProximityTrigger" to="." method="_on_proximity_triggered"]
 [connection signal="exited" from="ProximityTrigger" to="." method="_on_proximity_exited"]
+[connection signal="triggered" from="ProximityTrigger" to="." method="_on_proximity_triggered"]
 [connection signal="timeout" from="AutoCloseTimer" to="." method="_on_auto_close_timeout"]

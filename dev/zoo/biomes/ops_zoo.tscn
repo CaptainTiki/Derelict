@@ -1,0 +1,1519 @@
+[gd_scene load_steps=86 format=3]
+[ext_resource type="PackedScene" path="res://player.tscn" id="packedscene_1"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_01.glb" id="packedscene_2"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_010.glb" id="packedscene_3"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_011.glb" id="packedscene_4"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_02.glb" id="packedscene_5"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_03.glb" id="packedscene_6"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_04.glb" id="packedscene_7"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_05.glb" id="packedscene_8"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_06.glb" id="packedscene_9"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_07.glb" id="packedscene_10"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_08.glb" id="packedscene_11"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_09.glb" id="packedscene_12"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="packedscene_13"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01_Alt.glb" id="packedscene_14"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_02.glb" id="packedscene_15"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_03.glb" id="packedscene_16"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_04.glb" id="packedscene_17"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_04_Alt.glb" id="packedscene_18"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_05.glb" id="packedscene_19"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_06.glb" id="packedscene_20"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_01.glb" id="packedscene_21"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.glb" id="packedscene_22"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="packedscene_23"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Double_Arch_01.glb" id="packedscene_24"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Double_Arch_02.glb" id="packedscene_25"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="packedscene_26"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_02.glb" id="packedscene_27"]
+[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_03.glb" id="packedscene_28"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_01.glb" id="packedscene_29"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_02.glb" id="packedscene_30"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_Wide_01.glb" id="packedscene_31"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_Wide_02.glb" id="packedscene_32"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_01.glb" id="packedscene_33"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_02.glb" id="packedscene_34"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_03.glb" id="packedscene_35"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_04.glb" id="packedscene_36"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_01.glb" id="packedscene_37"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.glb" id="packedscene_38"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_06.glb" id="packedscene_39"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_01.glb" id="packedscene_40"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02.glb" id="packedscene_41"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_03.glb" id="packedscene_42"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_04.glb" id="packedscene_43"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.glb" id="packedscene_44"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_06.glb" id="packedscene_45"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_01.glb" id="packedscene_46"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_02.glb" id="packedscene_47"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="packedscene_48"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_02.glb" id="packedscene_49"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_03.glb" id="packedscene_50"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_04.glb" id="packedscene_51"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_05.glb" id="packedscene_52"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_01.glb" id="packedscene_53"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_02.glb" id="packedscene_54"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_03.glb" id="packedscene_55"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_04.glb" id="packedscene_56"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_05.glb" id="packedscene_57"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_06.glb" id="packedscene_58"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_07.glb" id="packedscene_59"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_08.glb" id="packedscene_60"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Large_01.glb" id="packedscene_61"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Small_01.glb" id="packedscene_62"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="packedscene_63"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_01.glb" id="packedscene_64"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_02.glb" id="packedscene_65"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_03.glb" id="packedscene_66"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_04.glb" id="packedscene_67"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_MapTable_01.glb" id="packedscene_68"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_01.glb" id="packedscene_69"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_02.glb" id="packedscene_70"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_01.glb" id="packedscene_71"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_02.glb" id="packedscene_72"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_06.glb" id="packedscene_73"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_08.glb" id="packedscene_74"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/crate/SM_Prop_Crate_01.glb" id="packedscene_75"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/crate/SM_Prop_Crate_02.glb" id="packedscene_76"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Bridge_01.glb" id="packedscene_77"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Exit_02.glb" id="packedscene_78"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Communication_01.glb" id="packedscene_79"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Warning_01.glb" id="packedscene_80"]
+
+[sub_resource type="StandardMaterial3D" id="GroundMat"]
+albedo_color = Color(0.240, 0.250, 0.270, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="ReferenceMat"]
+albedo_color = Color(0.180, 0.220, 0.260, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_horizon_color = Color(0.480, 0.510, 0.560, 1)
+ground_horizon_color = Color(0.240, 0.250, 0.270, 1)
+energy_multiplier = 0.65
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="ZooEnvironment"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.620, 0.680, 0.760, 1)
+ambient_light_energy = 0.75
+tonemap_mode = 2
+ssao_enabled = true
+
+[node name="OpsZoo" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("ZooEnvironment")
+
+[node name="InspectionFloor" type="CSGBox3D" parent="."]
+position = Vector3(35, -0.080, 47.500)
+size = Vector3(150, 0.120, 135)
+use_collision = true
+material = SubResource("GroundMat")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="SunKey" type="DirectionalLight3D" parent="Lighting"]
+rotation = Vector3(-0.850, 0.550, 0)
+light_energy = 1.35
+shadow_enabled = true
+
+[node name="FillLight" type="OmniLight3D" parent="Lighting"]
+position = Vector3(22, 8, 20)
+light_energy = 3.0
+omni_range = 38.0
+
+[node name="PlayerStart" type="Marker3D" parent="."]
+position = Vector3(-8, 1.050, -10)
+
+[node name="Player" parent="." instance=ExtResource("packedscene_1")]
+position = Vector3(-8, 1.050, -10)
+
+[node name="Candidates" type="Node3D" parent="."]
+
+[node name="Dioramas" type="Node3D" parent="."]
+
+[node name="StateTesting" type="Node3D" parent="."]
+position = Vector3(0, 0, 92)
+
+[node name="StateTestingLabel" type="Label3D" parent="StateTesting"]
+position = Vector3(0, 3, 0)
+billboard = 1
+font_size = 54
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "StateTesting scaffold: Powered / Emergency / Unpowered"
+
+[node name="Floors" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 0)
+
+[node name="Label_Floors" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Floors"
+
+[node name="SM_Bld_Floor_01" parent="Candidates/Floors" instance=ExtResource("packedscene_2")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Bld_Floor_01" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_01"
+
+[node name="SM_Bld_Floor_010" parent="Candidates/Floors" instance=ExtResource("packedscene_3")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Bld_Floor_010" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_010"
+
+[node name="SM_Bld_Floor_011" parent="Candidates/Floors" instance=ExtResource("packedscene_4")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Bld_Floor_011" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_011"
+
+[node name="SM_Bld_Floor_02" parent="Candidates/Floors" instance=ExtResource("packedscene_5")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Bld_Floor_02" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_02"
+
+[node name="SM_Bld_Floor_03" parent="Candidates/Floors" instance=ExtResource("packedscene_6")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Bld_Floor_03" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_03"
+
+[node name="SM_Bld_Floor_04" parent="Candidates/Floors" instance=ExtResource("packedscene_7")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Bld_Floor_04" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_04"
+
+[node name="SM_Bld_Floor_05" parent="Candidates/Floors" instance=ExtResource("packedscene_8")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Bld_Floor_05" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_05"
+
+[node name="SM_Bld_Floor_06" parent="Candidates/Floors" instance=ExtResource("packedscene_9")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Bld_Floor_06" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_06"
+
+[node name="SM_Bld_Floor_07" parent="Candidates/Floors" instance=ExtResource("packedscene_10")]
+position = Vector3(18, 0, 9)
+
+[node name="Label_SM_Bld_Floor_07" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(18, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_07"
+
+[node name="SM_Bld_Floor_08" parent="Candidates/Floors" instance=ExtResource("packedscene_11")]
+position = Vector3(27, 0, 9)
+
+[node name="Label_SM_Bld_Floor_08" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(27, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_08"
+
+[node name="SM_Bld_Floor_09" parent="Candidates/Floors" instance=ExtResource("packedscene_12")]
+position = Vector3(36, 0, 9)
+
+[node name="Label_SM_Bld_Floor_09" type="Label3D" parent="Candidates/Floors"]
+position = Vector3(36, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Floor_09"
+
+[node name="Walls" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 31)
+
+[node name="Label_Walls" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Walls"
+
+[node name="SM_Bld_Wall_01" parent="Candidates/Walls" instance=ExtResource("packedscene_13")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Bld_Wall_01" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_01"
+
+[node name="SM_Bld_Wall_01_Alt" parent="Candidates/Walls" instance=ExtResource("packedscene_14")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Bld_Wall_01_Alt" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_01_Alt"
+
+[node name="SM_Bld_Wall_02" parent="Candidates/Walls" instance=ExtResource("packedscene_15")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Bld_Wall_02" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_02"
+
+[node name="SM_Bld_Wall_03" parent="Candidates/Walls" instance=ExtResource("packedscene_16")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Bld_Wall_03" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_03"
+
+[node name="SM_Bld_Wall_04" parent="Candidates/Walls" instance=ExtResource("packedscene_17")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Bld_Wall_04" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_04"
+
+[node name="SM_Bld_Wall_04_Alt" parent="Candidates/Walls" instance=ExtResource("packedscene_18")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Bld_Wall_04_Alt" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_04_Alt"
+
+[node name="SM_Bld_Wall_05" parent="Candidates/Walls" instance=ExtResource("packedscene_19")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Bld_Wall_05" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_05"
+
+[node name="SM_Bld_Wall_06" parent="Candidates/Walls" instance=ExtResource("packedscene_20")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Bld_Wall_06" type="Label3D" parent="Candidates/Walls"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_06"
+
+[node name="Ceilings" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 62)
+
+[node name="Label_Ceilings" type="Label3D" parent="Candidates/Ceilings"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Ceilings"
+
+[node name="SM_Bld_Ceiling_01" parent="Candidates/Ceilings" instance=ExtResource("packedscene_21")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Bld_Ceiling_01" type="Label3D" parent="Candidates/Ceilings"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Ceiling_01"
+
+[node name="SM_Bld_Ceiling_02" parent="Candidates/Ceilings" instance=ExtResource("packedscene_22")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Bld_Ceiling_02" type="Label3D" parent="Candidates/Ceilings"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Ceiling_02"
+
+[node name="SM_Bld_Ceiling_03" parent="Candidates/Ceilings" instance=ExtResource("packedscene_23")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Bld_Ceiling_03" type="Label3D" parent="Candidates/Ceilings"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Ceiling_03"
+
+[node name="Structural" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 84)
+
+[node name="Label_Structural" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Structural"
+
+[node name="SM_Bld_Corridor_Double_Arch_01" parent="Candidates/Structural" instance=ExtResource("packedscene_24")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Bld_Corridor_Double_Arch_01" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Corridor_Double_Arch_01"
+
+[node name="SM_Bld_Corridor_Double_Arch_02" parent="Candidates/Structural" instance=ExtResource("packedscene_25")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Bld_Corridor_Double_Arch_02" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Corridor_Double_Arch_02"
+
+[node name="SM_Bld_Corridor_Single_Arch_01" parent="Candidates/Structural" instance=ExtResource("packedscene_26")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Bld_Corridor_Single_Arch_01" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Corridor_Single_Arch_01"
+
+[node name="SM_Bld_Corridor_Single_Arch_02" parent="Candidates/Structural" instance=ExtResource("packedscene_27")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Bld_Corridor_Single_Arch_02" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Corridor_Single_Arch_02"
+
+[node name="SM_Bld_Corridor_Single_Arch_03" parent="Candidates/Structural" instance=ExtResource("packedscene_28")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Bld_Corridor_Single_Arch_03" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Corridor_Single_Arch_03"
+
+[node name="SM_Bld_Wall_Corner_Pillar_01" parent="Candidates/Structural" instance=ExtResource("packedscene_29")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_01" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Corner_Pillar_01"
+
+[node name="SM_Bld_Wall_Corner_Pillar_02" parent="Candidates/Structural" instance=ExtResource("packedscene_30")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_02" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Corner_Pillar_02"
+
+[node name="SM_Bld_Wall_Corner_Pillar_Wide_01" parent="Candidates/Structural" instance=ExtResource("packedscene_31")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_Wide_01" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Corner_Pillar_Wide_01"
+
+[node name="SM_Bld_Wall_Corner_Pillar_Wide_02" parent="Candidates/Structural" instance=ExtResource("packedscene_32")]
+position = Vector3(18, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_Wide_02" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(18, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Corner_Pillar_Wide_02"
+
+[node name="SM_Bld_Wall_Pillar_01" parent="Candidates/Structural" instance=ExtResource("packedscene_33")]
+position = Vector3(27, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Pillar_01" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(27, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Pillar_01"
+
+[node name="SM_Bld_Wall_Pillar_02" parent="Candidates/Structural" instance=ExtResource("packedscene_34")]
+position = Vector3(36, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Pillar_02" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(36, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Pillar_02"
+
+[node name="SM_Bld_Wall_Pillar_03" parent="Candidates/Structural" instance=ExtResource("packedscene_35")]
+position = Vector3(45, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Pillar_03" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(45, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Pillar_03"
+
+[node name="SM_Bld_Wall_Pillar_04" parent="Candidates/Structural" instance=ExtResource("packedscene_36")]
+position = Vector3(0, 0, 18)
+
+[node name="Label_SM_Bld_Wall_Pillar_04" type="Label3D" parent="Candidates/Structural"]
+position = Vector3(0, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Pillar_04"
+
+[node name="Doors" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 124)
+
+[node name="Label_Doors" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Doors"
+
+[node name="SM_Bld_Wall_Door_01" parent="Candidates/Doors" instance=ExtResource("packedscene_37")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Door_01" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Door_01"
+
+[node name="SM_Bld_Wall_Door_02" parent="Candidates/Doors" instance=ExtResource("packedscene_38")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Door_02" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Door_02"
+
+[node name="SM_Bld_Wall_Door_06" parent="Candidates/Doors" instance=ExtResource("packedscene_39")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Door_06" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Door_06"
+
+[node name="SM_Bld_Wall_Doorframe_01" parent="Candidates/Doors" instance=ExtResource("packedscene_40")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Doorframe_01" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_01"
+
+[node name="SM_Bld_Wall_Doorframe_02" parent="Candidates/Doors" instance=ExtResource("packedscene_41")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Doorframe_02" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_02"
+
+[node name="SM_Bld_Wall_Doorframe_03" parent="Candidates/Doors" instance=ExtResource("packedscene_42")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Doorframe_03" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_03"
+
+[node name="SM_Bld_Wall_Doorframe_04" parent="Candidates/Doors" instance=ExtResource("packedscene_43")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Doorframe_04" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_04"
+
+[node name="SM_Bld_Wall_Doorframe_05" parent="Candidates/Doors" instance=ExtResource("packedscene_44")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Doorframe_05" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_05"
+
+[node name="SM_Bld_Wall_Doorframe_06" parent="Candidates/Doors" instance=ExtResource("packedscene_45")]
+position = Vector3(18, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Doorframe_06" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(18, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_06"
+
+[node name="SM_Bld_Wall_Doorframe_Outer_01" parent="Candidates/Doors" instance=ExtResource("packedscene_46")]
+position = Vector3(27, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Doorframe_Outer_01" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(27, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_Outer_01"
+
+[node name="SM_Bld_Wall_Doorframe_Outer_02" parent="Candidates/Doors" instance=ExtResource("packedscene_47")]
+position = Vector3(36, 0, 9)
+
+[node name="Label_SM_Bld_Wall_Doorframe_Outer_02" type="Label3D" parent="Candidates/Doors"]
+position = Vector3(36, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Bld_Wall_Doorframe_Outer_02"
+
+[node name="Lights" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 155)
+
+[node name="Label_Lights" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Lights"
+
+[node name="SM_Prop_Light_Panel_01" parent="Candidates/Lights" instance=ExtResource("packedscene_48")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Prop_Light_Panel_01" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Panel_01"
+
+[node name="SM_Prop_Light_Panel_02" parent="Candidates/Lights" instance=ExtResource("packedscene_49")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Prop_Light_Panel_02" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Panel_02"
+
+[node name="SM_Prop_Light_Panel_03" parent="Candidates/Lights" instance=ExtResource("packedscene_50")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Prop_Light_Panel_03" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Panel_03"
+
+[node name="SM_Prop_Light_Panel_04" parent="Candidates/Lights" instance=ExtResource("packedscene_51")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Prop_Light_Panel_04" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Panel_04"
+
+[node name="SM_Prop_Light_Panel_05" parent="Candidates/Lights" instance=ExtResource("packedscene_52")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Prop_Light_Panel_05" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Panel_05"
+
+[node name="SM_Prop_Light_Small_01" parent="Candidates/Lights" instance=ExtResource("packedscene_53")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Prop_Light_Small_01" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_01"
+
+[node name="SM_Prop_Light_Small_02" parent="Candidates/Lights" instance=ExtResource("packedscene_54")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_02" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_02"
+
+[node name="SM_Prop_Light_Small_03" parent="Candidates/Lights" instance=ExtResource("packedscene_55")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_03" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_03"
+
+[node name="SM_Prop_Light_Small_04" parent="Candidates/Lights" instance=ExtResource("packedscene_56")]
+position = Vector3(18, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_04" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(18, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_04"
+
+[node name="SM_Prop_Light_Small_05" parent="Candidates/Lights" instance=ExtResource("packedscene_57")]
+position = Vector3(27, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_05" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(27, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_05"
+
+[node name="SM_Prop_Light_Small_06" parent="Candidates/Lights" instance=ExtResource("packedscene_58")]
+position = Vector3(36, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_06" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(36, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_06"
+
+[node name="SM_Prop_Light_Small_07" parent="Candidates/Lights" instance=ExtResource("packedscene_59")]
+position = Vector3(45, 0, 9)
+
+[node name="Label_SM_Prop_Light_Small_07" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(45, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_07"
+
+[node name="SM_Prop_Light_Small_08" parent="Candidates/Lights" instance=ExtResource("packedscene_60")]
+position = Vector3(0, 0, 18)
+
+[node name="Label_SM_Prop_Light_Small_08" type="Label3D" parent="Candidates/Lights"]
+position = Vector3(0, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Light_Small_08"
+
+[node name="Props" type="Node3D" parent="Candidates"]
+position = Vector3(0, 0, 195)
+
+[node name="Label_Props" type="Label3D" parent="Candidates/Props"]
+position = Vector3(-4.500, 3, -3.800)
+billboard = 1
+font_size = 72
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "Props"
+
+[node name="SM_Prop_AirVent_Large_01" parent="Candidates/Props" instance=ExtResource("packedscene_61")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Prop_AirVent_Large_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(0, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_AirVent_Large_01"
+
+[node name="SM_Prop_AirVent_Small_01" parent="Candidates/Props" instance=ExtResource("packedscene_62")]
+position = Vector3(9, 0, 0)
+
+[node name="Label_SM_Prop_AirVent_Small_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(9, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_AirVent_Small_01"
+
+[node name="SM_Prop_Detail_Airvent_01" parent="Candidates/Props" instance=ExtResource("packedscene_63")]
+position = Vector3(18, 0, 0)
+
+[node name="Label_SM_Prop_Detail_Airvent_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(18, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Detail_Airvent_01"
+
+[node name="SM_Prop_ControllPanel_01" parent="Candidates/Props" instance=ExtResource("packedscene_64")]
+position = Vector3(27, 0, 0)
+
+[node name="Label_SM_Prop_ControllPanel_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(27, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_ControllPanel_01"
+
+[node name="SM_Prop_ControllPanel_02" parent="Candidates/Props" instance=ExtResource("packedscene_65")]
+position = Vector3(36, 0, 0)
+
+[node name="Label_SM_Prop_ControllPanel_02" type="Label3D" parent="Candidates/Props"]
+position = Vector3(36, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_ControllPanel_02"
+
+[node name="SM_Prop_ControllPanel_03" parent="Candidates/Props" instance=ExtResource("packedscene_66")]
+position = Vector3(45, 0, 0)
+
+[node name="Label_SM_Prop_ControllPanel_03" type="Label3D" parent="Candidates/Props"]
+position = Vector3(45, 2.350, 3.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_ControllPanel_03"
+
+[node name="SM_Prop_ControllPanel_04" parent="Candidates/Props" instance=ExtResource("packedscene_67")]
+position = Vector3(0, 0, 9)
+
+[node name="Label_SM_Prop_ControllPanel_04" type="Label3D" parent="Candidates/Props"]
+position = Vector3(0, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_ControllPanel_04"
+
+[node name="SM_Prop_MapTable_01" parent="Candidates/Props" instance=ExtResource("packedscene_68")]
+position = Vector3(9, 0, 9)
+
+[node name="Label_SM_Prop_MapTable_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(9, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_MapTable_01"
+
+[node name="SM_Prop_Radar_Panel_01" parent="Candidates/Props" instance=ExtResource("packedscene_69")]
+position = Vector3(18, 0, 9)
+
+[node name="Label_SM_Prop_Radar_Panel_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(18, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Radar_Panel_01"
+
+[node name="SM_Prop_Radar_Panel_02" parent="Candidates/Props" instance=ExtResource("packedscene_70")]
+position = Vector3(27, 0, 9)
+
+[node name="Label_SM_Prop_Radar_Panel_02" type="Label3D" parent="Candidates/Props"]
+position = Vector3(27, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Radar_Panel_02"
+
+[node name="SM_Prop_Screen_01" parent="Candidates/Props" instance=ExtResource("packedscene_71")]
+position = Vector3(36, 0, 9)
+
+[node name="Label_SM_Prop_Screen_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(36, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Screen_01"
+
+[node name="SM_Prop_Screen_02" parent="Candidates/Props" instance=ExtResource("packedscene_72")]
+position = Vector3(45, 0, 9)
+
+[node name="Label_SM_Prop_Screen_02" type="Label3D" parent="Candidates/Props"]
+position = Vector3(45, 2.350, 12.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Screen_02"
+
+[node name="SM_Prop_Screen_06" parent="Candidates/Props" instance=ExtResource("packedscene_73")]
+position = Vector3(0, 0, 18)
+
+[node name="Label_SM_Prop_Screen_06" type="Label3D" parent="Candidates/Props"]
+position = Vector3(0, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Screen_06"
+
+[node name="SM_Prop_Screen_08" parent="Candidates/Props" instance=ExtResource("packedscene_74")]
+position = Vector3(9, 0, 18)
+
+[node name="Label_SM_Prop_Screen_08" type="Label3D" parent="Candidates/Props"]
+position = Vector3(9, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Screen_08"
+
+[node name="SM_Prop_Crate_01" parent="Candidates/Props" instance=ExtResource("packedscene_75")]
+position = Vector3(18, 0, 18)
+
+[node name="Label_SM_Prop_Crate_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(18, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Crate_01"
+
+[node name="SM_Prop_Crate_02" parent="Candidates/Props" instance=ExtResource("packedscene_76")]
+position = Vector3(27, 0, 18)
+
+[node name="Label_SM_Prop_Crate_02" type="Label3D" parent="Candidates/Props"]
+position = Vector3(27, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Prop_Crate_02"
+
+[node name="SM_Sign_Bridge_01" parent="Candidates/Props" instance=ExtResource("packedscene_77")]
+position = Vector3(36, 0, 18)
+
+[node name="Label_SM_Sign_Bridge_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(36, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Sign_Bridge_01"
+
+[node name="SM_Sign_Exit_02" parent="Candidates/Props" instance=ExtResource("packedscene_78")]
+position = Vector3(45, 0, 18)
+
+[node name="Label_SM_Sign_Exit_02" type="Label3D" parent="Candidates/Props"]
+position = Vector3(45, 2.350, 21.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_Sign_Exit_02"
+
+[node name="SM_SignBorder_Communication_01" parent="Candidates/Props" instance=ExtResource("packedscene_79")]
+position = Vector3(0, 0, 27)
+
+[node name="Label_SM_SignBorder_Communication_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(0, 2.350, 30.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_SignBorder_Communication_01"
+
+[node name="SM_SignBorder_Warning_01" parent="Candidates/Props" instance=ExtResource("packedscene_80")]
+position = Vector3(9, 0, 27)
+
+[node name="Label_SM_SignBorder_Warning_01" type="Label3D" parent="Candidates/Props"]
+position = Vector3(9, 2.350, 30.100)
+billboard = 1
+font_size = 36
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "SM_SignBorder_Warning_01"
+
+[node name="StandardCorridor" type="Node3D" parent="Dioramas"]
+position = Vector3(80, 0, 0)
+
+[node name="StandardCorridor_Label" type="Label3D" parent="Dioramas/StandardCorridor"]
+position = Vector3(-2, 3.600, -4)
+billboard = 1
+font_size = 66
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "StandardCorridor"
+
+[node name="Architecture" type="Node3D" parent="Dioramas/StandardCorridor"]
+
+[node name="Props" type="Node3D" parent="Dioramas/StandardCorridor"]
+
+[node name="PoweredLighting" type="Node3D" parent="Dioramas/StandardCorridor"]
+
+[node name="EmergencyLighting" type="Node3D" parent="Dioramas/StandardCorridor"]
+visible = false
+
+[node name="FX" type="Node3D" parent="Dioramas/StandardCorridor"]
+
+[node name="SM_Bld_Floor_011" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 0)
+
+[node name="SM_Bld_Ceiling_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 0)
+
+[node name="SM_Bld_Floor_011_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 5)
+
+[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 5)
+
+[node name="SM_Bld_Floor_011_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 10)
+
+[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 10)
+
+[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(0, 0, 5)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(5, 0, 0)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Single_Arch_01" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
+position = Vector3(0, 0, 0)
+
+[node name="SM_Prop_Light_Panel_01" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(2.500, 3.200, 2.500)
+
+[node name="SM_Bld_Wall_02_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(0, 0, 10)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(5, 0, 5)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Single_Arch_01_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
+position = Vector3(0, 0, 5)
+
+[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(2.500, 3.200, 7.500)
+
+[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(0, 0, 15)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_02_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(5, 0, 10)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Single_Arch_01_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
+position = Vector3(0, 0, 10)
+
+[node name="SM_Prop_Light_Panel_01_03" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(2.500, 3.200, 12.500)
+
+[node name="SM_Prop_AirVent_Large_01" parent="Dioramas/StandardCorridor/Props" instance=ExtResource("packedscene_61")]
+position = Vector3(4.750, 1.600, 6.500)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Sign_Exit_02" parent="Dioramas/StandardCorridor/Props" instance=ExtResource("packedscene_78")]
+position = Vector3(0.200, 1.800, 11.200)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/StandardCorridor/PoweredLighting"]
+position = Vector3(2.500, 3, 7.500)
+light_color = Color(0.580, 0.780, 1, 1)
+light_energy = 2.2
+omni_range = 9.0
+shadow_enabled = true
+
+[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/StandardCorridor/EmergencyLighting"]
+position = Vector3(2.500, 2.800, 7.500)
+light_color = Color(1, 0.180, 0.100, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="MainCorridor" type="Node3D" parent="Dioramas"]
+position = Vector3(80, 0, 32)
+
+[node name="MainCorridor_Label" type="Label3D" parent="Dioramas/MainCorridor"]
+position = Vector3(-2, 3.600, -4)
+billboard = 1
+font_size = 66
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "MainCorridor"
+
+[node name="Architecture" type="Node3D" parent="Dioramas/MainCorridor"]
+
+[node name="Props" type="Node3D" parent="Dioramas/MainCorridor"]
+
+[node name="PoweredLighting" type="Node3D" parent="Dioramas/MainCorridor"]
+
+[node name="EmergencyLighting" type="Node3D" parent="Dioramas/MainCorridor"]
+visible = false
+
+[node name="FX" type="Node3D" parent="Dioramas/MainCorridor"]
+
+[node name="SM_Bld_Floor_011" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 0)
+
+[node name="SM_Bld_Ceiling_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 0)
+
+[node name="SM_Bld_Floor_011_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 5)
+
+[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 5)
+
+[node name="SM_Bld_Floor_011_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 10)
+
+[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 10)
+
+[node name="SM_Bld_Floor_011_04" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(5, 0, 0)
+
+[node name="SM_Bld_Ceiling_03_04" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(5, 3.800, 0)
+
+[node name="SM_Bld_Floor_011_05" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(5, 0, 5)
+
+[node name="SM_Bld_Ceiling_03_05" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(5, 3.800, 5)
+
+[node name="SM_Bld_Floor_011_06" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(5, 0, 10)
+
+[node name="SM_Bld_Ceiling_03_06" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(5, 3.800, 10)
+
+[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(0, 0, 5)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(10, 0, 0)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Double_Arch_01" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
+position = Vector3(0, 0, 0)
+
+[node name="SM_Prop_Light_Panel_01" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(5, 3.200, 2.500)
+
+[node name="SM_Bld_Wall_02_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(0, 0, 10)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(10, 0, 5)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Double_Arch_01_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
+position = Vector3(0, 0, 5)
+
+[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(5, 3.200, 7.500)
+
+[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(0, 0, 15)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_02_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(10, 0, 10)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Corridor_Double_Arch_01_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
+position = Vector3(0, 0, 10)
+
+[node name="SM_Prop_Light_Panel_01_03" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(5, 3.200, 12.500)
+
+[node name="SM_Prop_AirVent_Large_01" parent="Dioramas/MainCorridor/Props" instance=ExtResource("packedscene_61")]
+position = Vector3(9.750, 1.600, 6.500)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Sign_Exit_02" parent="Dioramas/MainCorridor/Props" instance=ExtResource("packedscene_78")]
+position = Vector3(0.200, 1.800, 11.200)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/MainCorridor/PoweredLighting"]
+position = Vector3(5, 3, 7.500)
+light_color = Color(0.580, 0.780, 1, 1)
+light_energy = 2.2
+omni_range = 9.0
+shadow_enabled = true
+
+[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/MainCorridor/EmergencyLighting"]
+position = Vector3(5, 2.800, 7.500)
+light_color = Color(1, 0.180, 0.100, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="StandardRoom" type="Node3D" parent="Dioramas"]
+position = Vector3(80, 0, 68)
+
+[node name="StandardRoom_Label" type="Label3D" parent="Dioramas/StandardRoom"]
+position = Vector3(-2, 3.600, -4)
+billboard = 1
+font_size = 66
+pixel_size = 0.018
+modulate = Color(0.920, 0.960, 1, 1)
+outline_size = 8
+text = "StandardRoom"
+
+[node name="Architecture" type="Node3D" parent="Dioramas/StandardRoom"]
+
+[node name="Props" type="Node3D" parent="Dioramas/StandardRoom"]
+
+[node name="PoweredLighting" type="Node3D" parent="Dioramas/StandardRoom"]
+
+[node name="EmergencyLighting" type="Node3D" parent="Dioramas/StandardRoom"]
+visible = false
+
+[node name="FX" type="Node3D" parent="Dioramas/StandardRoom"]
+
+[node name="SM_Bld_Floor_011" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 0)
+
+[node name="SM_Bld_Ceiling_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 0)
+
+[node name="SM_Bld_Floor_011_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(0, 0, 5)
+
+[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(0, 3.800, 5)
+
+[node name="SM_Bld_Floor_011_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(5, 0, 0)
+
+[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(5, 3.800, 0)
+
+[node name="SM_Bld_Floor_011_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
+position = Vector3(5, 0, 5)
+
+[node name="SM_Bld_Ceiling_03_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
+position = Vector3(5, 3.800, 5)
+
+[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(0, 0, 0)
+rotation = Vector3(0, 0, 0)
+
+[node name="SM_Bld_Wall_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(5, 0, 10)
+rotation = Vector3(0, 3.142, 0)
+
+[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(5, 0, 0)
+rotation = Vector3(0, 0, 0)
+
+[node name="SM_Bld_Wall_02_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(10, 0, 10)
+rotation = Vector3(0, 3.142, 0)
+
+[node name="SM_Bld_Wall_02_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(0, 0, 5)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(10, 0, 0)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Wall_02_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
+position = Vector3(0, 0, 10)
+rotation = Vector3(0, 1.571, 0)
+
+[node name="SM_Bld_Wall_01_Alt_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
+position = Vector3(10, 0, 5)
+rotation = Vector3(0, -1.571, 0)
+
+[node name="SM_Bld_Wall_Doorframe_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_41")]
+position = Vector3(5, 0, 0)
+
+[node name="SM_Prop_Light_Panel_01" parent="Dioramas/StandardRoom/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(2.500, 3.250, 2.500)
+
+[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/StandardRoom/PoweredLighting" instance=ExtResource("packedscene_48")]
+position = Vector3(7.500, 3.250, 7.500)
+
+[node name="SM_Prop_ControllPanel_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_64")]
+position = Vector3(2.500, 0, 8.200)
+rotation = Vector3(0, 3.142, 0)
+
+[node name="SM_Prop_MapTable_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_68")]
+position = Vector3(6.800, 0, 5.200)
+
+[node name="SM_Sign_Bridge_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_77")]
+position = Vector3(8.800, 1.600, 0.200)
+
+[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/StandardRoom/PoweredLighting"]
+position = Vector3(5, 3, 7.500)
+light_color = Color(0.580, 0.780, 1, 1)
+light_energy = 2.2
+omni_range = 9.0
+shadow_enabled = true
+
+[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/StandardRoom/EmergencyLighting"]
+position = Vector3(5, 2.800, 7.500)
+light_color = Color(1, 0.180, 0.100, 1)
+light_energy = 1.3
+omni_range = 8.0

@@ -1,23 +1,22 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://ds68j5jpr0elv"]
 
 [ext_resource type="PackedScene" path="res://gameplay/doors/bulkhead_door_02.tscn" id="1_door"]
 [ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.tscn" id="2_arch"]
 
-[node name="ServicePortal" type="Node3D"]
+[node name="ServicePortal" type="Node3D" unique_id=151838235]
 
-[node name="Door" parent="." instance=ExtResource("1_door")]
+[node name="Door" parent="." unique_id=1216225781 instance=ExtResource("1_door")]
 proximity_enabled = true
 auto_close_enabled = true
 auto_close_delay = 1.5
 
-[node name="CorridorArch" parent="." instance=ExtResource("2_arch")]
-position = Vector3(0, 0, -0.5)
+[node name="CorridorArch" parent="." unique_id=1280655795 instance=ExtResource("2_arch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 
-[node name="Connections" type="Node3D" parent="."]
+[node name="Connections" type="Node3D" parent="." unique_id=529641293]
 
-[node name="RoomSide" type="Marker3D" parent="Connections"]
-position = Vector3(2.5, 0, 0.5)
+[node name="RoomSide" type="Marker3D" parent="Connections" unique_id=837128115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.5)
 
-[node name="CorridorSide" type="Marker3D" parent="Connections"]
-position = Vector3(2.5, 0, -0.5)
-rotation = Vector3(0, 3.1415927, 0)
+[node name="CorridorSide" type="Marker3D" parent="Connections" unique_id=1496461803]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.5, 0, -0.5)
