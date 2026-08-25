@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://vfx/steam_pressure_release_vfx.gd" id="1_steam"]
+
+[sub_resource type="Gradient" id="Gradient_particle_fade"]
+offsets = PackedFloat32Array(0, 0.55, 1)
+colors = PackedColorArray(0.9, 0.96, 1, 0.52, 0.82, 0.9, 0.96, 0.28, 0.75, 0.84, 0.92, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture_particle_fade"]
+gradient = SubResource("Gradient_particle_fade")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_steam"]
+emission_shape = 1
+emission_sphere_radius = 0.1
+direction = Vector3(0, 0, 1)
+spread = 16.0
+gravity = Vector3(0, 0.38, 0)
+initial_velocity_min = 1.8
+initial_velocity_max = 3.2
+damping_min = 0.15
+damping_max = 0.65
+scale_min = 0.45
+scale_max = 0.95
+color_ramp = SubResource("GradientTexture_particle_fade")
+
+[sub_resource type="Gradient" id="Gradient_soft_puff"]
+offsets = PackedFloat32Array(0, 0.65, 1)
+colors = PackedColorArray(1, 1, 1, 0.85, 1, 1, 1, 0.32, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_soft_puff"]
+gradient = SubResource("Gradient_soft_puff")
+width = 64
+height = 64
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial_steam"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9, 0.96, 1, 0.5)
+albedo_texture = SubResource("GradientTexture_soft_puff")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_steam"]
+material = SubResource("StandardMaterial_steam")
+size = Vector2(0.42, 0.42)
+
+[node name="SteamPressureReleaseVFX" type="Node3D"]
+script = ExtResource("1_steam")
+
+[node name="Steam" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 48
+lifetime = 1.45
+randomness = 0.65
+visibility_aabb = AABB(-2.5, -2.5, -1, 5, 5, 7)
+process_material = SubResource("ParticleProcessMaterial_steam")
+draw_pass_1 = SubResource("QuadMesh_steam")
+
+[node name="ReleaseAudio" type="AudioStreamPlayer3D" parent="."]
+unit_size = 4.0
+max_distance = 18.0
+
+[node name="IntervalTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DurationTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="finished" from="ReleaseAudio" to="." method="_on_release_audio_finished"]
+[connection signal="timeout" from="IntervalTimer" to="." method="_on_interval_timer_timeout"]
+[connection signal="timeout" from="DurationTimer" to="." method="_on_duration_timer_timeout"]
