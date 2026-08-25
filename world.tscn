@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dnaxw3t4et8a8" path="res://level.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://c88pfdot3fhe4" path="res://player.tscn" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://4s2wmwfksdpd" path="res://ui/build_label.gd" id="3_build_label"]
+[ext_resource type="PackedScene" path="res://ui/interaction_hud.tscn" id="4_interaction_hud"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,6 +38,8 @@ transform = Transform3D(0.100099444, 0, -0.9949774, 0, 1, 0, 0.9949774, 0, 0.100
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=25598063]
 
+[node name="InteractionHUD" parent="HUD" instance=ExtResource("4_interaction_hud")]
+
 [node name="BuildLabel" type="Label" parent="HUD" unique_id=1825158639]
 anchors_preset = 1
 anchor_left = 1.0
@@ -51,3 +54,7 @@ theme_override_constants/outline_size = 4
 text = "Build:"
 horizontal_alignment = 2
 script = ExtResource("3_build_label")
+
+[connection signal="focus_changed" from="Player/CameraRig/Camera3D/PlayerInteraction" to="HUD/InteractionHUD" method="_on_focus_changed"]
+[connection signal="interaction_performed" from="Player/CameraRig/Camera3D/PlayerInteraction" to="HUD/InteractionHUD" method="_on_interaction_performed"]
+[connection signal="interaction_rejected" from="Player/CameraRig/Camera3D/PlayerInteraction" to="HUD/InteractionHUD" method="_on_interaction_rejected"]

@@ -4,8 +4,9 @@ class_name PlayerInteraction
 
 const InteractableComponent = preload("res://gameplay/interaction/interactable.gd")
 
-signal focus_changed(interactable: InteractableComponent)
-signal interaction_performed(interactable: InteractableComponent)
+signal focus_changed(interactable: InteractableComponent, actor: Node)
+signal interaction_performed(interactable: InteractableComponent, actor: Node)
+signal interaction_rejected(interactable: InteractableComponent, actor: Node)
 
 @export var actor_path: NodePath
 @export var interaction_action: StringName = &"interact"
@@ -26,8 +27,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not is_instance_valid(focused_interactable):
 		return
 	if focused_interactable.interact(actor):
-		interaction_performed.emit(focused_interactable)
-		get_viewport().set_input_as_handled()
+		interaction_performed.emit(focused_interactable, actor)
+	else:
+		interaction_rejected.emit(focused_interactable, actor)
+	get_viewport().set_input_as_handled()
 
 
 func _update_focus() -> void:
@@ -43,13 +46,13 @@ func _update_focus() -> void:
 	if is_instance_valid(focused_interactable):
 		focused_interactable.set_focused(true, actor)
 
-	focus_changed.emit(focused_interactable)
+	focus_changed.emit(focused_interactable, actor)
 
 
 func _get_raycast_interactable() -> InteractableComponent:
 	if not interaction_ray.is_colliding():
 		return null
 	var collider := interaction_ray.get_collider()
-	if collider is InteractableComponent and collider.can_interact(actor):
+	if collider is InteractableComponent:
 		return collider as InteractableComponent
 	return null

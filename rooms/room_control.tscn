@@ -7,12 +7,11 @@
 [ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_Mechanical_01.tscn" id="5_wall_mech"]
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.tscn" id="6_roof"]
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.tscn" id="7_light_bay"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.tscn" id="8_frame"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05__SM_Bld_Wall_Door_01.tscn" id="9_leaf_a"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.tscn" id="10_leaf_b"]
+[ext_resource type="PackedScene" path="res://gameplay/doors/mechanical_door.tscn" id="8_door"]
 [ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="11_light"]
 [ext_resource type="PackedScene" uid="uid://b5vttg6kf805a" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="12_button"]
 [ext_resource type="PackedScene" uid="uid://vptimce7ujfw" path="res://assets/geometry/controls/SM_Prop_Detail_Keypad_01.glb" id="13_keypad"]
+[ext_resource type="PackedScene" path="res://gameplay/doors/door_control_panel.tscn" id="14_door_panel"]
 
 [node name="ControlRoom" type="Node3D"]
 
@@ -81,14 +80,11 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 15, 
 [node name="Entrance" type="Node3D" parent="."]
 position = Vector3(5, 0, 0)
 
-[node name="Frame" parent="Entrance" instance=ExtResource("8_frame")]
+[node name="Door" parent="Entrance" instance=ExtResource("8_door")]
 
-[node name="DoorLeafA" parent="Entrance" instance=ExtResource("9_leaf_a")]
-
-[node name="DoorLeafB" parent="Entrance" instance=ExtResource("10_leaf_b")]
-
-[node name="InteriorControl" parent="Entrance" instance=ExtResource("12_button")]
-position = Vector3(0.65, 1.4, 0.68)
+[node name="InteriorControl" parent="Entrance" instance=ExtResource("14_door_panel")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.65, 1.4, -0.68)
+target_door_path = NodePath("../Door")
 
 [node name="Ceilings" type="Node3D" parent="."]
 

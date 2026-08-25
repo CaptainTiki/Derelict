@@ -7,14 +7,13 @@
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.tscn" id="5_7lbn3"]
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.tscn" id="6_jxfi2"]
 [ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Roof_Exterior_02.tscn" id="7_roof"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.tscn" id="8_frame"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05__SM_Bld_Wall_Door_01.tscn" id="9_leaf_a"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.tscn" id="10_leaf_b"]
+[ext_resource type="PackedScene" path="res://gameplay/doors/mechanical_door.tscn" id="8_door"]
 [ext_resource type="PackedScene" uid="uid://c0ea14jbmxaq5" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="11_light"]
 [ext_resource type="PackedScene" uid="uid://b5vttg6kf805a" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="12_button"]
 [ext_resource type="PackedScene" uid="uid://seqe0xylxwsm" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="13_vent"]
 [ext_resource type="PackedScene" uid="uid://d0miatl6d0pvi" path="res://assets/geometry/vents/SM_Prop_Detail_Pipe_Broken_01.glb" id="14_pipe"]
 [ext_resource type="PackedScene" uid="uid://d4ipsm44sg35" path="res://assets/geometry/damage/SM_Prop_Detail_Panel_Broken_01.glb" id="15_damage"]
+[ext_resource type="PackedScene" path="res://gameplay/doors/door_control_panel.tscn" id="16_door_panel"]
 
 [node name="Room" type="Node3D" unique_id=346581259]
 
@@ -155,26 +154,21 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 
 [node name="WestDoor" type="Node3D" parent="AirlockDoors" unique_id=195785433]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, -10)
 
-[node name="Frame" parent="AirlockDoors/WestDoor" unique_id=1672544632 instance=ExtResource("8_frame")]
+[node name="Door" parent="AirlockDoors/WestDoor" unique_id=1672544632 instance=ExtResource("8_door")]
+locked = true
 
-[node name="DoorLeafA" parent="AirlockDoors/WestDoor" unique_id=1962353896 instance=ExtResource("9_leaf_a")]
-
-[node name="DoorLeafB" parent="AirlockDoors/WestDoor" unique_id=1220081476 instance=ExtResource("10_leaf_b")]
-
-[node name="InteriorControl" parent="AirlockDoors/WestDoor" unique_id=1960078988 instance=ExtResource("12_button")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 1.4, 0.68)
+[node name="InteriorControl" parent="AirlockDoors/WestDoor" unique_id=1960078988 instance=ExtResource("16_door_panel")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.65, 1.4, -0.68)
+target_door_path = NodePath("../Door")
 
 [node name="EastDoor" type="Node3D" parent="AirlockDoors" unique_id=991394040]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 10, 0, -10)
 
-[node name="Frame" parent="AirlockDoors/EastDoor" unique_id=2028317720 instance=ExtResource("8_frame")]
+[node name="Door" parent="AirlockDoors/EastDoor" unique_id=2028317720 instance=ExtResource("8_door")]
 
-[node name="DoorLeafA" parent="AirlockDoors/EastDoor" unique_id=469484285 instance=ExtResource("9_leaf_a")]
-
-[node name="DoorLeafB" parent="AirlockDoors/EastDoor" unique_id=672622314 instance=ExtResource("10_leaf_b")]
-
-[node name="InteriorControl" parent="AirlockDoors/EastDoor" unique_id=2101302347 instance=ExtResource("12_button")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 1.4, 0.68)
+[node name="InteriorControl" parent="AirlockDoors/EastDoor" unique_id=2101302347 instance=ExtResource("16_door_panel")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.65, 1.4, -0.68)
+target_door_path = NodePath("../Door")
 
 [node name="Ceilings" type="Node3D" parent="." unique_id=1703102684]
 

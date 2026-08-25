@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://ui/interaction_hud.gd" id="1_hud"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+length = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/InteractionRing:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(1, 1)]}
+
+[sub_resource type="Animation" id="Animation_accepted"]
+resource_name = "accepted"
+length = 0.24
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/InteractionRing:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.1, 0.24), "transitions": PackedFloat32Array(1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(0.72, 0.72), Vector2(1, 1)]}
+
+[sub_resource type="Animation" id="Animation_rejected"]
+resource_name = "rejected"
+length = 0.32
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/InteractionRing:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32), "transitions": PackedFloat32Array(1, 1, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(1.18, 0.82), Vector2(0.86, 1.12), Vector2(1.08, 0.92), Vector2(1, 1)]}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_feedback"]
+_data = {&"RESET": SubResource("Animation_reset"), &"accepted": SubResource("Animation_accepted"), &"rejected": SubResource("Animation_rejected")}
+
+[node name="InteractionHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hud")
+
+[node name="Center" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="IdleDot" type="ColorRect" parent="Center"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 34.0
+offset_bottom = 34.0
+mouse_filter = 2
+color = Color(0.82, 0.88, 0.94, 0.85)
+
+[node name="InteractionRing" type="Control" parent="Center"]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 60.0
+pivot_offset = Vector2(28, 28)
+mouse_filter = 2
+
+[node name="TopRight" type="Line2D" parent="Center/InteractionRing"]
+points = PackedVector2Array(28, 4, 37.2, 5.8, 45, 11, 50.2, 18.8)
+width = 3.0
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="BottomRight" type="Line2D" parent="Center/InteractionRing"]
+points = PackedVector2Array(52, 28, 50.2, 37.2, 45, 45, 37.2, 50.2)
+width = 3.0
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="BottomLeft" type="Line2D" parent="Center/InteractionRing"]
+points = PackedVector2Array(28, 52, 18.8, 50.2, 11, 45, 5.8, 37.2)
+width = 3.0
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="TopLeft" type="Line2D" parent="Center/InteractionRing"]
+points = PackedVector2Array(4, 28, 5.8, 18.8, 11, 11, 18.8, 5.8)
+width = 3.0
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="CenterDot" type="ColorRect" parent="Center/InteractionRing"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 30.0
+offset_bottom = 30.0
+mouse_filter = 2
+
+[node name="InteractionPrompt" type="Label" parent="Center"]
+visible = false
+layout_mode = 0
+offset_left = -168.0
+offset_top = 48.0
+offset_right = 232.0
+offset_bottom = 78.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.9)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "[E] Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FeedbackAnimation" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("AnimationLibrary_feedback")}
