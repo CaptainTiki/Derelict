@@ -1,1519 +1,1587 @@
-[gd_scene load_steps=86 format=3]
-[ext_resource type="PackedScene" path="res://player.tscn" id="packedscene_1"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_01.glb" id="packedscene_2"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_010.glb" id="packedscene_3"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_011.glb" id="packedscene_4"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_02.glb" id="packedscene_5"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_03.glb" id="packedscene_6"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_04.glb" id="packedscene_7"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_05.glb" id="packedscene_8"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_06.glb" id="packedscene_9"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_07.glb" id="packedscene_10"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_08.glb" id="packedscene_11"]
-[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_09.glb" id="packedscene_12"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="packedscene_13"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01_Alt.glb" id="packedscene_14"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_02.glb" id="packedscene_15"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_03.glb" id="packedscene_16"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_04.glb" id="packedscene_17"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_04_Alt.glb" id="packedscene_18"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_05.glb" id="packedscene_19"]
-[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_06.glb" id="packedscene_20"]
-[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_01.glb" id="packedscene_21"]
-[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.glb" id="packedscene_22"]
-[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="packedscene_23"]
-[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Double_Arch_01.glb" id="packedscene_24"]
-[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Double_Arch_02.glb" id="packedscene_25"]
-[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_01.glb" id="packedscene_26"]
-[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_02.glb" id="packedscene_27"]
-[ext_resource type="PackedScene" path="res://assets/geometry/corridor/SM_Bld_Corridor_Single_Arch_03.glb" id="packedscene_28"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_01.glb" id="packedscene_29"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_02.glb" id="packedscene_30"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_Wide_01.glb" id="packedscene_31"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_Wide_02.glb" id="packedscene_32"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_01.glb" id="packedscene_33"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_02.glb" id="packedscene_34"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_03.glb" id="packedscene_35"]
-[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_04.glb" id="packedscene_36"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_01.glb" id="packedscene_37"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.glb" id="packedscene_38"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_06.glb" id="packedscene_39"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_01.glb" id="packedscene_40"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02.glb" id="packedscene_41"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_03.glb" id="packedscene_42"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_04.glb" id="packedscene_43"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.glb" id="packedscene_44"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_06.glb" id="packedscene_45"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_01.glb" id="packedscene_46"]
-[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_02.glb" id="packedscene_47"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="packedscene_48"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_02.glb" id="packedscene_49"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_03.glb" id="packedscene_50"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_04.glb" id="packedscene_51"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_05.glb" id="packedscene_52"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_01.glb" id="packedscene_53"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_02.glb" id="packedscene_54"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_03.glb" id="packedscene_55"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_04.glb" id="packedscene_56"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_05.glb" id="packedscene_57"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_06.glb" id="packedscene_58"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_07.glb" id="packedscene_59"]
-[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_08.glb" id="packedscene_60"]
-[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Large_01.glb" id="packedscene_61"]
-[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Small_01.glb" id="packedscene_62"]
-[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="packedscene_63"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_01.glb" id="packedscene_64"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_02.glb" id="packedscene_65"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_03.glb" id="packedscene_66"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_04.glb" id="packedscene_67"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_MapTable_01.glb" id="packedscene_68"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_01.glb" id="packedscene_69"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_02.glb" id="packedscene_70"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_01.glb" id="packedscene_71"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_02.glb" id="packedscene_72"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_06.glb" id="packedscene_73"]
-[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_08.glb" id="packedscene_74"]
-[ext_resource type="PackedScene" path="res://assets/geometry/props/crate/SM_Prop_Crate_01.glb" id="packedscene_75"]
-[ext_resource type="PackedScene" path="res://assets/geometry/props/crate/SM_Prop_Crate_02.glb" id="packedscene_76"]
-[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Bridge_01.glb" id="packedscene_77"]
-[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Exit_02.glb" id="packedscene_78"]
-[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Communication_01.glb" id="packedscene_79"]
-[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Warning_01.glb" id="packedscene_80"]
+[gd_scene format=3]
 
-[sub_resource type="StandardMaterial3D" id="GroundMat"]
-albedo_color = Color(0.240, 0.250, 0.270, 1)
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01.glb" id="asset_001"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_01_Alt.glb" id="asset_002"]
+[ext_resource type="PackedScene" path="res://assets/geometry/walls/SM_Bld_Wall_03.glb" id="asset_003"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_04.glb" id="asset_004"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_05.glb" id="asset_005"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_06.glb" id="asset_006"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_09.glb" id="asset_007"]
+[ext_resource type="PackedScene" path="res://assets/geometry/floors/SM_Bld_Floor_011.glb" id="asset_008"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_02.glb" id="asset_009"]
+[ext_resource type="PackedScene" path="res://assets/geometry/ceilings/SM_Bld_Ceiling_03.glb" id="asset_010"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_01.glb" id="asset_023"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_02.glb" id="asset_024"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Door_06.glb" id="asset_025"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_01.glb" id="asset_026"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_02.glb" id="asset_027"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_03.glb" id="asset_028"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_04.glb" id="asset_029"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_05.glb" id="asset_030"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_06.glb" id="asset_031"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_01.glb" id="asset_032"]
+[ext_resource type="PackedScene" path="res://assets/geometry/doors/SM_Bld_Wall_Doorframe_Outer_02.glb" id="asset_033"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_01.glb" id="asset_011"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_02.glb" id="asset_012"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_03.glb" id="asset_013"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_04.glb" id="asset_014"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_05.glb" id="asset_015"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_06.glb" id="asset_016"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Pillar_07.glb" id="asset_017"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_01.glb" id="asset_018"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_02.glb" id="asset_019"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_03.glb" id="asset_020"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_04.glb" id="asset_021"]
+[ext_resource type="PackedScene" path="res://assets/geometry/pillars/SM_Bld_Wall_Corner_Pillar_05.glb" id="asset_022"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Small_01.glb" id="asset_034"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_AirVent_Large_01.glb" id="asset_035"]
+[ext_resource type="PackedScene" path="res://assets/geometry/vents/SM_Prop_Detail_Airvent_01.glb" id="asset_036"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/detail/SM_Prop_Detail_Panel_01.glb" id="asset_037"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/detail/SM_Prop_Detail_Panel_Fixed_01.glb" id="asset_038"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/panel/SM_Prop_Panel_01.glb" id="asset_039"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/wall/SM_Prop_Wall_Panel_Small_01.glb" id="asset_040"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/wall/SM_Prop_Wall_Panel_Small_02.glb" id="asset_041"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/wall/SM_Prop_Wall_Panel_Small_03.glb" id="asset_042"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_01.glb" id="asset_043"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_02.glb" id="asset_044"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_03.glb" id="asset_045"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_04.glb" id="asset_046"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_05.glb" id="asset_047"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_06.glb" id="asset_048"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_07.glb" id="asset_049"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_08.glb" id="asset_050"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_09.glb" id="asset_051"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_10.glb" id="asset_052"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_11.glb" id="asset_053"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_Small_01.glb" id="asset_054"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Screen_Small_02.glb" id="asset_055"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_01.glb" id="asset_056"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_02.glb" id="asset_057"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_03.glb" id="asset_058"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_ControllPanel_04.glb" id="asset_059"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_01.glb" id="asset_063"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Radar_Panel_02.glb" id="asset_064"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Detail_Keypad_01.glb" id="asset_060"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Detail_Button_01.glb" id="asset_061"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_HandScanner_01.glb" id="asset_062"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_01.glb" id="asset_065"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_02.glb" id="asset_066"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_03.glb" id="asset_067"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_04.glb" id="asset_068"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_05.glb" id="asset_069"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_06.glb" id="asset_070"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_07.glb" id="asset_071"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_08.glb" id="asset_072"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_09.glb" id="asset_073"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_10.glb" id="asset_074"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_11.glb" id="asset_075"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_12.glb" id="asset_076"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_13.glb" id="asset_077"]
+[ext_resource type="PackedScene" path="res://assets/geometry/controls/SM_Prop_Buttons_14.glb" id="asset_078"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/detail/SM_Prop_Detail_Lights_01.glb" id="asset_079"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/detail/SM_Prop_Detail_Lights_02.glb" id="asset_080"]
+[ext_resource type="PackedScene" path="res://assets/geometry/props/detail/SM_Prop_Detail_Lights_03.glb" id="asset_081"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_01.glb" id="asset_082"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_02.glb" id="asset_083"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_03.glb" id="asset_084"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_04.glb" id="asset_085"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Panel_05.glb" id="asset_086"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_01.glb" id="asset_087"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_02.glb" id="asset_088"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_03.glb" id="asset_089"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_04.glb" id="asset_090"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_05.glb" id="asset_091"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_06.glb" id="asset_092"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_07.glb" id="asset_093"]
+[ext_resource type="PackedScene" path="res://assets/geometry/lights/SM_Prop_Light_Small_08.glb" id="asset_094"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Bridge_01.glb" id="asset_095"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_Sign_Exit_02.glb" id="asset_096"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Arrow_01.glb" id="asset_097"]
+[ext_resource type="PackedScene" path="res://assets/geometry/signs/SM_SignBorder_Arrow_02.glb" id="asset_098"]
+
+[sub_resource type="StandardMaterial3D" id="InspectionFloorMat"]
+albedo_color = Color(0.24, 0.25, 0.27, 1)
 roughness = 0.9
 
-[sub_resource type="StandardMaterial3D" id="ReferenceMat"]
-albedo_color = Color(0.180, 0.220, 0.260, 1)
+[sub_resource type="ProceduralSkyMaterial" id="InspectionSkyMat"]
+sky_horizon_color = Color(0.62, 0.66, 0.72, 1)
+ground_horizon_color = Color(0.28, 0.29, 0.31, 1)
+energy_multiplier = 0.9
 
-[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
-sky_horizon_color = Color(0.480, 0.510, 0.560, 1)
-ground_horizon_color = Color(0.240, 0.250, 0.270, 1)
-energy_multiplier = 0.65
+[sub_resource type="Sky" id="InspectionSky"]
+sky_material = SubResource("InspectionSkyMat")
 
-[sub_resource type="Sky" id="Sky"]
-sky_material = SubResource("SkyMat")
-
-[sub_resource type="Environment" id="ZooEnvironment"]
+[sub_resource type="Environment" id="InspectionEnvironment"]
 background_mode = 2
-sky = SubResource("Sky")
+sky = SubResource("InspectionSky")
 ambient_light_source = 2
-ambient_light_color = Color(0.620, 0.680, 0.760, 1)
-ambient_light_energy = 0.75
+ambient_light_color = Color(0.78, 0.82, 0.9, 1)
+ambient_light_energy = 0.95
 tonemap_mode = 2
-ssao_enabled = true
 
 [node name="OpsZoo" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("ZooEnvironment")
+environment = SubResource("InspectionEnvironment")
 
 [node name="InspectionFloor" type="CSGBox3D" parent="."]
-position = Vector3(35, -0.080, 47.500)
-size = Vector3(150, 0.120, 135)
+position = Vector3(26, -0.08, 39)
+size = Vector3(78, 0.12, 96)
 use_collision = true
-material = SubResource("GroundMat")
+material = SubResource("InspectionFloorMat")
 
-[node name="Lighting" type="Node3D" parent="."]
+[node name="InspectionLighting" type="Node3D" parent="."]
 
-[node name="SunKey" type="DirectionalLight3D" parent="Lighting"]
-rotation = Vector3(-0.850, 0.550, 0)
-light_energy = 1.35
+[node name="SunKey" type="DirectionalLight3D" parent="InspectionLighting"]
+rotation = Vector3(-0.85, 0.55, 0)
+light_energy = 1.45
 shadow_enabled = true
 
-[node name="FillLight" type="OmniLight3D" parent="Lighting"]
-position = Vector3(22, 8, 20)
-light_energy = 3.0
+[node name="NorthWestFill" type="OmniLight3D" parent="InspectionLighting"]
+position = Vector3(-4, 8, -2)
+light_energy = 2.8
 omni_range = 38.0
 
-[node name="PlayerStart" type="Marker3D" parent="."]
-position = Vector3(-8, 1.050, -10)
+[node name="NorthEastFill" type="OmniLight3D" parent="InspectionLighting"]
+position = Vector3(56, 8, -2)
+light_energy = 2.8
+omni_range = 38.0
 
-[node name="Player" parent="." instance=ExtResource("packedscene_1")]
-position = Vector3(-8, 1.050, -10)
+[node name="SouthWestFill" type="OmniLight3D" parent="InspectionLighting"]
+position = Vector3(-4, 8, 78)
+light_energy = 2.8
+omni_range = 38.0
 
-[node name="Candidates" type="Node3D" parent="."]
+[node name="SouthEastFill" type="OmniLight3D" parent="InspectionLighting"]
+position = Vector3(56, 8, 78)
+light_energy = 2.8
+omni_range = 38.0
 
-[node name="Dioramas" type="Node3D" parent="."]
-
-[node name="StateTesting" type="Node3D" parent="."]
-position = Vector3(0, 0, 92)
-
-[node name="StateTestingLabel" type="Label3D" parent="StateTesting"]
-position = Vector3(0, 3, 0)
-billboard = 1
-font_size = 54
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "StateTesting scaffold: Powered / Emergency / Unpowered"
-
-[node name="Floors" type="Node3D" parent="Candidates"]
+[node name="Architecture" type="Node3D" parent="."]
 position = Vector3(0, 0, 0)
 
-[node name="Label_Floors" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(-4.500, 3, -3.800)
-billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "Floors"
+[node name="InstalledDetails" type="Node3D" parent="."]
+position = Vector3(34, 0, 0)
 
-[node name="SM_Bld_Floor_01" parent="Candidates/Floors" instance=ExtResource("packedscene_2")]
+[node name="Lights" type="Node3D" parent="."]
+position = Vector3(34, 0, 43)
+
+[node name="Walls" type="Node3D" parent="Architecture"]
 position = Vector3(0, 0, 0)
 
-[node name="Label_SM_Bld_Floor_01" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(0, 2.350, 3.100)
+[node name="Meshes" type="Node3D" parent="Architecture/Walls"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Walls"]
+
+[node name="Label_Walls" type="Label3D" parent="Architecture/Walls/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 3.2, -2.2)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_01"
-
-[node name="SM_Bld_Floor_010" parent="Candidates/Floors" instance=ExtResource("packedscene_3")]
-position = Vector3(9, 0, 0)
-
-[node name="Label_SM_Bld_Floor_010" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(9, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_010"
-
-[node name="SM_Bld_Floor_011" parent="Candidates/Floors" instance=ExtResource("packedscene_4")]
-position = Vector3(18, 0, 0)
-
-[node name="Label_SM_Bld_Floor_011" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(18, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_011"
-
-[node name="SM_Bld_Floor_02" parent="Candidates/Floors" instance=ExtResource("packedscene_5")]
-position = Vector3(27, 0, 0)
-
-[node name="Label_SM_Bld_Floor_02" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(27, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_02"
-
-[node name="SM_Bld_Floor_03" parent="Candidates/Floors" instance=ExtResource("packedscene_6")]
-position = Vector3(36, 0, 0)
-
-[node name="Label_SM_Bld_Floor_03" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(36, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_03"
-
-[node name="SM_Bld_Floor_04" parent="Candidates/Floors" instance=ExtResource("packedscene_7")]
-position = Vector3(45, 0, 0)
-
-[node name="Label_SM_Bld_Floor_04" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(45, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_04"
-
-[node name="SM_Bld_Floor_05" parent="Candidates/Floors" instance=ExtResource("packedscene_8")]
-position = Vector3(0, 0, 9)
-
-[node name="Label_SM_Bld_Floor_05" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(0, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_05"
-
-[node name="SM_Bld_Floor_06" parent="Candidates/Floors" instance=ExtResource("packedscene_9")]
-position = Vector3(9, 0, 9)
-
-[node name="Label_SM_Bld_Floor_06" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(9, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_06"
-
-[node name="SM_Bld_Floor_07" parent="Candidates/Floors" instance=ExtResource("packedscene_10")]
-position = Vector3(18, 0, 9)
-
-[node name="Label_SM_Bld_Floor_07" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(18, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_07"
-
-[node name="SM_Bld_Floor_08" parent="Candidates/Floors" instance=ExtResource("packedscene_11")]
-position = Vector3(27, 0, 9)
-
-[node name="Label_SM_Bld_Floor_08" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(27, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_08"
-
-[node name="SM_Bld_Floor_09" parent="Candidates/Floors" instance=ExtResource("packedscene_12")]
-position = Vector3(36, 0, 9)
-
-[node name="Label_SM_Bld_Floor_09" type="Label3D" parent="Candidates/Floors"]
-position = Vector3(36, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Floor_09"
-
-[node name="Walls" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 31)
-
-[node name="Label_Walls" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(-4.500, 3, -3.800)
-billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
 text = "Walls"
 
-[node name="SM_Bld_Wall_01" parent="Candidates/Walls" instance=ExtResource("packedscene_13")]
+[node name="SM_Bld_Wall_01" parent="Architecture/Walls/Meshes" instance=ExtResource("asset_001")]
 position = Vector3(0, 0, 0)
 
-[node name="Label_SM_Bld_Wall_01" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(0, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_01" type="Label3D" parent="Architecture/Walls/Labels" groups=["zoo_labels"]]
+position = Vector3(2.5, 4.5, 1.387)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 30
+pixel_size = 0.012
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_01"
 
-[node name="SM_Bld_Wall_01_Alt" parent="Candidates/Walls" instance=ExtResource("packedscene_14")]
-position = Vector3(9, 0, 0)
+[node name="SM_Bld_Wall_01_Alt" parent="Architecture/Walls/Meshes" instance=ExtResource("asset_002")]
+position = Vector3(6.1, 0, 0)
 
-[node name="Label_SM_Bld_Wall_01_Alt" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(9, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_01_Alt" type="Label3D" parent="Architecture/Walls/Labels" groups=["zoo_labels"]]
+position = Vector3(8.6, 4.5, 1.387)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 30
+pixel_size = 0.012
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_01_Alt"
 
-[node name="SM_Bld_Wall_02" parent="Candidates/Walls" instance=ExtResource("packedscene_15")]
-position = Vector3(18, 0, 0)
+[node name="SM_Bld_Wall_03" parent="Architecture/Walls/Meshes" instance=ExtResource("asset_003")]
+position = Vector3(12.2, 0, 0)
 
-[node name="Label_SM_Bld_Wall_02" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(18, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_03" type="Label3D" parent="Architecture/Walls/Labels" groups=["zoo_labels"]]
+position = Vector3(14.7, 4.5, 1.392)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_02"
-
-[node name="SM_Bld_Wall_03" parent="Candidates/Walls" instance=ExtResource("packedscene_16")]
-position = Vector3(27, 0, 0)
-
-[node name="Label_SM_Bld_Wall_03" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(27, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 30
+pixel_size = 0.012
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_03"
 
-[node name="SM_Bld_Wall_04" parent="Candidates/Walls" instance=ExtResource("packedscene_17")]
-position = Vector3(36, 0, 0)
+[node name="Floors" type="Node3D" parent="Architecture"]
+position = Vector3(0, 0, 10)
 
-[node name="Label_SM_Bld_Wall_04" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(36, 2.350, 3.100)
+[node name="Meshes" type="Node3D" parent="Architecture/Floors"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Floors"]
+
+[node name="Label_Floors" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 2.2, -2)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_04"
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Floors"
 
-[node name="SM_Bld_Wall_04_Alt" parent="Candidates/Walls" instance=ExtResource("packedscene_18")]
-position = Vector3(45, 0, 0)
+[node name="SM_Bld_Floor_04" parent="Architecture/Floors/Meshes" instance=ExtResource("asset_004")]
+position = Vector3(0, 0, 0)
 
-[node name="Label_SM_Bld_Wall_04_Alt" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(45, 2.350, 3.100)
+[node name="Label_SM_Bld_Floor_04" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(2.5, 0.379, 5.45)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_04_Alt"
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Floor_04"
 
-[node name="SM_Bld_Wall_05" parent="Candidates/Walls" instance=ExtResource("packedscene_19")]
-position = Vector3(0, 0, 9)
+[node name="SM_Bld_Floor_05" parent="Architecture/Floors/Meshes" instance=ExtResource("asset_005")]
+position = Vector3(6.007, 0, 0)
 
-[node name="Label_SM_Bld_Wall_05" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(0, 2.350, 12.100)
+[node name="Label_SM_Bld_Floor_05" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(8.504, 0.379, 5.45)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_05"
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Floor_05"
 
-[node name="SM_Bld_Wall_06" parent="Candidates/Walls" instance=ExtResource("packedscene_20")]
-position = Vector3(9, 0, 9)
+[node name="SM_Bld_Floor_06" parent="Architecture/Floors/Meshes" instance=ExtResource("asset_006")]
+position = Vector3(12.007, 0, 0)
 
-[node name="Label_SM_Bld_Wall_06" type="Label3D" parent="Candidates/Walls"]
-position = Vector3(9, 2.350, 12.100)
+[node name="Label_SM_Bld_Floor_06" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(14.507, 0.379, 5.45)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_06"
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Floor_06"
 
-[node name="Ceilings" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 62)
+[node name="SM_Bld_Floor_09" parent="Architecture/Floors/Meshes" instance=ExtResource("asset_007")]
+position = Vector3(18.007, 0, 0)
 
-[node name="Label_Ceilings" type="Label3D" parent="Candidates/Ceilings"]
-position = Vector3(-4.500, 3, -3.800)
+[node name="Label_SM_Bld_Floor_09" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(20.507, 0.357, 5.45)
 billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Floor_09"
+
+[node name="SM_Bld_Floor_011" parent="Architecture/Floors/Meshes" instance=ExtResource("asset_008")]
+position = Vector3(24.007, 0, 0)
+
+[node name="Label_SM_Bld_Floor_011" type="Label3D" parent="Architecture/Floors/Labels" groups=["zoo_labels"]]
+position = Vector3(26.507, 0.404, 5.45)
+billboard = 1
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Floor_011"
+
+[node name="Ceilings" type="Node3D" parent="Architecture"]
+position = Vector3(0, 0, 22)
+
+[node name="Meshes" type="Node3D" parent="Architecture/Ceilings"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Ceilings"]
+
+[node name="Label_Ceilings" type="Label3D" parent="Architecture/Ceilings/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 4.9, -2)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
 text = "Ceilings"
 
-[node name="SM_Bld_Ceiling_01" parent="Candidates/Ceilings" instance=ExtResource("packedscene_21")]
+[node name="SM_Bld_Ceiling_02" parent="Architecture/Ceilings/Meshes" instance=ExtResource("asset_009")]
 position = Vector3(0, 0, 0)
 
-[node name="Label_SM_Bld_Ceiling_01" type="Label3D" parent="Candidates/Ceilings"]
-position = Vector3(0, 2.350, 3.100)
+[node name="Label_SM_Bld_Ceiling_02" type="Label3D" parent="Architecture/Ceilings/Labels" groups=["zoo_labels"]]
+position = Vector3(2.5, 4.839, 5.45)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Ceiling_01"
-
-[node name="SM_Bld_Ceiling_02" parent="Candidates/Ceilings" instance=ExtResource("packedscene_22")]
-position = Vector3(9, 0, 0)
-
-[node name="Label_SM_Bld_Ceiling_02" type="Label3D" parent="Candidates/Ceilings"]
-position = Vector3(9, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Ceiling_02"
 
-[node name="SM_Bld_Ceiling_03" parent="Candidates/Ceilings" instance=ExtResource("packedscene_23")]
-position = Vector3(18, 0, 0)
+[node name="SM_Bld_Ceiling_03" parent="Architecture/Ceilings/Meshes" instance=ExtResource("asset_010")]
+position = Vector3(6, 0, 0)
 
-[node name="Label_SM_Bld_Ceiling_03" type="Label3D" parent="Candidates/Ceilings"]
-position = Vector3(18, 2.350, 3.100)
+[node name="Label_SM_Bld_Ceiling_03" type="Label3D" parent="Architecture/Ceilings/Labels" groups=["zoo_labels"]]
+position = Vector3(8.5, 4.839, 5.45)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 28
+pixel_size = 0.011
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Ceiling_03"
 
-[node name="Structural" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 84)
+[node name="Doors" type="Node3D" parent="Architecture"]
+position = Vector3(0, 0, 34)
 
-[node name="Label_Structural" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(-4.500, 3, -3.800)
+[node name="Meshes" type="Node3D" parent="Architecture/Doors"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Doors"]
+
+[node name="Label_Doors" type="Label3D" parent="Architecture/Doors/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 3, -2)
 billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "Structural"
-
-[node name="SM_Bld_Corridor_Double_Arch_01" parent="Candidates/Structural" instance=ExtResource("packedscene_24")]
-position = Vector3(0, 0, 0)
-
-[node name="Label_SM_Bld_Corridor_Double_Arch_01" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(0, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Corridor_Double_Arch_01"
-
-[node name="SM_Bld_Corridor_Double_Arch_02" parent="Candidates/Structural" instance=ExtResource("packedscene_25")]
-position = Vector3(9, 0, 0)
-
-[node name="Label_SM_Bld_Corridor_Double_Arch_02" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(9, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Corridor_Double_Arch_02"
-
-[node name="SM_Bld_Corridor_Single_Arch_01" parent="Candidates/Structural" instance=ExtResource("packedscene_26")]
-position = Vector3(18, 0, 0)
-
-[node name="Label_SM_Bld_Corridor_Single_Arch_01" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(18, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Corridor_Single_Arch_01"
-
-[node name="SM_Bld_Corridor_Single_Arch_02" parent="Candidates/Structural" instance=ExtResource("packedscene_27")]
-position = Vector3(27, 0, 0)
-
-[node name="Label_SM_Bld_Corridor_Single_Arch_02" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(27, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Corridor_Single_Arch_02"
-
-[node name="SM_Bld_Corridor_Single_Arch_03" parent="Candidates/Structural" instance=ExtResource("packedscene_28")]
-position = Vector3(36, 0, 0)
-
-[node name="Label_SM_Bld_Corridor_Single_Arch_03" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(36, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Corridor_Single_Arch_03"
-
-[node name="SM_Bld_Wall_Corner_Pillar_01" parent="Candidates/Structural" instance=ExtResource("packedscene_29")]
-position = Vector3(45, 0, 0)
-
-[node name="Label_SM_Bld_Wall_Corner_Pillar_01" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(45, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Corner_Pillar_01"
-
-[node name="SM_Bld_Wall_Corner_Pillar_02" parent="Candidates/Structural" instance=ExtResource("packedscene_30")]
-position = Vector3(0, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Corner_Pillar_02" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(0, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Corner_Pillar_02"
-
-[node name="SM_Bld_Wall_Corner_Pillar_Wide_01" parent="Candidates/Structural" instance=ExtResource("packedscene_31")]
-position = Vector3(9, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Corner_Pillar_Wide_01" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(9, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Corner_Pillar_Wide_01"
-
-[node name="SM_Bld_Wall_Corner_Pillar_Wide_02" parent="Candidates/Structural" instance=ExtResource("packedscene_32")]
-position = Vector3(18, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Corner_Pillar_Wide_02" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(18, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Corner_Pillar_Wide_02"
-
-[node name="SM_Bld_Wall_Pillar_01" parent="Candidates/Structural" instance=ExtResource("packedscene_33")]
-position = Vector3(27, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Pillar_01" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(27, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Pillar_01"
-
-[node name="SM_Bld_Wall_Pillar_02" parent="Candidates/Structural" instance=ExtResource("packedscene_34")]
-position = Vector3(36, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Pillar_02" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(36, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Pillar_02"
-
-[node name="SM_Bld_Wall_Pillar_03" parent="Candidates/Structural" instance=ExtResource("packedscene_35")]
-position = Vector3(45, 0, 9)
-
-[node name="Label_SM_Bld_Wall_Pillar_03" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(45, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Pillar_03"
-
-[node name="SM_Bld_Wall_Pillar_04" parent="Candidates/Structural" instance=ExtResource("packedscene_36")]
-position = Vector3(0, 0, 18)
-
-[node name="Label_SM_Bld_Wall_Pillar_04" type="Label3D" parent="Candidates/Structural"]
-position = Vector3(0, 2.350, 21.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Bld_Wall_Pillar_04"
-
-[node name="Doors" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 124)
-
-[node name="Label_Doors" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(-4.500, 3, -3.800)
-billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
 text = "Doors"
 
-[node name="SM_Bld_Wall_Door_01" parent="Candidates/Doors" instance=ExtResource("packedscene_37")]
-position = Vector3(0, 0, 0)
+[node name="SM_Bld_Wall_Door_01" parent="Architecture/Doors/Meshes" instance=ExtResource("asset_023")]
+position = Vector3(-1.654, 0, 0.222)
 
-[node name="Label_SM_Bld_Wall_Door_01" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(0, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_Door_01" type="Label3D" parent="Architecture/Doors/Labels" groups=["zoo_labels"]]
+position = Vector3(0.846, 3.224, 0.893)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 27
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Door_01"
 
-[node name="SM_Bld_Wall_Door_02" parent="Candidates/Doors" instance=ExtResource("packedscene_38")]
-position = Vector3(9, 0, 0)
+[node name="SM_Bld_Wall_Door_02" parent="Architecture/Doors/Meshes" instance=ExtResource("asset_024")]
+position = Vector3(0.412, 0, 0.211)
 
-[node name="Label_SM_Bld_Wall_Door_02" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(9, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_Door_02" type="Label3D" parent="Architecture/Doors/Labels" groups=["zoo_labels"]]
+position = Vector3(3.627, 2.883, 0.873)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 27
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Door_02"
 
-[node name="SM_Bld_Wall_Door_06" parent="Candidates/Doors" instance=ExtResource("packedscene_39")]
-position = Vector3(18, 0, 0)
+[node name="SM_Bld_Wall_Door_06" parent="Architecture/Doors/Meshes" instance=ExtResource("asset_025")]
+position = Vector3(3.573, 0, 0.05)
 
-[node name="Label_SM_Bld_Wall_Door_06" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(18, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_Door_06" type="Label3D" parent="Architecture/Doors/Labels" groups=["zoo_labels"]]
+position = Vector3(6.073, 2.418, 0.549)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 27
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Door_06"
 
-[node name="SM_Bld_Wall_Doorframe_01" parent="Candidates/Doors" instance=ExtResource("packedscene_40")]
-position = Vector3(27, 0, 0)
+[node name="Doorframes" type="Node3D" parent="Architecture"]
+position = Vector3(0, 0, 42)
 
-[node name="Label_SM_Bld_Wall_Doorframe_01" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(27, 2.350, 3.100)
+[node name="Meshes" type="Node3D" parent="Architecture/Doorframes"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Doorframes"]
+
+[node name="Label_Doorframes" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 5, -2)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Doorframes"
+
+[node name="SM_Bld_Wall_Doorframe_01" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_026")]
+position = Vector3(0, 0, 0.364)
+
+[node name="Label_SM_Bld_Wall_Doorframe_01" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(2.5, 4.45, 1.268)
+billboard = 1
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_01"
 
-[node name="SM_Bld_Wall_Doorframe_02" parent="Candidates/Doors" instance=ExtResource("packedscene_41")]
-position = Vector3(36, 0, 0)
+[node name="SM_Bld_Wall_Doorframe_02" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_027")]
+position = Vector3(6.2, 0, 0.436)
 
-[node name="Label_SM_Bld_Wall_Doorframe_02" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(36, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_Doorframe_02" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(8.7, 4.45, 1.411)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_02"
 
-[node name="SM_Bld_Wall_Doorframe_03" parent="Candidates/Doors" instance=ExtResource("packedscene_42")]
-position = Vector3(45, 0, 0)
+[node name="SM_Bld_Wall_Doorframe_03" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_028")]
+position = Vector3(16.9, 0, 0.469)
 
-[node name="Label_SM_Bld_Wall_Doorframe_03" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(45, 2.350, 3.100)
+[node name="Label_SM_Bld_Wall_Doorframe_03" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(16.9, 4.455, 1.478)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_03"
 
-[node name="SM_Bld_Wall_Doorframe_04" parent="Candidates/Doors" instance=ExtResource("packedscene_43")]
-position = Vector3(0, 0, 9)
+[node name="SM_Bld_Wall_Doorframe_04" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_029")]
+position = Vector3(22.6, 0, 0.576)
 
-[node name="Label_SM_Bld_Wall_Doorframe_04" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(0, 2.350, 12.100)
+[node name="Label_SM_Bld_Wall_Doorframe_04" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(25.1, 4.45, 4.139)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_04"
 
-[node name="SM_Bld_Wall_Doorframe_05" parent="Candidates/Doors" instance=ExtResource("packedscene_44")]
-position = Vector3(9, 0, 9)
+[node name="SM_Bld_Wall_Doorframe_05" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_030")]
+position = Vector3(0, 0, 6.62)
 
-[node name="Label_SM_Bld_Wall_Doorframe_05" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(9, 2.350, 12.100)
+[node name="Label_SM_Bld_Wall_Doorframe_05" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(2.5, 4.45, 7.78)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_05"
 
-[node name="SM_Bld_Wall_Doorframe_06" parent="Candidates/Doors" instance=ExtResource("packedscene_45")]
-position = Vector3(18, 0, 9)
+[node name="SM_Bld_Wall_Doorframe_06" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_031")]
+position = Vector3(6.2, 0, 6.224)
 
-[node name="Label_SM_Bld_Wall_Doorframe_06" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(18, 2.350, 12.100)
+[node name="Label_SM_Bld_Wall_Doorframe_06" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(8.7, 4.445, 6.989)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_06"
 
-[node name="SM_Bld_Wall_Doorframe_Outer_01" parent="Candidates/Doors" instance=ExtResource("packedscene_46")]
-position = Vector3(27, 0, 9)
+[node name="SM_Bld_Wall_Doorframe_Outer_01" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_032")]
+position = Vector3(12.602, 0, 6.711)
 
-[node name="Label_SM_Bld_Wall_Doorframe_Outer_01" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(27, 2.350, 12.100)
+[node name="Label_SM_Bld_Wall_Doorframe_Outer_01" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(15.103, 4.652, 7.964)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_Outer_01"
 
-[node name="SM_Bld_Wall_Doorframe_Outer_02" parent="Candidates/Doors" instance=ExtResource("packedscene_47")]
-position = Vector3(36, 0, 9)
+[node name="SM_Bld_Wall_Doorframe_Outer_02" parent="Architecture/Doorframes/Meshes" instance=ExtResource("asset_033")]
+position = Vector3(24.204, 0, 6.711)
 
-[node name="Label_SM_Bld_Wall_Doorframe_Outer_02" type="Label3D" parent="Candidates/Doors"]
-position = Vector3(36, 2.350, 12.100)
+[node name="Label_SM_Bld_Wall_Doorframe_Outer_02" type="Label3D" parent="Architecture/Doorframes/Labels" groups=["zoo_labels"]]
+position = Vector3(24.204, 4.652, 7.964)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 26
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Bld_Wall_Doorframe_Outer_02"
 
-[node name="Lights" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 155)
+[node name="Pillars" type="Node3D" parent="Architecture"]
+position = Vector3(0, 0, 58)
 
-[node name="Label_Lights" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(-4.500, 3, -3.800)
+[node name="Meshes" type="Node3D" parent="Architecture/Pillars"]
+
+[node name="Labels" type="Node3D" parent="Architecture/Pillars"]
+
+[node name="Label_Pillars" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 5.1, -1.8)
 billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "Lights"
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Pillars"
 
-[node name="SM_Prop_Light_Panel_01" parent="Candidates/Lights" instance=ExtResource("packedscene_48")]
+[node name="SM_Bld_Wall_Pillar_01" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_011")]
+position = Vector3(0.308, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Pillar_01" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(0.308, 4.504, 1.481)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_01"
+
+[node name="SM_Bld_Wall_Pillar_02" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_012")]
+position = Vector3(1.775, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Pillar_02" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(1.776, 4.504, 1.393)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_02"
+
+[node name="SM_Bld_Wall_Pillar_03" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_013")]
+position = Vector3(3.392, 0, -0.012)
+
+[node name="Label_SM_Bld_Wall_Pillar_03" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(3.392, 4.504, 1.433)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_03"
+
+[node name="SM_Bld_Wall_Pillar_04" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_014")]
+position = Vector3(5.456, 0, 0.19)
+
+[node name="Label_SM_Bld_Wall_Pillar_04" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(5.464, 4.505, 1.933)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_04"
+
+[node name="SM_Bld_Wall_Pillar_05" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_015")]
+position = Vector3(7.541, 0, 0.031)
+
+[node name="Label_SM_Bld_Wall_Pillar_05" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(7.541, 4.504, 1.465)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_05"
+
+[node name="SM_Bld_Wall_Pillar_06" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_016")]
+position = Vector3(9.191, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Pillar_06" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(9.191, 4.504, 1.909)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_06"
+
+[node name="SM_Bld_Wall_Pillar_07" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_017")]
+position = Vector3(10.84, 0, 0)
+
+[node name="Label_SM_Bld_Wall_Pillar_07" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(10.84, 4.504, 1.466)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Pillar_07"
+
+[node name="SM_Bld_Wall_Corner_Pillar_01" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_018")]
+position = Vector3(12.404, 0, 0.202)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_01" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(12.801, 4.504, 1.603)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Corner_Pillar_01"
+
+[node name="SM_Bld_Wall_Corner_Pillar_02" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_019")]
+position = Vector3(14.536, 0, 0.245)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_02" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(14.887, 4.504, 1.588)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Corner_Pillar_02"
+
+[node name="SM_Bld_Wall_Corner_Pillar_03" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_020")]
+position = Vector3(16.583, 0, 0.209)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_03" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(16.943, 4.504, 1.548)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Corner_Pillar_03"
+
+[node name="SM_Bld_Wall_Corner_Pillar_04" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_021")]
+position = Vector3(18.614, 0, 0.202)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_04" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(19.009, 4.504, 1.6)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Corner_Pillar_04"
+
+[node name="SM_Bld_Wall_Corner_Pillar_05" parent="Architecture/Pillars/Meshes" instance=ExtResource("asset_022")]
+position = Vector3(20.742, 0, 0.245)
+
+[node name="Label_SM_Bld_Wall_Corner_Pillar_05" type="Label3D" parent="Architecture/Pillars/Labels" groups=["zoo_labels"]]
+position = Vector3(21.19, 4.504, 1.72)
+billboard = 1
+font_size = 24
+pixel_size = 0.009
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Bld_Wall_Corner_Pillar_05"
+
+[node name="Vents" type="Node3D" parent="InstalledDetails"]
 position = Vector3(0, 0, 0)
 
-[node name="Label_SM_Prop_Light_Panel_01" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(0, 2.350, 3.100)
+[node name="Meshes" type="Node3D" parent="InstalledDetails/Vents"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/Vents"]
+
+[node name="Label_Vents" type="Label3D" parent="InstalledDetails/Vents/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.3, 2.4, -1.4)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Panel_01"
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Vents"
 
-[node name="SM_Prop_Light_Panel_02" parent="Candidates/Lights" instance=ExtResource("packedscene_49")]
-position = Vector3(9, 0, 0)
+[node name="SM_Prop_AirVent_Small_01" parent="InstalledDetails/Vents/Meshes" instance=ExtResource("asset_034")]
+position = Vector3(0.381, 0, 0.205)
 
-[node name="Label_SM_Prop_Light_Panel_02" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(9, 2.350, 3.100)
+[node name="Label_SM_Prop_AirVent_Small_01" type="Label3D" parent="InstalledDetails/Vents/Labels" groups=["zoo_labels"]]
+position = Vector3(0.484, 0.77, 0.844)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Panel_02"
-
-[node name="SM_Prop_Light_Panel_03" parent="Candidates/Lights" instance=ExtResource("packedscene_50")]
-position = Vector3(18, 0, 0)
-
-[node name="Label_SM_Prop_Light_Panel_03" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(18, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Panel_03"
-
-[node name="SM_Prop_Light_Panel_04" parent="Candidates/Lights" instance=ExtResource("packedscene_51")]
-position = Vector3(27, 0, 0)
-
-[node name="Label_SM_Prop_Light_Panel_04" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(27, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Panel_04"
-
-[node name="SM_Prop_Light_Panel_05" parent="Candidates/Lights" instance=ExtResource("packedscene_52")]
-position = Vector3(36, 0, 0)
-
-[node name="Label_SM_Prop_Light_Panel_05" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(36, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Panel_05"
-
-[node name="SM_Prop_Light_Small_01" parent="Candidates/Lights" instance=ExtResource("packedscene_53")]
-position = Vector3(45, 0, 0)
-
-[node name="Label_SM_Prop_Light_Small_01" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(45, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_01"
-
-[node name="SM_Prop_Light_Small_02" parent="Candidates/Lights" instance=ExtResource("packedscene_54")]
-position = Vector3(0, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_02" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(0, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_02"
-
-[node name="SM_Prop_Light_Small_03" parent="Candidates/Lights" instance=ExtResource("packedscene_55")]
-position = Vector3(9, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_03" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(9, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_03"
-
-[node name="SM_Prop_Light_Small_04" parent="Candidates/Lights" instance=ExtResource("packedscene_56")]
-position = Vector3(18, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_04" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(18, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_04"
-
-[node name="SM_Prop_Light_Small_05" parent="Candidates/Lights" instance=ExtResource("packedscene_57")]
-position = Vector3(27, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_05" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(27, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_05"
-
-[node name="SM_Prop_Light_Small_06" parent="Candidates/Lights" instance=ExtResource("packedscene_58")]
-position = Vector3(36, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_06" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(36, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_06"
-
-[node name="SM_Prop_Light_Small_07" parent="Candidates/Lights" instance=ExtResource("packedscene_59")]
-position = Vector3(45, 0, 9)
-
-[node name="Label_SM_Prop_Light_Small_07" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(45, 2.350, 12.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_07"
-
-[node name="SM_Prop_Light_Small_08" parent="Candidates/Lights" instance=ExtResource("packedscene_60")]
-position = Vector3(0, 0, 18)
-
-[node name="Label_SM_Prop_Light_Small_08" type="Label3D" parent="Candidates/Lights"]
-position = Vector3(0, 2.350, 21.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Light_Small_08"
-
-[node name="Props" type="Node3D" parent="Candidates"]
-position = Vector3(0, 0, 195)
-
-[node name="Label_Props" type="Label3D" parent="Candidates/Props"]
-position = Vector3(-4.500, 3, -3.800)
-billboard = 1
-font_size = 72
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "Props"
-
-[node name="SM_Prop_AirVent_Large_01" parent="Candidates/Props" instance=ExtResource("packedscene_61")]
-position = Vector3(0, 0, 0)
-
-[node name="Label_SM_Prop_AirVent_Large_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(0, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_AirVent_Large_01"
-
-[node name="SM_Prop_AirVent_Small_01" parent="Candidates/Props" instance=ExtResource("packedscene_62")]
-position = Vector3(9, 0, 0)
-
-[node name="Label_SM_Prop_AirVent_Small_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(9, 2.350, 3.100)
-billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 21
+pixel_size = 0.007
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_AirVent_Small_01"
 
-[node name="SM_Prop_Detail_Airvent_01" parent="Candidates/Props" instance=ExtResource("packedscene_63")]
-position = Vector3(18, 0, 0)
+[node name="SM_Prop_AirVent_Large_01" parent="InstalledDetails/Vents/Meshes" instance=ExtResource("asset_035")]
+position = Vector3(2.963, 0, 0.526)
 
-[node name="Label_SM_Prop_Detail_Airvent_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(18, 2.350, 3.100)
+[node name="Label_SM_Prop_AirVent_Large_01" type="Label3D" parent="InstalledDetails/Vents/Labels" groups=["zoo_labels"]]
+position = Vector3(2.963, 1.445, 1.411)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 21
+pixel_size = 0.007
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_AirVent_Large_01"
+
+[node name="SM_Prop_Detail_Airvent_01" parent="InstalledDetails/Vents/Meshes" instance=ExtResource("asset_036")]
+position = Vector3(5.74, 0, 0.245)
+
+[node name="Label_SM_Prop_Detail_Airvent_01" type="Label3D" parent="InstalledDetails/Vents/Labels" groups=["zoo_labels"]]
+position = Vector3(5.741, 0.787, 0.849)
+billboard = 1
+font_size = 21
+pixel_size = 0.007
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_Detail_Airvent_01"
 
-[node name="SM_Prop_ControllPanel_01" parent="Candidates/Props" instance=ExtResource("packedscene_64")]
-position = Vector3(27, 0, 0)
+[node name="Panels" type="Node3D" parent="InstalledDetails"]
+position = Vector3(0, 0, 7)
 
-[node name="Label_SM_Prop_ControllPanel_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(27, 2.350, 3.100)
+[node name="Meshes" type="Node3D" parent="InstalledDetails/Panels"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/Panels"]
+
+[node name="Label_Panels" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.3, 1.2, -1.2)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_ControllPanel_01"
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Panels"
 
-[node name="SM_Prop_ControllPanel_02" parent="Candidates/Props" instance=ExtResource("packedscene_65")]
-position = Vector3(36, 0, 0)
+[node name="SM_Prop_Detail_Panel_01" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_037")]
+position = Vector3(0.221, 0, 0.492)
 
-[node name="Label_SM_Prop_ControllPanel_02" type="Label3D" parent="Candidates/Props"]
-position = Vector3(36, 2.350, 3.100)
+[node name="Label_SM_Prop_Detail_Panel_01" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(0.222, 0.999, 1.277)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_ControllPanel_02"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Panel_01"
 
-[node name="SM_Prop_ControllPanel_03" parent="Candidates/Props" instance=ExtResource("packedscene_66")]
-position = Vector3(45, 0, 0)
+[node name="SM_Prop_Detail_Panel_Fixed_01" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_038")]
+position = Vector3(1.591, 0, 0.498)
 
-[node name="Label_SM_Prop_ControllPanel_03" type="Label3D" parent="Candidates/Props"]
-position = Vector3(45, 2.350, 3.100)
+[node name="Label_SM_Prop_Detail_Panel_Fixed_01" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(1.592, 0.385, 1.29)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_ControllPanel_03"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Panel_Fixed_01"
 
-[node name="SM_Prop_ControllPanel_04" parent="Candidates/Props" instance=ExtResource("packedscene_67")]
-position = Vector3(0, 0, 9)
+[node name="SM_Prop_Panel_01" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_039")]
+position = Vector3(3.121, 0, 0.173)
 
-[node name="Label_SM_Prop_ControllPanel_04" type="Label3D" parent="Candidates/Props"]
-position = Vector3(0, 2.350, 12.100)
+[node name="Label_SM_Prop_Panel_01" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(3.122, 0.262, 0.639)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_ControllPanel_04"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Panel_01"
 
-[node name="SM_Prop_MapTable_01" parent="Candidates/Props" instance=ExtResource("packedscene_68")]
-position = Vector3(9, 0, 9)
+[node name="SM_Prop_Wall_Panel_Small_01" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_040")]
+position = Vector3(4.403, 0, 0)
 
-[node name="Label_SM_Prop_MapTable_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(9, 2.350, 12.100)
+[node name="Label_SM_Prop_Wall_Panel_Small_01" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(4.403, 0.43, 0.503)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_MapTable_01"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Wall_Panel_Small_01"
 
-[node name="SM_Prop_Radar_Panel_01" parent="Candidates/Props" instance=ExtResource("packedscene_69")]
-position = Vector3(18, 0, 9)
+[node name="SM_Prop_Wall_Panel_Small_02" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_041")]
+position = Vector3(5.553, 0, 0)
 
-[node name="Label_SM_Prop_Radar_Panel_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(18, 2.350, 12.100)
+[node name="Label_SM_Prop_Wall_Panel_Small_02" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(5.554, 0.43, 0.504)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Radar_Panel_01"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Wall_Panel_Small_02"
 
-[node name="SM_Prop_Radar_Panel_02" parent="Candidates/Props" instance=ExtResource("packedscene_70")]
-position = Vector3(27, 0, 9)
+[node name="SM_Prop_Wall_Panel_Small_03" parent="InstalledDetails/Panels/Meshes" instance=ExtResource("asset_042")]
+position = Vector3(6.704, 0, 0)
 
-[node name="Label_SM_Prop_Radar_Panel_02" type="Label3D" parent="Candidates/Props"]
-position = Vector3(27, 2.350, 12.100)
+[node name="Label_SM_Prop_Wall_Panel_Small_03" type="Label3D" parent="InstalledDetails/Panels/Labels" groups=["zoo_labels"]]
+position = Vector3(6.705, 0.43, 0.504)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Radar_Panel_02"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Wall_Panel_Small_03"
 
-[node name="SM_Prop_Screen_01" parent="Candidates/Props" instance=ExtResource("packedscene_71")]
-position = Vector3(36, 0, 9)
+[node name="Screens_Large" type="Node3D" parent="InstalledDetails"]
+position = Vector3(0, 0, 13)
 
-[node name="Label_SM_Prop_Screen_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(36, 2.350, 12.100)
+[node name="Meshes" type="Node3D" parent="InstalledDetails/Screens_Large"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/Screens_Large"]
+
+[node name="Label_Screens_Large" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.25, 0.9, -0.9)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Screens_Large"
+
+[node name="SM_Prop_Screen_01" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_043")]
+position = Vector3(0.207, 0, 0.198)
+
+[node name="Label_SM_Prop_Screen_01" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(0.207, 0.25, 0.599)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_Screen_01"
 
-[node name="SM_Prop_Screen_02" parent="Candidates/Props" instance=ExtResource("packedscene_72")]
-position = Vector3(45, 0, 9)
+[node name="SM_Prop_Screen_02" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_044")]
+position = Vector3(1.005, 0, 0.125)
 
-[node name="Label_SM_Prop_Screen_02" type="Label3D" parent="Candidates/Props"]
-position = Vector3(45, 2.350, 12.100)
+[node name="Label_SM_Prop_Screen_02" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(1.006, 0.25, 0.454)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_Screen_02"
 
-[node name="SM_Prop_Screen_06" parent="Candidates/Props" instance=ExtResource("packedscene_73")]
-position = Vector3(0, 0, 18)
+[node name="SM_Prop_Screen_03" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_045")]
+position = Vector3(1.795, 0, 0.115)
 
-[node name="Label_SM_Prop_Screen_06" type="Label3D" parent="Candidates/Props"]
-position = Vector3(0, 2.350, 21.100)
+[node name="Label_SM_Prop_Screen_03" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(1.796, 0.25, 0.434)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_03"
+
+[node name="SM_Prop_Screen_04" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_046")]
+position = Vector3(2.59, 0, 0.106)
+
+[node name="Label_SM_Prop_Screen_04" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(2.591, 0.25, 0.414)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_04"
+
+[node name="SM_Prop_Screen_05" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_047")]
+position = Vector3(3.321, 0, 0.115)
+
+[node name="Label_SM_Prop_Screen_05" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(3.321, 0.25, 0.434)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_05"
+
+[node name="SM_Prop_Screen_06" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_048")]
+position = Vector3(4.166, 0, 0.179)
+
+[node name="Label_SM_Prop_Screen_06" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(4.167, 0.25, 0.561)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_Screen_06"
 
-[node name="SM_Prop_Screen_08" parent="Candidates/Props" instance=ExtResource("packedscene_74")]
-position = Vector3(9, 0, 18)
+[node name="SM_Prop_Screen_07" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_049")]
+position = Vector3(5.019, 0, 0.125)
 
-[node name="Label_SM_Prop_Screen_08" type="Label3D" parent="Candidates/Props"]
-position = Vector3(9, 2.350, 21.100)
+[node name="Label_SM_Prop_Screen_07" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(5.02, 0.25, 0.454)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_07"
+
+[node name="SM_Prop_Screen_08" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_050")]
+position = Vector3(5.904, 0, 0.2)
+
+[node name="Label_SM_Prop_Screen_08" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(5.904, 0.25, 0.603)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Prop_Screen_08"
 
-[node name="SM_Prop_Crate_01" parent="Candidates/Props" instance=ExtResource("packedscene_75")]
-position = Vector3(18, 0, 18)
+[node name="SM_Prop_Screen_09" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_051")]
+position = Vector3(6.804, 0, 0.179)
 
-[node name="Label_SM_Prop_Crate_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(18, 2.350, 21.100)
+[node name="Label_SM_Prop_Screen_09" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(6.856, 0.25, 0.561)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Crate_01"
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_09"
 
-[node name="SM_Prop_Crate_02" parent="Candidates/Props" instance=ExtResource("packedscene_76")]
-position = Vector3(27, 0, 18)
+[node name="SM_Prop_Screen_10" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_052")]
+position = Vector3(7.713, 0, 0.115)
 
-[node name="Label_SM_Prop_Crate_02" type="Label3D" parent="Candidates/Props"]
-position = Vector3(27, 2.350, 21.100)
+[node name="Label_SM_Prop_Screen_10" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(7.714, 0.25, 0.434)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_Prop_Crate_02"
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_10"
 
-[node name="SM_Sign_Bridge_01" parent="Candidates/Props" instance=ExtResource("packedscene_77")]
-position = Vector3(36, 0, 18)
+[node name="SM_Prop_Screen_11" parent="InstalledDetails/Screens_Large/Meshes" instance=ExtResource("asset_053")]
+position = Vector3(8.503, 0, 0.143)
 
-[node name="Label_SM_Sign_Bridge_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(36, 2.350, 21.100)
+[node name="Label_SM_Prop_Screen_11" type="Label3D" parent="InstalledDetails/Screens_Large/Labels" groups=["zoo_labels"]]
+position = Vector3(8.504, 0.25, 0.471)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_11"
+
+[node name="Screens_Small" type="Node3D" parent="InstalledDetails"]
+position = Vector3(0, 0, 17)
+
+[node name="Meshes" type="Node3D" parent="InstalledDetails/Screens_Small"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/Screens_Small"]
+
+[node name="Label_Screens_Small" type="Label3D" parent="InstalledDetails/Screens_Small/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.25, 0.95, -0.8)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Screens_Small"
+
+[node name="SM_Prop_Screen_Small_01" parent="InstalledDetails/Screens_Small/Meshes" instance=ExtResource("asset_054")]
+position = Vector3(0.24, 0, 0.065)
+
+[node name="Label_SM_Prop_Screen_Small_01" type="Label3D" parent="InstalledDetails/Screens_Small/Labels" groups=["zoo_labels"]]
+position = Vector3(0.241, 0.437, 0.332)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_Small_01"
+
+[node name="SM_Prop_Screen_Small_02" parent="InstalledDetails/Screens_Small/Meshes" instance=ExtResource("asset_055")]
+position = Vector3(1.344, 0, 0.069)
+
+[node name="Label_SM_Prop_Screen_Small_02" type="Label3D" parent="InstalledDetails/Screens_Small/Labels" groups=["zoo_labels"]]
+position = Vector3(1.344, 0.446, 0.341)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Screen_Small_02"
+
+[node name="Controls" type="Node3D" parent="InstalledDetails"]
+position = Vector3(0, 0, 23)
+
+[node name="Meshes" type="Node3D" parent="InstalledDetails/Controls"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/Controls"]
+
+[node name="Label_Controls" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.5, 2.1, -1.8)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Controls"
+
+[node name="SM_Prop_ControllPanel_01" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_056")]
+position = Vector3(0, 0, 0)
+
+[node name="Label_SM_Prop_ControllPanel_01" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(2.658, 1.529, 2.999)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_ControllPanel_01"
+
+[node name="SM_Prop_ControllPanel_02" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_057")]
+position = Vector3(10.987, 0, 0.028)
+
+[node name="Label_SM_Prop_ControllPanel_02" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(10.988, 1.836, 3.027)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_ControllPanel_02"
+
+[node name="SM_Prop_ControllPanel_03" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_058")]
+position = Vector3(21.976, 0, 0)
+
+[node name="Label_SM_Prop_ControllPanel_03" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(19.318, 1.529, 2.999)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_ControllPanel_03"
+
+[node name="SM_Prop_ControllPanel_04" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_059")]
+position = Vector3(1.833, 0, 5.682)
+
+[node name="Label_SM_Prop_ControllPanel_04" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(1.833, 1.544, 6.95)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_ControllPanel_04"
+
+[node name="SM_Prop_Radar_Panel_01" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_063")]
+position = Vector3(5.07, 0, 4.788)
+
+[node name="Label_SM_Prop_Radar_Panel_01" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(5.071, 0.437, 5.649)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Radar_Panel_01"
+
+[node name="SM_Prop_Radar_Panel_02" parent="InstalledDetails/Controls/Meshes" instance=ExtResource("asset_064")]
+position = Vector3(7.113, 0, 5.015)
+
+[node name="Label_SM_Prop_Radar_Panel_02" type="Label3D" parent="InstalledDetails/Controls/Labels" groups=["zoo_labels"]]
+position = Vector3(7.113, 0.487, 6.102)
+billboard = 1
+font_size = 22
+pixel_size = 0.008
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Radar_Panel_02"
+
+[node name="ButtonsAndAccess" type="Node3D" parent="InstalledDetails"]
+position = Vector3(0, 0, 31)
+
+[node name="Meshes" type="Node3D" parent="InstalledDetails/ButtonsAndAccess"]
+
+[node name="Labels" type="Node3D" parent="InstalledDetails/ButtonsAndAccess"]
+
+[node name="Label_ButtonsAndAccess" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.2, 0.9, -0.8)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "ButtonsAndAccess"
+
+[node name="SM_Prop_Detail_Keypad_01" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_060")]
+position = Vector3(0.526, 0, 0.375)
+
+[node name="Label_SM_Prop_Detail_Keypad_01" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(0.527, 0.25, 0.93)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Keypad_01"
+
+[node name="SM_Prop_Detail_Button_01" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_061")]
+position = Vector3(1.494, 0, 0)
+
+[node name="Label_SM_Prop_Detail_Button_01" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(1.476, 0.25, 0.231)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Button_01"
+
+[node name="SM_Prop_HandScanner_01" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_062")]
+position = Vector3(2.038, 0, 0.05)
+
+[node name="Label_SM_Prop_HandScanner_01" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(2.038, 0.291, 0.348)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_HandScanner_01"
+
+[node name="SM_Prop_Buttons_01" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_065")]
+position = Vector3(2.626, 0, 0.092)
+
+[node name="Label_SM_Prop_Buttons_01" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(2.626, 0.25, 0.363)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_01"
+
+[node name="SM_Prop_Buttons_02" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_066")]
+position = Vector3(3.166, 0, 0.076)
+
+[node name="Label_SM_Prop_Buttons_02" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(3.166, 0.25, 0.331)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_02"
+
+[node name="SM_Prop_Buttons_03" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_067")]
+position = Vector3(3.796, 0, 0.18)
+
+[node name="Label_SM_Prop_Buttons_03" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(3.796, 0.25, 0.539)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_03"
+
+[node name="SM_Prop_Buttons_04" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_068")]
+position = Vector3(4.484, 0, 0.096)
+
+[node name="Label_SM_Prop_Buttons_04" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(4.484, 0.25, 0.372)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_04"
+
+[node name="SM_Prop_Buttons_05" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_069")]
+position = Vector3(5.193, 0, 0.096)
+
+[node name="Label_SM_Prop_Buttons_05" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(5.193, 0.25, 0.372)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_05"
+
+[node name="SM_Prop_Buttons_06" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_070")]
+position = Vector3(5.944, 0, 0.073)
+
+[node name="Label_SM_Prop_Buttons_06" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(5.944, 0.25, 0.326)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_06"
+
+[node name="SM_Prop_Buttons_07" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_071")]
+position = Vector3(6.555, 0, 0.077)
+
+[node name="Label_SM_Prop_Buttons_07" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(6.556, 0.25, 0.334)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_07"
+
+[node name="SM_Prop_Buttons_08" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_072")]
+position = Vector3(7.167, 0, 0.164)
+
+[node name="Label_SM_Prop_Buttons_08" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(7.167, 0.25, 0.509)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_08"
+
+[node name="SM_Prop_Buttons_09" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_073")]
+position = Vector3(0.284, 0, 1.519)
+
+[node name="Label_SM_Prop_Buttons_09" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(0.284, 0.25, 1.818)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_09"
+
+[node name="SM_Prop_Buttons_10" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_074")]
+position = Vector3(1.129, 0, 1.477)
+
+[node name="Label_SM_Prop_Buttons_10" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(1.129, 0.25, 1.734)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_10"
+
+[node name="SM_Prop_Buttons_11" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_075")]
+position = Vector3(1.927, 0, 1.594)
+
+[node name="Label_SM_Prop_Buttons_11" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(1.928, 0.25, 1.967)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_11"
+
+[node name="SM_Prop_Buttons_12" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_076")]
+position = Vector3(2.579, 0, 1.543)
+
+[node name="Label_SM_Prop_Buttons_12" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(2.579, 0.25, 1.867)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_12"
+
+[node name="SM_Prop_Buttons_13" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_077")]
+position = Vector3(3.042, 0, 1.454)
+
+[node name="Label_SM_Prop_Buttons_13" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(3.043, 0.25, 1.688)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_13"
+
+[node name="SM_Prop_Buttons_14" parent="InstalledDetails/ButtonsAndAccess/Meshes" instance=ExtResource("asset_078")]
+position = Vector3(3.485, 0, 1.456)
+
+[node name="Label_SM_Prop_Buttons_14" type="Label3D" parent="InstalledDetails/ButtonsAndAccess/Labels" groups=["zoo_labels"]]
+position = Vector3(3.486, 0.262, 1.693)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Buttons_14"
+
+[node name="Large" type="Node3D" parent="Lights"]
+position = Vector3(0, 0, 0)
+
+[node name="Meshes" type="Node3D" parent="Lights/Large"]
+
+[node name="Labels" type="Node3D" parent="Lights/Large"]
+
+[node name="Label_Large" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.3, 1.3, -1.2)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Large"
+
+[node name="SM_Prop_Detail_Lights_01" parent="Lights/Large/Meshes" instance=ExtResource("asset_079")]
+position = Vector3(0.526, 0, 0.167)
+
+[node name="Label_SM_Prop_Detail_Lights_01" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(0.527, 0.28, 0.649)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Lights_01"
+
+[node name="SM_Prop_Detail_Lights_02" parent="Lights/Large/Meshes" instance=ExtResource("asset_080")]
+position = Vector3(2.258, 0, 0.146)
+
+[node name="Label_SM_Prop_Detail_Lights_02" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(2.258, 0.28, 0.607)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Lights_02"
+
+[node name="SM_Prop_Detail_Lights_03" parent="Lights/Large/Meshes" instance=ExtResource("asset_081")]
+position = Vector3(3.968, 0, 0.146)
+
+[node name="Label_SM_Prop_Detail_Lights_03" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(3.968, 0.28, 0.607)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Detail_Lights_03"
+
+[node name="SM_Prop_Light_Panel_01" parent="Lights/Large/Meshes" instance=ExtResource("asset_082")]
+position = Vector3(5.429, 0, 0.603)
+
+[node name="Label_SM_Prop_Light_Panel_01" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(5.43, 0.282, 1.521)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Panel_01"
+
+[node name="SM_Prop_Light_Panel_02" parent="Lights/Large/Meshes" instance=ExtResource("asset_083")]
+position = Vector3(6.676, 0, 0.611)
+
+[node name="Label_SM_Prop_Light_Panel_02" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(6.676, 0.323, 1.537)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Panel_02"
+
+[node name="SM_Prop_Light_Panel_03" parent="Lights/Large/Meshes" instance=ExtResource("asset_084")]
+position = Vector3(7.869, 0, 0.619)
+
+[node name="Label_SM_Prop_Light_Panel_03" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(7.869, 0.312, 1.552)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Panel_03"
+
+[node name="SM_Prop_Light_Panel_04" parent="Lights/Large/Meshes" instance=ExtResource("asset_085")]
+position = Vector3(8.974, 0, 0.553)
+
+[node name="Label_SM_Prop_Light_Panel_04" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(8.974, 0.324, 1.422)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Panel_04"
+
+[node name="SM_Prop_Light_Panel_05" parent="Lights/Large/Meshes" instance=ExtResource("asset_086")]
+position = Vector3(10.132, 0, 0.603)
+
+[node name="Label_SM_Prop_Light_Panel_05" type="Label3D" parent="Lights/Large/Labels" groups=["zoo_labels"]]
+position = Vector3(10.133, 0.288, 1.521)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Panel_05"
+
+[node name="Small" type="Node3D" parent="Lights"]
+position = Vector3(0, 0, 6)
+
+[node name="Meshes" type="Node3D" parent="Lights/Small"]
+
+[node name="Labels" type="Node3D" parent="Lights/Small"]
+
+[node name="Label_Small" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.2, 0.9, -0.8)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Small"
+
+[node name="SM_Prop_Light_Small_01" parent="Lights/Small/Meshes" instance=ExtResource("asset_087")]
+position = Vector3(0.064, 0, 0.171)
+
+[node name="Label_SM_Prop_Light_Small_01" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(0.064, 0.25, 0.522)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_01"
+
+[node name="SM_Prop_Light_Small_02" parent="Lights/Small/Meshes" instance=ExtResource("asset_088")]
+position = Vector3(0.523, 0, 0.171)
+
+[node name="Label_SM_Prop_Light_Small_02" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(0.533, 0.25, 0.522)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_02"
+
+[node name="SM_Prop_Light_Small_03" parent="Lights/Small/Meshes" instance=ExtResource("asset_089")]
+position = Vector3(1.009, 0, 0.246)
+
+[node name="Label_SM_Prop_Light_Small_03" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(1.009, 0.25, 0.671)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_03"
+
+[node name="SM_Prop_Light_Small_04" parent="Lights/Small/Meshes" instance=ExtResource("asset_090")]
+position = Vector3(1.502, 0, 0.656)
+
+[node name="Label_SM_Prop_Light_Small_04" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(1.502, 0.25, 1.493)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_04"
+
+[node name="SM_Prop_Light_Small_05" parent="Lights/Small/Meshes" instance=ExtResource("asset_091")]
+position = Vector3(2.09, 0, 0.175)
+
+[node name="Label_SM_Prop_Light_Small_05" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(2.091, 0.25, 0.53)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_05"
+
+[node name="SM_Prop_Light_Small_06" parent="Lights/Small/Meshes" instance=ExtResource("asset_092")]
+position = Vector3(2.687, 0, 0.63)
+
+[node name="Label_SM_Prop_Light_Small_06" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(2.688, 0.25, 1.441)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_06"
+
+[node name="SM_Prop_Light_Small_07" parent="Lights/Small/Meshes" instance=ExtResource("asset_093")]
+position = Vector3(3.196, 0, 0.186)
+
+[node name="Label_SM_Prop_Light_Small_07" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(3.197, 0.25, 0.553)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_07"
+
+[node name="SM_Prop_Light_Small_08" parent="Lights/Small/Meshes" instance=ExtResource("asset_094")]
+position = Vector3(3.734, 0, 0.108)
+
+[node name="Label_SM_Prop_Light_Small_08" type="Label3D" parent="Lights/Small/Labels" groups=["zoo_labels"]]
+position = Vector3(3.734, 0.382, 0.396)
+billboard = 1
+font_size = 11
+pixel_size = 0.0035
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_Prop_Light_Small_08"
+
+[node name="Signs" type="Node3D" parent="."]
+position = Vector3(35, 0, 31)
+
+[node name="Meshes" type="Node3D" parent="Signs"]
+
+[node name="Labels" type="Node3D" parent="Signs"]
+
+[node name="Label_Signs" type="Label3D" parent="Signs/Labels" groups=["zoo_labels"]]
+position = Vector3(-0.3, 1.5, -1.2)
+billboard = 1
+font_size = 38
+pixel_size = 0.01
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 6
+text = "Signs"
+
+[node name="SM_Sign_Bridge_01" parent="Signs/Meshes" instance=ExtResource("asset_095")]
+position = Vector3(1.137, 0, 0.072)
+
+[node name="Label_SM_Sign_Bridge_01" type="Label3D" parent="Signs/Labels" groups=["zoo_labels"]]
+position = Vector3(1.137, 0.639, 0.437)
+billboard = 1
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Sign_Bridge_01"
 
-[node name="SM_Sign_Exit_02" parent="Candidates/Props" instance=ExtResource("packedscene_78")]
-position = Vector3(45, 0, 18)
+[node name="SM_Sign_Exit_02" parent="Signs/Meshes" instance=ExtResource("asset_096")]
+position = Vector3(3.771, 0, 0.072)
 
-[node name="Label_SM_Sign_Exit_02" type="Label3D" parent="Candidates/Props"]
-position = Vector3(45, 2.350, 21.100)
+[node name="Label_SM_Sign_Exit_02" type="Label3D" parent="Signs/Labels" groups=["zoo_labels"]]
+position = Vector3(3.771, 0.639, 0.437)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
 text = "SM_Sign_Exit_02"
 
-[node name="SM_SignBorder_Communication_01" parent="Candidates/Props" instance=ExtResource("packedscene_79")]
-position = Vector3(0, 0, 27)
+[node name="SM_SignBorder_Arrow_01" parent="Signs/Meshes" instance=ExtResource("asset_097")]
+position = Vector3(5.852, 0, 0.072)
 
-[node name="Label_SM_SignBorder_Communication_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(0, 2.350, 30.100)
+[node name="Label_SM_SignBorder_Arrow_01" type="Label3D" parent="Signs/Labels" groups=["zoo_labels"]]
+position = Vector3(5.852, 0.764, 0.437)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_SignBorder_Communication_01"
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_SignBorder_Arrow_01"
 
-[node name="SM_SignBorder_Warning_01" parent="Candidates/Props" instance=ExtResource("packedscene_80")]
-position = Vector3(9, 0, 27)
+[node name="SM_SignBorder_Arrow_02" parent="Signs/Meshes" instance=ExtResource("asset_098")]
+position = Vector3(7.67, 0, 0.072)
 
-[node name="Label_SM_SignBorder_Warning_01" type="Label3D" parent="Candidates/Props"]
-position = Vector3(9, 2.350, 30.100)
+[node name="Label_SM_SignBorder_Arrow_02" type="Label3D" parent="Signs/Labels" groups=["zoo_labels"]]
+position = Vector3(7.67, 0.764, 0.437)
 billboard = 1
-font_size = 36
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "SM_SignBorder_Warning_01"
-
-[node name="StandardCorridor" type="Node3D" parent="Dioramas"]
-position = Vector3(80, 0, 0)
-
-[node name="StandardCorridor_Label" type="Label3D" parent="Dioramas/StandardCorridor"]
-position = Vector3(-2, 3.600, -4)
-billboard = 1
-font_size = 66
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "StandardCorridor"
-
-[node name="Architecture" type="Node3D" parent="Dioramas/StandardCorridor"]
-
-[node name="Props" type="Node3D" parent="Dioramas/StandardCorridor"]
-
-[node name="PoweredLighting" type="Node3D" parent="Dioramas/StandardCorridor"]
-
-[node name="EmergencyLighting" type="Node3D" parent="Dioramas/StandardCorridor"]
-visible = false
-
-[node name="FX" type="Node3D" parent="Dioramas/StandardCorridor"]
-
-[node name="SM_Bld_Floor_011" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 0)
-
-[node name="SM_Bld_Ceiling_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 0)
-
-[node name="SM_Bld_Floor_011_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 5)
-
-[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 5)
-
-[node name="SM_Bld_Floor_011_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 10)
-
-[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 10)
-
-[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(0, 0, 5)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(5, 0, 0)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Single_Arch_01" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
-position = Vector3(0, 0, 0)
-
-[node name="SM_Prop_Light_Panel_01" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(2.500, 3.200, 2.500)
-
-[node name="SM_Bld_Wall_02_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(0, 0, 10)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(5, 0, 5)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Single_Arch_01_02" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
-position = Vector3(0, 0, 5)
-
-[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(2.500, 3.200, 7.500)
-
-[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(0, 0, 15)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_02_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(5, 0, 10)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Single_Arch_01_03" parent="Dioramas/StandardCorridor/Architecture" instance=ExtResource("packedscene_26")]
-position = Vector3(0, 0, 10)
-
-[node name="SM_Prop_Light_Panel_01_03" parent="Dioramas/StandardCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(2.500, 3.200, 12.500)
-
-[node name="SM_Prop_AirVent_Large_01" parent="Dioramas/StandardCorridor/Props" instance=ExtResource("packedscene_61")]
-position = Vector3(4.750, 1.600, 6.500)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Sign_Exit_02" parent="Dioramas/StandardCorridor/Props" instance=ExtResource("packedscene_78")]
-position = Vector3(0.200, 1.800, 11.200)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/StandardCorridor/PoweredLighting"]
-position = Vector3(2.500, 3, 7.500)
-light_color = Color(0.580, 0.780, 1, 1)
-light_energy = 2.2
-omni_range = 9.0
-shadow_enabled = true
-
-[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/StandardCorridor/EmergencyLighting"]
-position = Vector3(2.500, 2.800, 7.500)
-light_color = Color(1, 0.180, 0.100, 1)
-light_energy = 1.3
-omni_range = 8.0
-
-[node name="MainCorridor" type="Node3D" parent="Dioramas"]
-position = Vector3(80, 0, 32)
-
-[node name="MainCorridor_Label" type="Label3D" parent="Dioramas/MainCorridor"]
-position = Vector3(-2, 3.600, -4)
-billboard = 1
-font_size = 66
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "MainCorridor"
-
-[node name="Architecture" type="Node3D" parent="Dioramas/MainCorridor"]
-
-[node name="Props" type="Node3D" parent="Dioramas/MainCorridor"]
-
-[node name="PoweredLighting" type="Node3D" parent="Dioramas/MainCorridor"]
-
-[node name="EmergencyLighting" type="Node3D" parent="Dioramas/MainCorridor"]
-visible = false
-
-[node name="FX" type="Node3D" parent="Dioramas/MainCorridor"]
-
-[node name="SM_Bld_Floor_011" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 0)
-
-[node name="SM_Bld_Ceiling_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 0)
-
-[node name="SM_Bld_Floor_011_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 5)
-
-[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 5)
-
-[node name="SM_Bld_Floor_011_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 10)
-
-[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 10)
-
-[node name="SM_Bld_Floor_011_04" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(5, 0, 0)
-
-[node name="SM_Bld_Ceiling_03_04" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(5, 3.800, 0)
-
-[node name="SM_Bld_Floor_011_05" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(5, 0, 5)
-
-[node name="SM_Bld_Ceiling_03_05" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(5, 3.800, 5)
-
-[node name="SM_Bld_Floor_011_06" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(5, 0, 10)
-
-[node name="SM_Bld_Ceiling_03_06" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(5, 3.800, 10)
-
-[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(0, 0, 5)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(10, 0, 0)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Double_Arch_01" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
-position = Vector3(0, 0, 0)
-
-[node name="SM_Prop_Light_Panel_01" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(5, 3.200, 2.500)
-
-[node name="SM_Bld_Wall_02_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(0, 0, 10)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(10, 0, 5)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Double_Arch_01_02" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
-position = Vector3(0, 0, 5)
-
-[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(5, 3.200, 7.500)
-
-[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(0, 0, 15)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_02_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(10, 0, 10)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Corridor_Double_Arch_01_03" parent="Dioramas/MainCorridor/Architecture" instance=ExtResource("packedscene_24")]
-position = Vector3(0, 0, 10)
-
-[node name="SM_Prop_Light_Panel_01_03" parent="Dioramas/MainCorridor/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(5, 3.200, 12.500)
-
-[node name="SM_Prop_AirVent_Large_01" parent="Dioramas/MainCorridor/Props" instance=ExtResource("packedscene_61")]
-position = Vector3(9.750, 1.600, 6.500)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Sign_Exit_02" parent="Dioramas/MainCorridor/Props" instance=ExtResource("packedscene_78")]
-position = Vector3(0.200, 1.800, 11.200)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/MainCorridor/PoweredLighting"]
-position = Vector3(5, 3, 7.500)
-light_color = Color(0.580, 0.780, 1, 1)
-light_energy = 2.2
-omni_range = 9.0
-shadow_enabled = true
-
-[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/MainCorridor/EmergencyLighting"]
-position = Vector3(5, 2.800, 7.500)
-light_color = Color(1, 0.180, 0.100, 1)
-light_energy = 1.3
-omni_range = 8.0
-
-[node name="StandardRoom" type="Node3D" parent="Dioramas"]
-position = Vector3(80, 0, 68)
-
-[node name="StandardRoom_Label" type="Label3D" parent="Dioramas/StandardRoom"]
-position = Vector3(-2, 3.600, -4)
-billboard = 1
-font_size = 66
-pixel_size = 0.018
-modulate = Color(0.920, 0.960, 1, 1)
-outline_size = 8
-text = "StandardRoom"
-
-[node name="Architecture" type="Node3D" parent="Dioramas/StandardRoom"]
-
-[node name="Props" type="Node3D" parent="Dioramas/StandardRoom"]
-
-[node name="PoweredLighting" type="Node3D" parent="Dioramas/StandardRoom"]
-
-[node name="EmergencyLighting" type="Node3D" parent="Dioramas/StandardRoom"]
-visible = false
-
-[node name="FX" type="Node3D" parent="Dioramas/StandardRoom"]
-
-[node name="SM_Bld_Floor_011" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 0)
-
-[node name="SM_Bld_Ceiling_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 0)
-
-[node name="SM_Bld_Floor_011_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(0, 0, 5)
-
-[node name="SM_Bld_Ceiling_03_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(0, 3.800, 5)
-
-[node name="SM_Bld_Floor_011_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(5, 0, 0)
-
-[node name="SM_Bld_Ceiling_03_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(5, 3.800, 0)
-
-[node name="SM_Bld_Floor_011_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_4")]
-position = Vector3(5, 0, 5)
-
-[node name="SM_Bld_Ceiling_03_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_23")]
-position = Vector3(5, 3.800, 5)
-
-[node name="SM_Bld_Wall_01_Alt" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(0, 0, 0)
-rotation = Vector3(0, 0, 0)
-
-[node name="SM_Bld_Wall_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(5, 0, 10)
-rotation = Vector3(0, 3.142, 0)
-
-[node name="SM_Bld_Wall_01_Alt_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(5, 0, 0)
-rotation = Vector3(0, 0, 0)
-
-[node name="SM_Bld_Wall_02_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(10, 0, 10)
-rotation = Vector3(0, 3.142, 0)
-
-[node name="SM_Bld_Wall_02_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(0, 0, 5)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_01_Alt_03" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(10, 0, 0)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Wall_02_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_15")]
-position = Vector3(0, 0, 10)
-rotation = Vector3(0, 1.571, 0)
-
-[node name="SM_Bld_Wall_01_Alt_04" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_14")]
-position = Vector3(10, 0, 5)
-rotation = Vector3(0, -1.571, 0)
-
-[node name="SM_Bld_Wall_Doorframe_02" parent="Dioramas/StandardRoom/Architecture" instance=ExtResource("packedscene_41")]
-position = Vector3(5, 0, 0)
-
-[node name="SM_Prop_Light_Panel_01" parent="Dioramas/StandardRoom/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(2.500, 3.250, 2.500)
-
-[node name="SM_Prop_Light_Panel_01_02" parent="Dioramas/StandardRoom/PoweredLighting" instance=ExtResource("packedscene_48")]
-position = Vector3(7.500, 3.250, 7.500)
-
-[node name="SM_Prop_ControllPanel_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_64")]
-position = Vector3(2.500, 0, 8.200)
-rotation = Vector3(0, 3.142, 0)
-
-[node name="SM_Prop_MapTable_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_68")]
-position = Vector3(6.800, 0, 5.200)
-
-[node name="SM_Sign_Bridge_01" parent="Dioramas/StandardRoom/Props" instance=ExtResource("packedscene_77")]
-position = Vector3(8.800, 1.600, 0.200)
-
-[node name="PoweredFill" type="OmniLight3D" parent="Dioramas/StandardRoom/PoweredLighting"]
-position = Vector3(5, 3, 7.500)
-light_color = Color(0.580, 0.780, 1, 1)
-light_energy = 2.2
-omni_range = 9.0
-shadow_enabled = true
-
-[node name="EmergencyRed" type="OmniLight3D" parent="Dioramas/StandardRoom/EmergencyLighting"]
-position = Vector3(5, 2.800, 7.500)
-light_color = Color(1, 0.180, 0.100, 1)
-light_energy = 1.3
-omni_range = 8.0
+font_size = 18
+pixel_size = 0.006
+modulate = Color(0.92, 0.96, 1, 1)
+outline_size = 5
+text = "SM_SignBorder_Arrow_02"
+
+[node name="PlayerStart" type="Marker3D" parent="."]
+position = Vector3(-8, 1.05, -10)
+rotation = Vector3(0, 0.7853982, 0)
