@@ -4,6 +4,6 @@
 render_priority = -2
 transparency = 1
 cull_mode = 2
-albedo_color = Color(0.045, 0.052, 0.06, 0.24)
+albedo_color = Color(0.045, 0.052, 0.06, 0.14)
 metallic = 0.04
 roughness = 0.95

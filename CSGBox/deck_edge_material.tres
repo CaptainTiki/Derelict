@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://CSGBox/hologram_edge.gdshader" id="1_edge"]
+
+[resource]
+render_priority = 2
+shader = ExtResource("1_edge")
+shader_parameter/tint = Color(0.72, 0.95, 1, 1)
+shader_parameter/edge_alpha = 0.9
+shader_parameter/emission_strength = 2.25
