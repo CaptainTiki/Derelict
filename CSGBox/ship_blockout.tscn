@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://bt6ba71fsnr2a" path="res://CSGBox/hologram_fill.gdshader" id="1_eh3bw"]
 [ext_resource type="Material" uid="uid://b65sbqve6ovhf" path="res://CSGBox/deck_slab_material.tres" id="3_deck_fill"]
 [ext_resource type="Script" uid="uid://c4d5b2f3jrito" path="res://CSGBox/deck_slab.gd" id="4_deck_slab"]
+[ext_resource type="Script" uid="uid://b0o81oodyb1k3" path="res://CSGBox/walkthrough_controller.gd" id="5_walkthrough"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v5csi"]
 render_priority = -1
@@ -355,7 +356,7 @@ tint = Color(1, 0.7, 0.08, 1)
 [node name="OfficersArea" type="Node3D" parent="Locations" unique_id=1188103515]
 
 [node name="OfficersGreen" type="CSGBox3D" parent="Locations/OfficersArea" unique_id=1261284333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041642666, 20, -18.000546)
 cast_shadow = 0
 use_collision = true
 size = Vector3(12, 8, 24)
@@ -2212,6 +2213,94 @@ current = true
 fov = 50.0
 near = 0.5
 far = 600.0
+
+[node name="Walkthrough" type="Node3D" parent="." unique_id=768451461]
+editor_description = "Development-only human-scale walkthrough harness. Toggle this node to disable its controller, markers, and HUD."
+
+[node name="Controller" type="Node3D" parent="Walkthrough" unique_id=838328670]
+script = ExtResource("5_walkthrough")
+
+[node name="WalkthroughCamera" type="Camera3D" parent="Walkthrough/Controller" unique_id=1343574819]
+current = true
+far = 600.0
+
+[node name="Start_Hangar" type="Marker3D" parent="Walkthrough" unique_id=1170824453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 9.7, 16)
+
+[node name="Label" type="Label3D" parent="Walkthrough/Start_Hangar" unique_id=948989187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+pixel_size = 0.035
+billboard = 1
+no_depth_test = true
+modulate = Color(0.5, 1, 0.68, 1)
+text = "START — HANGAR"
+font_size = 18
+outline_size = 5
+
+[node name="Bookmark_Maintenance" type="Marker3D" parent="Walkthrough" unique_id=1933571805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -2)
+
+[node name="Label" type="Label3D" parent="Walkthrough/Bookmark_Maintenance" unique_id=469631554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+pixel_size = 0.035
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.72, 0.22, 1)
+text = "BOOKMARK — MAINTENANCE"
+font_size = 18
+outline_size = 5
+
+[node name="Bookmark_Bridge" type="Marker3D" parent="Walkthrough" unique_id=1974573992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 25.7, -4)
+
+[node name="Label" type="Label3D" parent="Walkthrough/Bookmark_Bridge" unique_id=389641199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+pixel_size = 0.035
+billboard = 1
+no_depth_test = true
+modulate = Color(0.84, 0.72, 1, 1)
+text = "BOOKMARK — BRIDGE"
+font_size = 18
+outline_size = 5
+
+[node name="WalkthroughHUD" type="CanvasLayer" parent="Walkthrough" unique_id=534476262]
+layer = 20
+
+[node name="Panel" type="ColorRect" parent="Walkthrough/WalkthroughHUD" unique_id=463384184]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 330.0
+offset_bottom = 292.0
+mouse_filter = 2
+color = Color(0.01, 0.018, 0.028, 0.78)
+
+[node name="Readout" type="Label" parent="Walkthrough/WalkthroughHUD/Panel" unique_id=2080095446]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 300.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0.78, 0.94, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "WALKTHROUGH
+Mode: FLY
+Speed: 1.0 m/s
+Elapsed: 00:00.0
+Distance: 0.0 m
+
+Position:
+X -8.0
+Y 9.7
+Z 16.0"
+
+[node name="SplitReadout" type="Label" parent="Walkthrough/WalkthroughHUD/Panel" unique_id=1760168616]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 202.0
+offset_right = 300.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(1, 0.76, 0.28, 1)
+theme_override_font_sizes/font_size = 16
 
 [node name="Lighting" type="Node3D" parent="." unique_id=184438113]
 
