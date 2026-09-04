@@ -1,0 +1,1047 @@
+[gd_scene format=3 uid="uid://v5ecooky1r4e"]
+
+[ext_resource type="Script" uid="uid://c46o825y17kjs" path="res://CSGBox/hologram_block.gd" id="1_block"]
+[ext_resource type="Shader" uid="uid://bt6ba71fsnr2a" path="res://CSGBox/hologram_fill.gdshader" id="1_eh3bw"]
+[ext_resource type="Material" path="res://CSGBox/deck_slab_material.tres" id="2_deck"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5csi"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.05, 0.95, 0.9, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ubavj"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.12, 0.4, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_41tt2"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.12, 0.4, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0jsk"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.12, 0.4, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xgyh0"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.12, 0.4, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c27mt"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.7, 0.08, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f2y20"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.68, 0.2, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pfjpp"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.78, 0.2, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8vln"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.72, 0.9, 1, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ba8g"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jinjv"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8aa2w"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_epswy"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n7tbx"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4lh8s"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mk6in"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_08mgs"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.33, 0.06, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30cti"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.08, 0.72, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mv166"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.18, 0.9, 0.28, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5v7yx"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.18, 0.9, 0.28, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x2imy"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.67, 0.48, 0.16, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wku0y"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.67, 0.48, 0.16, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwasi"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(1, 0.08, 0.08, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qqgj2"]
+render_priority = -1
+shader = ExtResource("1_eh3bw")
+shader_parameter/tint = Color(0.58, 0.025, 0.04, 1)
+shader_parameter/fill_alpha = 0.04
+shader_parameter/fresnel_strength = 0.08
+
+[sub_resource type="StandardMaterial3D" id="Material_axis_z"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.15, 0.72, 1, 0.42)
+
+[sub_resource type="BoxMesh" id="Box_keel_axis"]
+material = SubResource("Material_axis_z")
+size = Vector3(0.18, 0.18, 210)
+
+[sub_resource type="StandardMaterial3D" id="Material_axis_x"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0.28, 0.2, 0.34)
+
+[sub_resource type="BoxMesh" id="Box_beam_axis"]
+material = SubResource("Material_axis_x")
+size = Vector3(40, 0.16, 0.16)
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_blockout"]
+sky_top_color = Color(0.005, 0.008, 0.02, 1)
+sky_horizon_color = Color(0.025, 0.045, 0.075, 1)
+ground_bottom_color = Color(0.004, 0.006, 0.012, 1)
+ground_horizon_color = Color(0.018, 0.03, 0.05, 1)
+energy_multiplier = 0.55
+
+[sub_resource type="Sky" id="Sky_blockout"]
+sky_material = SubResource("SkyMaterial_blockout")
+
+[sub_resource type="Environment" id="Environment_blockout"]
+background_mode = 2
+sky = SubResource("Sky_blockout")
+ambient_light_source = 2
+ambient_light_color = Color(0.22, 0.38, 0.58, 1)
+ambient_light_energy = 0.6
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="DerelictBlockout" type="Node3D" unique_id=1536897506]
+
+[node name="Locations" type="Node3D" parent="." unique_id=980585396]
+
+[node name="Labs" type="Node3D" parent="Locations" unique_id=782511033]
+
+[node name="ResearchComplex" type="CSGBox3D" parent="Locations/Labs" unique_id=9794010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -85)
+cast_shadow = 0
+use_collision = true
+size = Vector3(28, 24, 38)
+material = SubResource("ShaderMaterial_v5csi")
+script = ExtResource("1_block")
+box_size = Vector3(28, 24, 38)
+tint = Color(0.05, 0.95, 0.9, 1)
+
+[node name="CrewQuarters" type="Node3D" parent="Locations" unique_id=827117804]
+
+[node name="NeckPort" type="CSGBox3D" parent="Locations/CrewQuarters" unique_id=199237962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 8, -50)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8, 16, 28)
+material = SubResource("ShaderMaterial_ubavj")
+script = ExtResource("1_block")
+box_size = Vector3(8, 16, 28)
+tint = Color(0.12, 0.4, 1, 1)
+
+[node name="NeckStarboard" type="CSGBox3D" parent="Locations/CrewQuarters" unique_id=2124865525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 8, -50)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8, 16, 28)
+material = SubResource("ShaderMaterial_41tt2")
+script = ExtResource("1_block")
+box_size = Vector3(8, 16, 28)
+tint = Color(0.12, 0.4, 1, 1)
+
+[node name="CentralCorePort" type="CSGBox3D" parent="Locations/CrewQuarters" unique_id=1550790692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 12, -20)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8, 8, 24)
+material = SubResource("ShaderMaterial_q0jsk")
+script = ExtResource("1_block")
+box_size = Vector3(8, 8, 24)
+tint = Color(0.12, 0.4, 1, 1)
+
+[node name="CentralCoreStarboard" type="CSGBox3D" parent="Locations/CrewQuarters" unique_id=404597153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 12, -20)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8, 8, 24)
+material = SubResource("ShaderMaterial_xgyh0")
+script = ExtResource("1_block")
+box_size = Vector3(8, 8, 24)
+tint = Color(0.12, 0.4, 1, 1)
+
+[node name="Mess" type="Node3D" parent="Locations" unique_id=485551709]
+
+[node name="MessVolume" type="CSGBox3D" parent="Locations/Mess" unique_id=2085005821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -15)
+cast_shadow = 0
+use_collision = true
+size = Vector3(10, 8, 20)
+material = SubResource("ShaderMaterial_c27mt")
+script = ExtResource("1_block")
+box_size = Vector3(10, 8, 20)
+tint = Color(1, 0.7, 0.08, 1)
+
+[node name="OfficersArea" type="Node3D" parent="Locations" unique_id=1188103515]
+
+[node name="OfficersGreen" type="CSGBox3D" parent="Locations/OfficersArea" unique_id=1261284333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -17)
+cast_shadow = 0
+use_collision = true
+size = Vector3(12, 8, 22)
+material = SubResource("ShaderMaterial_f2y20")
+script = ExtResource("1_block")
+box_size = Vector3(12, 8, 22)
+tint = Color(0.68, 0.2, 1, 1)
+
+[node name="CaptainsQuarters" type="Node3D" parent="Locations" unique_id=90739925]
+
+[node name="CaptainsVolume" type="CSGBox3D" parent="Locations/CaptainsQuarters" unique_id=89160025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -2)
+cast_shadow = 0
+use_collision = true
+size = Vector3(8, 8, 8)
+material = SubResource("ShaderMaterial_pfjpp")
+script = ExtResource("1_block")
+box_size = Vector3(8, 8, 8)
+tint = Color(1, 0.78, 0.2, 1)
+
+[node name="Bridge" type="Node3D" parent="Locations" unique_id=268211369]
+
+[node name="CommandDeck" type="CSGBox3D" parent="Locations/Bridge" unique_id=806754298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, -1)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 4, 12)
+material = SubResource("ShaderMaterial_x8vln")
+script = ExtResource("1_block")
+box_size = Vector3(18, 4, 12)
+tint = Color(0.72, 0.9, 1, 1)
+
+[node name="Maintenance" type="Node3D" parent="Locations" unique_id=143293394]
+
+[node name="MainCentralPlant" type="CSGBox3D" parent="Locations/Maintenance" unique_id=330609077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -15)
+cast_shadow = 0
+use_collision = true
+size = Vector3(28, 8, 38)
+material = SubResource("ShaderMaterial_1ba8g")
+script = ExtResource("1_block")
+box_size = Vector3(28, 8, 38)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="FlightLogisticsAuxiliaryPlant" type="CSGBox3D" parent="Locations/Maintenance" unique_id=382175454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 28)
+cast_shadow = 0
+use_collision = true
+size = Vector3(12, 8, 24)
+material = SubResource("ShaderMaterial_jinjv")
+script = ExtResource("1_block")
+box_size = Vector3(12, 8, 24)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportPort" type="CSGBox3D" parent="Locations/Maintenance" unique_id=1634901167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 8, 60)
+cast_shadow = 0
+use_collision = true
+size = Vector3(6, 16, 28)
+material = SubResource("ShaderMaterial_8aa2w")
+script = ExtResource("1_block")
+box_size = Vector3(6, 16, 28)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportStarboard" type="CSGBox3D" parent="Locations/Maintenance" unique_id=1641695034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 8, 60)
+cast_shadow = 0
+use_collision = true
+size = Vector3(6, 16, 28)
+material = SubResource("ShaderMaterial_epswy")
+script = ExtResource("1_block")
+box_size = Vector3(6, 16, 28)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportBottom" type="CSGBox3D" parent="Locations/Maintenance" unique_id=969763386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 60)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 3, 28)
+material = SubResource("ShaderMaterial_n7tbx")
+script = ExtResource("1_block")
+box_size = Vector3(18, 3, 28)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportTop" type="CSGBox3D" parent="Locations/Maintenance" unique_id=65729584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.5, 60)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 3, 28)
+material = SubResource("ShaderMaterial_4lh8s")
+script = ExtResource("1_block")
+box_size = Vector3(18, 3, 28)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportForward" type="CSGBox3D" parent="Locations/Maintenance" unique_id=1688225380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 47.5)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 10, 3)
+material = SubResource("ShaderMaterial_mk6in")
+script = ExtResource("1_block")
+box_size = Vector3(18, 10, 3)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="ReactorSupportAft" type="CSGBox3D" parent="Locations/Maintenance" unique_id=563215100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 72.5)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 10, 3)
+material = SubResource("ShaderMaterial_08mgs")
+script = ExtResource("1_block")
+box_size = Vector3(18, 10, 3)
+tint = Color(1, 0.33, 0.06, 1)
+
+[node name="Comms" type="Node3D" parent="Locations" unique_id=662094159]
+
+[node name="DorsalComms" type="CSGBox3D" parent="Locations/Comms" unique_id=756487561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 10)
+cast_shadow = 0
+use_collision = true
+size = Vector3(14, 8, 14)
+material = SubResource("ShaderMaterial_30cti")
+script = ExtResource("1_block")
+box_size = Vector3(14, 8, 14)
+tint = Color(1, 0.08, 0.72, 1)
+
+[node name="Hangars" type="Node3D" parent="Locations" unique_id=807008875]
+
+[node name="PortHangar" type="CSGBox3D" parent="Locations/Hangars" unique_id=706614858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 14, 26)
+cast_shadow = 0
+use_collision = true
+size = Vector3(17, 12, 30)
+material = SubResource("ShaderMaterial_mv166")
+script = ExtResource("1_block")
+box_size = Vector3(17, 12, 30)
+tint = Color(0.18, 0.9, 0.28, 1)
+
+[node name="StarboardHangar" type="CSGBox3D" parent="Locations/Hangars" unique_id=306766521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 14, 26)
+cast_shadow = 0
+use_collision = true
+size = Vector3(17, 12, 30)
+material = SubResource("ShaderMaterial_5v7yx")
+script = ExtResource("1_block")
+box_size = Vector3(17, 12, 30)
+tint = Color(0.18, 0.9, 0.28, 1)
+
+[node name="Storage" type="Node3D" parent="Locations" unique_id=1340870757]
+
+[node name="PortStorage" type="CSGBox3D" parent="Locations/Storage" unique_id=277789062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 4, 26)
+cast_shadow = 0
+use_collision = true
+size = Vector3(13, 8, 30)
+material = SubResource("ShaderMaterial_x2imy")
+script = ExtResource("1_block")
+box_size = Vector3(13, 8, 30)
+tint = Color(0.67, 0.48, 0.16, 1)
+
+[node name="StarboardStorage" type="CSGBox3D" parent="Locations/Storage" unique_id=1290355367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 4, 26)
+cast_shadow = 0
+use_collision = true
+size = Vector3(13, 8, 30)
+material = SubResource("ShaderMaterial_wku0y")
+script = ExtResource("1_block")
+box_size = Vector3(13, 8, 30)
+tint = Color(0.67, 0.48, 0.16, 1)
+
+[node name="Reactors" type="Node3D" parent="Locations" unique_id=1206946238]
+
+[node name="ReactorComplex" type="CSGBox3D" parent="Locations/Reactors" unique_id=359873353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 60)
+cast_shadow = 0
+use_collision = true
+size = Vector3(18, 10, 22)
+material = SubResource("ShaderMaterial_pwasi")
+script = ExtResource("1_block")
+box_size = Vector3(18, 10, 22)
+tint = Color(1, 0.08, 0.08, 1)
+
+[node name="Engines" type="Node3D" parent="Locations" unique_id=1951718695]
+
+[node name="PropulsionBlock" type="CSGBox3D" parent="Locations/Engines" unique_id=1552136062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 90)
+cast_shadow = 0
+use_collision = true
+size = Vector3(28, 14, 28)
+material = SubResource("ShaderMaterial_qqgj2")
+script = ExtResource("1_block")
+box_size = Vector3(28, 14, 28)
+tint = Color(0.58, 0.025, 0.04, 1)
+
+[node name="Decks" type="Node3D" parent="."]
+
+[node name="Deck_Y00" type="Node3D" parent="Decks"]
+
+[node name="LabsBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(0, 0, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckPortBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(-6, 0, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckStarboardBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(6, 0, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CentralMaintenanceBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(0, 0, -15)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="LogisticsStoragePortBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(-11.5, 0, 26)
+cast_shadow = 0
+size = Vector3(13, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsStorageStarboardBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(11.5, 0, 26)
+cast_shadow = 0
+size = Vector3(13, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsUtilitiesBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(0, 0, 28)
+cast_shadow = 0
+size = Vector3(12, 0.12, 24)
+material = ExtResource("2_deck")
+
+[node name="ReactorPortAccessBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(-12, 0, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorStarboardAccessBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(12, 0, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="EnginesBase" type="CSGBox3D" parent="Decks/Deck_Y00"]
+position = Vector3(0, 0, 90)
+cast_shadow = 0
+size = Vector3(28, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y04" type="Node3D" parent="Decks"]
+
+[node name="LabsDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(0, 4, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckPortDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(-6, 4, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckStarboardDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(6, 4, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="MaintenancePortCatwalk" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(-10.5, 4, -15)
+cast_shadow = 0
+size = Vector3(5, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="MaintenanceCrossCatwalk" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(0, 4, -15)
+cast_shadow = 0
+size = Vector3(16, 0.12, 4)
+material = ExtResource("2_deck")
+
+[node name="MaintenanceStarboardCatwalk" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(10.5, 4, -15)
+cast_shadow = 0
+size = Vector3(5, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsStoragePortDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(-11.5, 4, 26)
+cast_shadow = 0
+size = Vector3(13, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsStorageStarboardDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(11.5, 4, 26)
+cast_shadow = 0
+size = Vector3(13, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsUtilitiesDeck01" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(0, 4, 28)
+cast_shadow = 0
+size = Vector3(12, 0.12, 24)
+material = ExtResource("2_deck")
+
+[node name="ReactorPortAccess" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(-12, 4, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorStarboardAccess" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(12, 4, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorForwardAccess" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(0, 4, 47.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="ReactorAftAccess" type="CSGBox3D" parent="Decks/Deck_Y04"]
+position = Vector3(0, 4, 72.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y08" type="Node3D" parent="Decks"]
+
+[node name="LabsDeck02" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(0, 8, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckPortDeck02" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(-6, 8, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckStarboardDeck02" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(6, 8, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CentralHabitationBase" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(0, 8, -15)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="HangarPortBase" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(-10.5, 8, 26)
+cast_shadow = 0
+size = Vector3(17, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="HangarStarboardBase" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(10.5, 8, 26)
+cast_shadow = 0
+size = Vector3(17, 0.12, 30)
+material = ExtResource("2_deck")
+
+[node name="LogisticsUtilitiesUpper" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(0, 8, 28)
+cast_shadow = 0
+size = Vector3(12, 0.12, 24)
+material = ExtResource("2_deck")
+
+[node name="ReactorPortAccess" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(-12, 8, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorStarboardAccess" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(12, 8, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorForwardAccess" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(0, 8, 47.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="ReactorAftAccess" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(0, 8, 72.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="EnginesPortCatwalk" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(-9, 8, 90)
+cast_shadow = 0
+size = Vector3(5, 0.12, 22)
+material = ExtResource("2_deck")
+
+[node name="EnginesStarboardCatwalk" type="CSGBox3D" parent="Decks/Deck_Y08"]
+position = Vector3(9, 8, 90)
+cast_shadow = 0
+size = Vector3(5, 0.12, 22)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y12" type="Node3D" parent="Decks"]
+
+[node name="LabsDeck03" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(0, 12, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckPortDeck03" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(-6, 12, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CrewNeckStarboardDeck03" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(6, 12, -50)
+cast_shadow = 0
+size = Vector3(8, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="CrewCentralPortDeck01" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(-10, 12, -20)
+cast_shadow = 0
+size = Vector3(8, 0.12, 24)
+material = ExtResource("2_deck")
+
+[node name="CrewCentralStarboardDeck01" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(10, 12, -20)
+cast_shadow = 0
+size = Vector3(8, 0.12, 24)
+material = ExtResource("2_deck")
+
+[node name="MessDeck01" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(0, 12, -15)
+cast_shadow = 0
+size = Vector3(10, 0.12, 20)
+material = ExtResource("2_deck")
+
+[node name="ReactorPortAccess" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(-12, 12, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorStarboardAccess" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(12, 12, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorForwardAccess" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(0, 12, 47.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="ReactorAftAccess" type="CSGBox3D" parent="Decks/Deck_Y12"]
+position = Vector3(0, 12, 72.5)
+cast_shadow = 0
+size = Vector3(18, 0.12, 3)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y16" type="Node3D" parent="Decks"]
+
+[node name="LabsDeck04" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(0, 16, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="OfficersBase" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(0, 16, -17)
+cast_shadow = 0
+size = Vector3(12, 0.12, 22)
+material = ExtResource("2_deck")
+
+[node name="CaptainsBase" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(0, 16, -2)
+cast_shadow = 0
+size = Vector3(8, 0.12, 8)
+material = ExtResource("2_deck")
+
+[node name="HangarPortAftMezzanine" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(-10.5, 16, 35)
+cast_shadow = 0
+size = Vector3(17, 0.12, 8)
+material = ExtResource("2_deck")
+
+[node name="HangarStarboardAftMezzanine" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(10.5, 16, 35)
+cast_shadow = 0
+size = Vector3(17, 0.12, 8)
+material = ExtResource("2_deck")
+
+[node name="ReactorPortUpperAccess" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(-12, 16, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="ReactorStarboardUpperAccess" type="CSGBox3D" parent="Decks/Deck_Y16"]
+position = Vector3(12, 16, 60)
+cast_shadow = 0
+size = Vector3(6, 0.12, 28)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y20" type="Node3D" parent="Decks"]
+
+[node name="LabsDeck05" type="CSGBox3D" parent="Decks/Deck_Y20"]
+position = Vector3(0, 20, -85)
+cast_shadow = 0
+size = Vector3(28, 0.12, 38)
+material = ExtResource("2_deck")
+
+[node name="OfficersDeck01" type="CSGBox3D" parent="Decks/Deck_Y20"]
+position = Vector3(0, 20, -17)
+cast_shadow = 0
+size = Vector3(12, 0.12, 22)
+material = ExtResource("2_deck")
+
+[node name="CaptainsDeck01" type="CSGBox3D" parent="Decks/Deck_Y20"]
+position = Vector3(0, 20, -2)
+cast_shadow = 0
+size = Vector3(8, 0.12, 8)
+material = ExtResource("2_deck")
+
+[node name="CommsDeck01" type="CSGBox3D" parent="Decks/Deck_Y20"]
+position = Vector3(0, 20, 10)
+cast_shadow = 0
+size = Vector3(14, 0.12, 14)
+material = ExtResource("2_deck")
+
+[node name="Deck_Y24" type="Node3D" parent="Decks"]
+
+[node name="BridgeBase" type="CSGBox3D" parent="Decks/Deck_Y24"]
+position = Vector3(0, 24, -1)
+cast_shadow = 0
+size = Vector3(18, 0.12, 12)
+material = ExtResource("2_deck")
+
+[node name="CommsAftDeck02" type="CSGBox3D" parent="Decks/Deck_Y24"]
+position = Vector3(0, 24, 11)
+cast_shadow = 0
+size = Vector3(14, 0.12, 12)
+material = ExtResource("2_deck")
+
+[node name="Labels" type="Node3D" parent="." unique_id=1779769481]
+
+[node name="LabsLabel" type="Label3D" parent="Labels" unique_id=1195571110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, -85)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.05, 0.95, 0.9, 1)
+text = "LABS"
+outline_size = 8
+
+[node name="CrewQuartersLabel" type="Label3D" parent="Labels" unique_id=894058405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, -50)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.2, 0.52, 1, 1)
+text = "CREW QUARTERS"
+font_size = 28
+outline_size = 8
+
+[node name="MessLabel" type="Label3D" parent="Labels" unique_id=1460745322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -15)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.75, 0.15, 1)
+text = "MESS"
+font_size = 28
+outline_size = 8
+
+[node name="OfficersAreaLabel" type="Label3D" parent="Labels" unique_id=123889945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, -17)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.76, 0.35, 1, 1)
+text = "OFFICERS AREA"
+font_size = 26
+outline_size = 8
+
+[node name="CaptainsQuartersLabel" type="Label3D" parent="Labels" unique_id=1977580092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -2)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.82, 0.3, 1)
+text = "CAPTAIN"
+font_size = 24
+outline_size = 8
+
+[node name="BridgeLabel" type="Label3D" parent="Labels" unique_id=588352623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -1)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.78, 0.92, 1, 1)
+text = "BRIDGE"
+font_size = 30
+outline_size = 8
+
+[node name="MaintenanceLabel" type="Label3D" parent="Labels" unique_id=8744509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -15)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.42, 0.12, 1)
+text = "MAINTENANCE"
+font_size = 26
+outline_size = 8
+
+[node name="CommsLabel" type="Label3D" parent="Labels" unique_id=145660416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27, 10)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.18, 0.78, 1)
+text = "COMMS"
+font_size = 27
+outline_size = 8
+
+[node name="HangarsLabel" type="Label3D" parent="Labels" unique_id=2057049888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 26)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.25, 1, 0.35, 1)
+text = "HANGARS"
+font_size = 30
+outline_size = 8
+
+[node name="StorageLabel" type="Label3D" parent="Labels" unique_id=1958784815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 40)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.78, 0.58, 0.24, 1)
+text = "STORAGE"
+font_size = 25
+outline_size = 8
+
+[node name="ReactorsLabel" type="Label3D" parent="Labels" unique_id=15250285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 60)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.18, 0.18, 1)
+text = "REACTORS"
+font_size = 29
+outline_size = 8
+
+[node name="EnginesLabel" type="Label3D" parent="Labels" unique_id=118186415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 90)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.2, 0.2, 1)
+text = "ENGINES"
+font_size = 30
+outline_size = 8
+
+[node name="Helpers" type="Node3D" parent="." unique_id=1842072513]
+
+[node name="KeelCenterline" type="MeshInstance3D" parent="Helpers" unique_id=2057799256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22, 0)
+cast_shadow = 0
+mesh = SubResource("Box_keel_axis")
+
+[node name="BeamReference" type="MeshInstance3D" parent="Helpers" unique_id=488997042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+cast_shadow = 0
+mesh = SubResource("Box_beam_axis")
+
+[node name="BowLabel" type="Label3D" parent="Helpers" unique_id=1363000390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -110)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.3, 0.82, 1, 1)
+text = "BOW  -Z"
+font_size = 28
+outline_size = 8
+
+[node name="SternLabel" type="Label3D" parent="Helpers" unique_id=2006202615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 110)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(0.3, 0.82, 1, 1)
+text = "STERN  +Z"
+font_size = 28
+outline_size = 8
+
+[node name="PortLabel" type="Label3D" parent="Helpers" unique_id=476906716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -0.1, 0)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.4, 0.3, 1)
+text = "PORT  -X"
+font_size = 24
+outline_size = 8
+
+[node name="StarboardLabel" type="Label3D" parent="Helpers" unique_id=148095986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -0.1, 0)
+pixel_size = 0.08
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.4, 0.3, 1)
+text = "STARBOARD  +X"
+font_size = 24
+outline_size = 8
+
+[node name="Camera" type="Node3D" parent="." unique_id=1165302790]
+transform = Transform3D(-0.8660254, -0.21130916, 0.45315394, 0, 0.90630776, 0.42261827, -0.50000006, 0.36599815, -0.7848855, 0, 10, 0)
+
+[node name="InspectionCamera" type="Camera3D" parent="Camera" unique_id=1879439354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 260)
+current = true
+fov = 50.0
+near = 0.5
+far = 600.0
+
+[node name="Lighting" type="Node3D" parent="." unique_id=184438113]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting" unique_id=1953811635]
+environment = SubResource("Environment_blockout")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="Lighting" unique_id=1658078255]
+transform = Transform3D(0.88294756, 0.3488854, -0.3141378, 0, 0.66913056, 0.74314487, 0.46947157, -0.656158, 0.5908072, 0, 0, 0)
+light_color = Color(0.64, 0.82, 1, 1)
+light_energy = 1.15
+shadow_enabled = true
+
+[node name="RimLight" type="DirectionalLight3D" parent="Lighting" unique_id=1847215927]
+transform = Transform3D(-0.8660254, 0.28678825, 0.4095761, 0, 0.81915206, -0.57357645, -0.50000006, -0.49673176, -0.7094065, 0, 0, 0)
+light_color = Color(1, 0.24, 0.52, 1)
+light_energy = 0.55
